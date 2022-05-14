@@ -49,5 +49,6 @@ Curso sobre Qemu/KVM + libvirt
 	* Redes privadas aisladas (isolated)
 	* Redes públicas conectadas a un bridge externo
 	* Configuración de red en las máquina virtuales
+	* Introducción a Network Filters
 	
 	
