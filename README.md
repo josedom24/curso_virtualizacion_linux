@@ -15,13 +15,14 @@ Curso sobre Qemu/KVM + libvirt
 	* Instalación de Qemu/KVM + libvirt
 	* Vista general de virt-manager
 	* Vista general de gnome boxes
+	* Introducción a virsh
 	* Almacenamiento y redes disponibles
 
 3. Creación de máquinas virtuales
-	*  Dispositivos paravirtualizados. virtio 
+	* Dispositivos paravirtualizados. virtio 
 	* Creación de máquinas virtuales con virt-install
-	* Creación de máquinas virtuales coon virt-manager
-	* Creación de máquinas virtuales desde un fichero de configuración
+	* Creación de máquinas virtuales con virt-manager
+	* Creación de máquinas virtuales con virsh
 	* Creación de máquinas virtuales Windows
 	* Instalación de Qemu-guest-agent en las máquinas virtuales
 	* Acceso a las máquinas virtuales desde el exterior: ssh RDP, virt-viewer,...
