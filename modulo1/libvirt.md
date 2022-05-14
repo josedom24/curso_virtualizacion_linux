@@ -30,4 +30,4 @@ libvirt proporciona una API que puede ser utilizada por diferentes [aplicaciones
 * **virt-viewer**: Programa que nos permite acceder a a la consola gráfica de una máquina virtual.
 * **gnome-boxes**: Aplicación gráfica muy simple, que utilizando el acceso local con usuario no priviligiado, nos permite gestionar, de forma sencilla, máquinas virtuales.
 
-Cuando cualquier aplicación se conecta a libvirt (con cualquiera de los métodos que hemos estudiado) el formato de la información que se intercambian a través de la API es XML. Puedes encontrar la definición de este formato en la documentación oficial: [XML Format]](https://libvirt.org/format.html).
+Cuando cualquier aplicación se conecta a libvirt (con cualquiera de los métodos que hemos estudiado) el formato de la información que se intercambian a través de la API es XML. Puedes encontrar la definición de este formato en la documentación oficial: [XML Format](https://libvirt.org/format.html).
