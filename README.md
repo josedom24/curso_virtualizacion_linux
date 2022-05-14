@@ -18,16 +18,20 @@ Curso sobre Qemu/KVM + libvirt
 	* Introducción a virsh
 	* Almacenamiento y redes disponibles
 
-3. Creación de máquinas virtuales
+3. Creación de máquinas virtuales desde la línea de comandos
 	* Dispositivos paravirtualizados. virtio 
 	* Creación de máquinas virtuales con virt-install
-	* Creación de máquinas virtuales con virt-manager
 	* Creación de máquinas virtuales con virsh
+	* Creación de máquinas virtuales con un usuario no privilegiado
 	* Creación de máquinas virtuales Windows
 	* Instalación de Qemu-guest-agent en las máquinas virtuales
 	* Acceso a las máquinas virtuales desde el exterior: ssh RDP, virt-viewer,...
 
-4. Gestión del  almacenamiento en Qemu/KVM + libvirt
+4. Creación de máquinas virtuales desde aplicaciones gráficas
+	* Creación de máquinas virtuales con virt-manager
+	* Creación de máquinas virtuales con gnome-boxes
+
+5. Gestión del  almacenamiento en Qemu/KVM + libvirt
 	* Introducción al almacenamiento en Qemu/KVM + libvirt
 	* Trabajo con imágenes de disco: qemu-img
 	* Operaciones sobre volúmenes
@@ -36,13 +40,15 @@ Curso sobre Qemu/KVM + libvirt
 	* Aprovisionamiento ligero
 	* Instantáneas (snapshots)
 
-5. Clonación de maquinas virtuales
+6. Almacenamiento con virt-manager
+
+7. Clonación de maquinas virtuales
 	* Clonación con virt-clone
 	* Clonación con virt-manager
 	* Clonación manual
 	* Clonación usando aprovisionamiento ligero
-
-6. Gestión de redes en Qemu/KVM + libvirt
+	
+8. Gestión de redes en Qemu/KVM + libvirt
 	* Introducción a la configuración de redes en sistemas virtuales
 	* Tipos de redes
 	* Redes privadas basadas en NAT
@@ -51,4 +57,4 @@ Curso sobre Qemu/KVM + libvirt
 	* Configuración de red en las máquina virtuales
 	* Introducción a Network Filters
 	
-	
+9. Redes con virt-manager	
