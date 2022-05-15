@@ -12,7 +12,7 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 
 2. Instalación de QEMU/KVM + libvirt
 	* Preparación del escenario de instalación
-	* Instalación de QEMU/KVM + libvirt
+	* Instalación de QEMU/KVM + libvirt	
 	* Vista general de virt-manager
 	* Vista general de gnome boxes
 	* Introducción a virsh
