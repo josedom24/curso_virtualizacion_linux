@@ -1,18 +1,18 @@
-# curso_kvm
+# Curso virtualización Linux
 
-Curso sobre Qemu/KVM + libvirt
+Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, LXC, ...
 
 ## Contenidos
 
 1. Introducción a la virtualización
 	* ¿Qué es la virtualización?
 	* Tipos de virtualización
-	* Introducción a Qemu/KVM
+	* Introducción a QEMU/KVM
 	* Introducción a libvirt
 
-2. Instalación de Qemu/KVM + libvirt
+2. Instalación de QEMU/KVM + libvirt
 	* Preparación del escenario de instalación
-	* Instalación de Qemu/KVM + libvirt
+	* Instalación de QEMU/KVM + libvirt
 	* Vista general de virt-manager
 	* Vista general de gnome boxes
 	* Introducción a virsh
@@ -31,8 +31,8 @@ Curso sobre Qemu/KVM + libvirt
 	* Creación de máquinas virtuales con virt-manager
 	* Creación de máquinas virtuales con gnome-boxes
 
-5. Gestión del  almacenamiento en Qemu/KVM + libvirt
-	* Introducción al almacenamiento en Qemu/KVM + libvirt
+5. Gestión del  almacenamiento en QEMU/KVM + libvirt
+	* Introducción al almacenamiento en QEMU/KVM + libvirt
 	* Trabajo con imágenes de disco: qemu-img
 	* Operaciones sobre volúmenes
 	* Añadir nuevos discos a una máquina virtual
@@ -48,7 +48,7 @@ Curso sobre Qemu/KVM + libvirt
 	* Clonación manual
 	* Clonación usando aprovisionamiento ligero
 	
-8. Gestión de redes en Qemu/KVM + libvirt
+8. Gestión de redes en QEMU/KVM + libvirt
 	* Introducción a la configuración de redes en sistemas virtuales
 	* Tipos de redes
 	* Redes privadas basadas en NAT
