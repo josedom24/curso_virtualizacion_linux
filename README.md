@@ -19,7 +19,6 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 	* Almacenamiento y redes disponibles
 
 3. Creación de máquinas virtuales desde la línea de comandos
-	* Dispositivos paravirtualizados. virtio 
 	* Creación de máquinas virtuales con virt-install
 	* Creación de máquinas virtuales con virsh
 	* Creación de máquinas virtuales con un usuario no privilegiado

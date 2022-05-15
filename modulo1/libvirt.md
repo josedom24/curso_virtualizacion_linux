@@ -10,15 +10,15 @@ libvirt proporciona varios mecanismos para conectarse a un hipervisor Qemu/KVM, 
 
 ### Acceso local con un usuario no privilegiado
 
-Nos conectamos a `qemu:///session`. Se acceden a las máquinas virtuales de ese usuario. En este modo de conexión, el usuario no suele tener permisos para crear conexiones de red, por lo que se limita su uso de la red no privilegiada de qemu ([SLIRP](https://wiki.qemu.org/Documentation/Networking#User_Networking_.28SLIRP.29)) que es útil para casos simples, pero que tiene bajo rendimiento y es poco configurable. 
+Nos conectamos a la URI `qemu:///session`. Se acceden a las máquinas virtuales de ese usuario. En este modo de conexión, el usuario no suele tener permisos para crear conexiones de red, por lo que se limita su uso de la red no privilegiada de qemu ([SLIRP](https://wiki.qemu.org/Documentation/Networking#User_Networking_.28SLIRP.29)) que es útil para casos simples, pero que tiene bajo rendimiento y es poco configurable. 
 
 ### Acceso local privilegiado
 
-Nos conectamos a `qemu:///system`. Se acceden a las máquinas virtuales del sistema. Por las limitaciones vistas anteriormente en el acceso local con usuarios no privilegiados, se utiliza la conexión `qemu:///system`, que es única para todo el sistema y que puede utilizar tanto el usuario `root` como cualquier miembro del grupo `libvirt`.
+Nos conectamos a la URI `qemu:///system`. Se acceden a las máquinas virtuales del sistema. Por las limitaciones vistas anteriormente en el acceso local con usuarios no privilegiados, se utiliza la conexión `qemu:///system`, que es única para todo el sistema y que puede utilizar tanto el usuario `root` como cualquier miembro del grupo `libvirt`.
 
 ### Acceso remoto privilegiado por ssh
 
-Nos conectamos a `qemu+ssh:///system`. En las conexiones citadas anteriormente nos conectamos a un socket linux `/var/run/libvirt/libvirt-sock`. A este socket también nos podemos conectar a través de un túnel ssh (qemu+ssh).
+Nos conectamos a la URI `qemu+ssh:///system`. En las conexiones citadas anteriormente nos conectamos a un socket linux `/var/run/libvirt/libvirt-sock`. A este socket también nos podemos conectar a través de un túnel ssh (qemu+ssh).
 
 ## Aplicaciones para usar libvirt
 
