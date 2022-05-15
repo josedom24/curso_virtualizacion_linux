@@ -10,7 +10,7 @@ libvirt proporciona varios mecanismos para conectarse a un hipervisor qemu-kvm.
 
 ## Conexión a QEMU/KVM
 
-Vamos a usar la utilidad `virsh` que nos proporciona una shell completa para el manejo de libvirt. Con el comando `list` mostramos las máquinas virtuales que hemos creado.
+Vamos a usar la utilidad `virsh`, que nos proporciona una shell completa para el manejo de libvirt. Con el comando `list` mostramos las máquinas virtuales que hemos creado.
 
 Si con un usuario sin privilegios ejecutamos:
 
