@@ -35,3 +35,6 @@ Por todo lo explicado a continuación la configuración recomendada para la máq
 * **100 Gb de disco duro**
 * **4 núcleos de CPU**
 
+---
+
+[Índice](https://github.com/josedom24/curso_virtualizacion_linux)

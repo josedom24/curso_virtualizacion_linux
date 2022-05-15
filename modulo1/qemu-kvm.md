@@ -15,3 +15,7 @@ El proyecto KVM proporciona una alternativa al uso de dispositivos emulados, que
 ## libvirt: una API de virtualización
 
 Normalmente no trabajamos directamente con las aplicaciones ofrecidas por QEMU/KVM para la gestión de recursos virtualizados. Es más fácil usar [libvirt](https://libvirt.org/), una API intermedia que nos facilita la comunicación con QEMU/KVM.
+
+---
+
+[Índice](https://github.com/josedom24/curso_virtualizacion_linux)
