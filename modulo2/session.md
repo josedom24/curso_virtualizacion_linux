@@ -45,7 +45,7 @@ usuario@kvm:~$ virsh -c qemu:///session list
  2    ubuntu20.10-2   ejecutando
 ```
 
-Vemos que la máquina está creado en la sesión del usuario `usuario`. **Nota: No es necesario indicar la conexión `-c qemu:///session`, pero de esa forma se ve más claro que estamos haciendo una conexión local con un usuario sin privilegios.
+Vemos que la máquina está creado en la sesión del usuario `usuario`. **Nota: No es necesario indicar la conexión `-c qemu:///session`, pero de esa forma se ve más claro que estamos haciendo una conexión local con un usuario sin privilegios**.
 
 Por último, indicar que la imagen del disco se guarda por defecto en el directorio `~/.local/share/gnome-boxes/images`:
 
