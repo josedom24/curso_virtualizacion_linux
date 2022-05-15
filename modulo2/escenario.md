@@ -1,6 +1,6 @@
 # Preparación del escenario de instalación
 
-En un entorno de producción, QEMU/KVM se instalará sobre la máquina física con suficientes recursos. Si el sistema operativo tiene entorno gráfico podremos instalar herramientas gráficas, aunque siempre nos podemos conectar remotamente al servidor para gestionar QEMU/KVM.
+En un entorno de producción, QEMU/KVM se instalará sobre una máquina física con suficientes recursos. Si el sistema operativo tiene entorno gráfico, podremos instalar herramientas gráficas, aunque siempre nos podemos conectar remotamente al servidor para gestionar QEMU/KVM.
 
 Para ejecutar QEMU/KVM necesitamos que el procesador soporte extensiones de virtualización en su juego de instrucciones. Para comprobar si tenemos esta característica ejecutamos la siguiente instrucción como `root`:
 
@@ -14,7 +14,7 @@ El resultado debería mostrar varias líneas con el texto buscado resaltado en c
 
 ## Virtualización anidada
 
-Con esta característica se permite la ejecución de instrucciones KVM dentro de máquinas virtuales KVM, lo cual nos posibilita la ejecución de máquinas virtuales dentro de máquinas virtuales. De esta manera,podemos crear un laboratorio de prueba de QEMU/KVM ejecutḉandolos en una máquina virtual.
+Con esta característica se permite la ejecución de instrucciones KVM dentro de máquinas virtuales KVM, lo cual nos posibilita la ejecución de máquinas virtuales dentro de máquinas virtuales. De esta manera,podemos crear un laboratorio de prueba de QEMU/KVM ejecutándolos en una máquina virtual.
 
 Por ejemplo podemos activar la virtualización anidada (nested virtualization) en VirtualBox de la siguiente manera.
 
