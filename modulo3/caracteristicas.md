@@ -44,7 +44,7 @@ virsh -c qemu:///system pool-list
  iso       activo   si
 ```
 
-Un **volumen** es un medio de almacenamiento que podemos crear en un pool de almacenamiento en kvm. Si el pool de almacenamiento es de tipo *dir*  entonces el volumen será un fichero de imagen.
+Un **volumen** es un medio de almacenamiento que podemos crear en un pool de almacenamiento en kvm. Si el pool de almacenamiento es de tipo *dir*, entonces el volumen será un fichero de imagen.
 
 Veamos el volumen que se ha creado el pool `default`:
 
@@ -64,7 +64,10 @@ virsh -c qemu:///system vol-list iso
  debian-11.3.0-amd64-netinst.iso   /home/usuario/iso/debian-11.3.0-amd64-netinst.iso
 ```
 
-Que corresponde a la imagen ISO que hemos copiado en el directorio `~/ISO`.
+Que corresponde al fichero de la imagen ISO que hemos copiado en el directorio `~/ISO`.
 
 En todos estos conceptos sobre almacenamiento profundizaremos en el módulo correspondiente.
 
+---
+
+[Índice](https://github.com/josedom24/curso_virtualizacion_linux)

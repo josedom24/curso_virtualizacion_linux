@@ -17,11 +17,11 @@ La información que tenemos que proporcionar a `virt-install` para la creación 
 * El tamaño del disco (parámetro `--disk size`). Se creará un fichero con la imagen del disco que se guardará en `/var/lib/libvirt/images`.
 * La cantidad de memoria RAM (parámetro `--memory`)
 
-Podemos indicar muchos más parámetros a la hora de crear la nueva máquina. Puedes obtener toda la infromación en la [documentación oficial](https://linux.die.net/man/1/virt-install) de la aplicación. Iremos usando, a lo largo del curso, diferentes parámetros de esta herramienta.
+Podemos indicar muchos más parámetros a la hora de crear la nueva máquina. Puedes obtener toda la información en la [documentación oficial](https://linux.die.net/man/1/virt-install) de la aplicación. Iremos usando, a lo largo del curso, diferentes parámetros de esta herramienta.
 
 ## Creación de nuestra primera máquina virtual.
 
-Vamos a crear una máquina con las siguientes características: se va a llamar `prueba1`, se va a usar una ISO de la distribución GNU/Linux Debian 11, la variante de sistema operativo podemos poner `debian10`, el tamñao del disco será de 10Gb y la memoria RAM será de 1GB. No vamos a indicar la red a la que se conecta ya que, por defecto, se conectará a la red predefinida `default`.
+Vamos a crear una máquina con las siguientes características: se va a llamar `prueba1`, se va a usar una ISO de la distribución GNU/Linux Debian 11, la variante de sistema operativo podemos poner `debian10`, el tamaño del disco será de 10Gb y la memoria RAM será de 1GB. No vamos a indicar la red a la que se conecta ya que, por defecto, se conectará a la red predefinida `default`.
 
 Tenemos que tener en cuenta dos cosas:
 
@@ -45,3 +45,6 @@ A continuación, se iniciará la máquina y se abrirá una terminal en la aplica
 ![virt-install](img/virt-install1.png)
 
 
+---
+
+[Índice](https://github.com/josedom24/curso_virtualizacion_linux)
