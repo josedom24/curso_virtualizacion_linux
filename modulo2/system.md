@@ -40,3 +40,7 @@ Aunque estudiaremos la redes con profundidad en el módulo correspondiente, pode
 
 Por defecto, las nuevas máquinas que creemos se conectarán a esta red.
 
+## Almacenamiento disponible
+
+Estudiaremos en profundidad el almacenamiento con el que podemos trabajr en el módulo correspondiente. En este momento, indicar que los ficheros correspondientes a las imágenes de discos de las nuevas máquinas virtuales que creemos se guardarán, por defecto, en el directorio `/var/lib/libvirt/images`.
+
