@@ -44,3 +44,6 @@ Por defecto, las nuevas máquinas que creemos se conectarán a esta red.
 
 Estudiaremos en profundidad el almacenamiento con el que podemos trabajar en el módulo correspondiente. En este momento, indicar que los ficheros correspondientes a las imágenes de discos de las nuevas máquinas virtuales que creemos se guardarán, por defecto, en el directorio `/var/lib/libvirt/images`.
 
+---
+
+[Índice](https://github.com/josedom24/curso_virtualizacion_linux)

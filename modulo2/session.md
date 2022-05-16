@@ -55,5 +55,7 @@ total 196
 -rwxr--r-- 1 usuario usuario 196816 may 15 21:52 ubuntu20.10-2
 ```
 
+---
 
+[Índice](https://github.com/josedom24/curso_virtualizacion_linux)
 
