@@ -30,12 +30,12 @@ Tenemos que tener en cuenta dos cosas:
 
 Para crear la nueva máquina con esas características, ejecutamos:
 
-virt-install --virt-type kvm \
+virt-install --conect qemu:///system \
+			 --virt-type kvm \
 			 --name prueba1 \
-			 --cdrom ~/iso \
+			 --cdrom ~/iso/debian-11.3.0-amd64-netinst.iso \
 			 --os-variant debian10 \
 			 --disk size=10 
 			 --memory 1024
-
-		
+			 
 		
