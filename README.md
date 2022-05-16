@@ -18,7 +18,8 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 
 3. Creación de máquinas virtuales desde la línea de comandos
 	* Creación de máquinas virtuales con virt-install
-	* Creación de máquinas virtuales con virsh
+	* Gestión de máquinas virtuales con virsh
+	* Definición XML de una máquina virtual
 	* Creación de máquinas virtuales Windows
 
 4. Creación de máquinas virtuales con virt-manager
