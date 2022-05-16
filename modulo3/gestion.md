@@ -43,6 +43,13 @@ virsh -c qemu:///system start prueba1
 Domain 'prueba1' started
 ```
 
+Si la propiedad **autostart** de una maquina está activa, cada vez que se inicie el host, esa máquina se encenderá de forma automática. Para activarlo:
+
+```
+virsh -c qemu:///system autostart prueba1
+Domain 'prueba1' marked as autostarted
+```
+
 Reiniciamos una máquina virtual, ejecutando:
 
 ```
@@ -76,10 +83,30 @@ Por último, para eliminar una máquina virtual que esté parada (eliminando los
 ```
 virsh -c qemu:///system undefine --remove-all-storage  prueba1
 ```
-##############################3
-QUEDA: autostart
-comandos con dom.....
-##############################
+
+## Obtener información de la máquina virtual
+
+Todos los comandos de `virsh` que empiezan por *dom*^nos permiten obtener información de la máquina. 
+
+Para obtener información de la máquina:
+
+```
+virsh -c qemu:///system dominfo prueba1 
+```
+
+Obtener la dirección IP de la interfaz de red:
+
+```
+virsh -c qemu:///system domifaddr prueba1
+```
+
+Obtener los discos que tiene la máquina:
+
+```
+virsh -c qemu:///system domblklist prueba1
+```
+
+Puedes buscar información de más comandos para obtener distinta información de la máquina virtual.
 
 
 

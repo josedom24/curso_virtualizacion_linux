@@ -47,7 +47,7 @@ root@kvm:~# adduser usuario libvirt
 Para que el usuario `usuario` haga una conexión privilegiada tendrá que indicar explícitamente la conexión a la URI `qemu:///system`:
 
 ```
-usuario@kvm:~$ virsh -c quemu:///system list
+usuario@kvm:~$ virsh -c qemu:///system list
 ```
 
 ---
