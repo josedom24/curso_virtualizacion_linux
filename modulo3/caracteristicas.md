@@ -25,14 +25,14 @@ Como comentábamos en el punto anterior, la máquina que hemos creado se conecta
 
 Podemos comprobar que la maqúina tiene un disco de 10 Gb y de memoria RAM 1Gb:
 
-![características](img/caracteristica2.png)
+![características](img/caracteristica2![características](img/caracteristica1.png).png)
 
 ## Almacenamiento
 
-Un **Pool de almacenamiento** es un recurso de almacenamiento. Lo más usual es tener pools de almacenamiento sean locales, por ejemplo un directorio. En el momento de crear la primera máquina se han creado dos pools de almacenamiento de tipo *Directory* y que corresponden a los dos directorios con los que estamos trabajando:
+Un **Pool de almacenamiento** es un recurso de almacenamiento. Lo más usual es tener pools de almacenamiento que sean locales, por ejemplo un directorio. En el momento de crear la primera máquina se han creado dos pools de almacenamiento de tipo *dir* y que corresponden a los dos directorios con los que estamos trabajando:
 
 * `default`: Es un pool de almacenamiento que corresponde con el directorio `/usr/lib/libvirt/images` y donde se guardarán los ficheros correspondientes a las imágenes de disco.
-* `iso`: Este pool de almacenamiento se ha creado al indicar en `virt-install`el directorio donde estaba almacenado el fichero ISO. En este caso es otro pool de almacenamientod etipo *Directory*, y corresponde al directorio `~/ISO`.
+* `iso`: Este pool de almacenamiento se ha creado al indicar en `virt-install`el directorio donde estaba almacenado el fichero ISO. En este caso es otro pool de almacenamiento de tipo *dir*, y corresponde al directorio `~/ISO`.
 
 Podemos ver los pools de almacenamiento, que tenemos creado, ejecutando:
 
@@ -44,7 +44,7 @@ virsh -c qemu:///system pool-list
  iso       activo   si
 ```
 
-Un **volumen** es un medio de almacenamiento que podemos crear en un pool de almacenamiento en kvm. Si el pool de almacenamiento es de tipo *Directory*  entonces el volumen será un fichero de imagen.
+Un **volumen** es un medio de almacenamiento que podemos crear en un pool de almacenamiento en kvm. Si el pool de almacenamiento es de tipo *dir*  entonces el volumen será un fichero de imagen.
 
 Veamos el volumen que se ha creado el pool `default`:
 
