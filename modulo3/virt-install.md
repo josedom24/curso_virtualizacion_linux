@@ -28,14 +28,15 @@ Tenemos que tener en cuenta dos cosas:
 1. La red `default` debe estar activa: `virsh -c qemu:///system net-start default`.
 2. Hemos bajado una imagen ISO para la instalación del sistema operativo y la tenemos guardad en el directorio `~/ISO`.
 
-Para crear la nueva máquina con esas características, ejecutamos:
+Para crear la nueva máquina con esas características, ejecutamos con usuario sin privilegios:
 
-virt-install --conect qemu:///system \
+```
+virt-install --connect qemu:///system \
 			 --virt-type kvm \
 			 --name prueba1 \
 			 --cdrom ~/iso/debian-11.3.0-amd64-netinst.iso \
 			 --os-variant debian10 \
-			 --disk size=10 
+			 --disk size=10 \
 			 --memory 1024
-			 
+```			 
 		
