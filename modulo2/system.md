@@ -29,7 +29,7 @@ usuario@kvm:~$ virsh -c qemu:///system net-start default
 La red default se ha iniciado
 ```
 
-Y ejecutando de nuevo `virsh -c qemu:///system net-list` debería aparecer como *activa*.
+Y ejecutando de nuevo `virsh -c qemu:///system net-list`, aparece la red como *activa*.
 
 Aunque estudiaremos la redes con profundidad en el módulo correspondiente, podemos señalar que las máquinas virtuales que se conecten a esta red, tendrán las siguientes características:
 
