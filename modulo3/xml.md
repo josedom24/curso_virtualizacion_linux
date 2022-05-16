@@ -40,3 +40,7 @@ domain type='kvm' id='6'>
     <vendor>Intel</vendor>
     ...
 ```
+
+A continuación nos encontramos la etiqueta `<devices>` donde se definen los distintos dispositivos hardware que forman parte de la máquina. Veamos algunos ejemplos:
+
+* Los discos se definen con la etiqueta `<disk>`. Encontramos información del tipo (en este caso fichero), tipo del fichero (en este caso qcow2), ruta donde se encuentra el fichero,... 
