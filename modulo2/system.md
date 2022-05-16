@@ -34,7 +34,7 @@ Y ejecutando de nuevo `virsh -c qemu:///system net-list` debería aparecer como 
 Aunque estudiaremos la redes con profundidad en el módulo correspondiente, podemos señalar que las máquinas virtuales que se conecten a esta red, tendrán las siguientes características:
 
 * Tomarán una dirección IP de forma dinámica en el rango `192.168.122.2` - `192.168.122.254`. Es decir, existe un servidor DHCP (que se encuentra en el host) asignando de forma dinámica el direccionamiento.
-* La puerta de enlace será la dirección IP `192.168.122.1` que corresponde al host. Está dirección también correponde al servidor DNS que tiene configurado (que también se encuentra en el host).
+* La puerta de enlace será la dirección IP `192.168.122.1` que corresponde al host. Está dirección también corresponde al servidor DNS que tiene configurado (que también se encuentra en el host).
 * La máquina virtual estará conectada a un Linux Bridge (switch virtual) llamado `virbr0` por el que se conectará al host.
 * El host hará de router/NAT para que la máquina tenga conectividad al exterior.
 
