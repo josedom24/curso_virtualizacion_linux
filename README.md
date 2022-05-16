@@ -21,13 +21,13 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 	* [Creación de máquinas virtuales con virt-install](modulo3/virt-install.md)
 	* [Características de las máquinas virtuales](modulo3/caracteristicas.md)
 	* [Gestión de máquinas virtuales con virsh](modulo3/gestion.md)
-	* Definición XML de una máquina virtual
-	* Creación de máquinas virtuales Windows
+	* [Definición XML de una máquina virtual](modulo3/xml.md)
+	* Modificación de la definición de una máquina virtual
 
 4. Creación de máquinas virtuales con virt-manager
 	* Instalación de virt-manager
 	* Vista general de virt-manager
-	* Creación de máquinas virtuales con virt-manager
+	* Creación de máquinas virtuales windows con virt-manager 
 	* Instalación de Qemu-guest-agent en las máquinas virtuales
 	* Acceso a las máquinas virtuales desde el exterior: ssh RDP, virt-viewer,...
 
