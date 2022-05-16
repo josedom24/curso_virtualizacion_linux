@@ -8,6 +8,16 @@ apt install qemu-system libvirt-clients libvirt-daemon-system
 
 libvirt proporciona varios mecanismos para conectarse a un hipervisor qemu-kvm.
 
+Podemos obtener las versiones de las aplicaciones que hemos instalado (en mi caso en una distribución GNU/Linux Debian 11), ejecutando:
+
+```
+virsh version
+Compilada con biblioteca: libvirt 7.0.0
+Uso de biblioteca: libvirt  7.0.0
+Utilizando API: QEMU 7.0.0
+Ejecutando hypervisor: QEMU 5.2.0
+```
+
 ## Conexión a QEMU/KVM
 
 Vamos a usar la utilidad `virsh`, que nos proporciona una shell completa para el manejo de libvirt. Con el comando `list` mostramos las máquinas virtuales que hemos creado.
