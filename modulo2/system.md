@@ -22,7 +22,7 @@ usuario@kvm:~$ virsh -c qemu:///system net-list --all
 
 * **Nota**: La opción `--all` muestra las redes activas e inactivas.
 
-Como vemos es estado es inactivo, para iniciarla, ejecutamos:
+Como vemos, el estado es inactivo, para iniciarla, ejecutamos:
 
 ```
 usuario@kvm:~$ virsh -c qemu:///system net-start default 
