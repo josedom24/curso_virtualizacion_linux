@@ -39,8 +39,10 @@ virt-install --connect qemu:///system \
 			 --disk size=10 \
 			 --memory 1024
 ```			 
+
+FALTA NÚMERO CPU!!!!!!!!!!!!!!!!!!!!!!
 		
-A continuación, se iniciará la máquina y se abrirá una terminal en la aplicación `virt-viewer` para que realicemos la iinstalación:
+A continuación, se iniciará la máquina y se abrirá una terminal en la aplicación `virt-viewer` para que realicemos la instalación:
 
 ![virt-install](img/virt-install1.png)
 

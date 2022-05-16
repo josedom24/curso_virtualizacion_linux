@@ -76,6 +76,12 @@ Por último, para eliminar una máquina virtual que esté parada (eliminando los
 ```
 virsh -c qemu:///system undefine --remove-all-storage  prueba1
 ```
+##############################3
+QUEDA: autostart
+comandos con dom.....
+##############################
+
+
 
 ---
 
