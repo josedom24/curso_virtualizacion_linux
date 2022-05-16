@@ -86,7 +86,7 @@ virsh -c qemu:///system undefine --remove-all-storage  prueba1
 
 ## Obtener información de la máquina virtual
 
-Todos los comandos de `virsh` que empiezan por *dom*^nos permiten obtener información de la máquina. 
+Todos los comandos de `virsh` que empiezan por *dom* nos permiten obtener información de la máquina. 
 
 Para obtener información de la máquina:
 
