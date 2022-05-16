@@ -40,3 +40,8 @@ virt-install --connect qemu:///system \
 			 --memory 1024
 ```			 
 		
+A continuación, se iniciará la máquina y se abrirá una terminal en la aplicación `virt-viewer` para que realicemos la iinstalación:
+
+![virt-install](img/virt-install1.png)
+
+
