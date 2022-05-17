@@ -10,11 +10,18 @@ Para obtener la definición XML de una máquina virtual, ejecutamos la siguiente
 virsh -c qemu:///system  dumpxml prueba1
 ```
 
+El fichero XML con la definición se guarda en el directorio `/etc/libvirt/qemu/prueba1.xml`.
+
 Veamos algunos elementos de la definición:
 
 * El documento XML empieza con la etiqueta `<domain type='kvm' id='6'>` donde se indica el tipo de virtualización utilizada para gestionar la máquina y su identificador.
 * El nombre de la máquina se indica con la etiqueta `<name>`.
-* La etiqueta `<memory>` nos indica la memoria RAM asignada.
+* La etiqueta `<currentMemory>` nos indica la memoria asignada actualmente a la máquina. Podemos modificar esta memoria asignada sin reiniciar la máquina hasta el límite indicado por la etiqueta `<memory>`. Por lo tanto, el valor asignado a `<memory>` no puede ser menor que el valor asociado a `<currentMemory>`.
+
+	En este ejemplo los dos valores son iguales, porque al crear la máquina con `virt-install` usamos el parámetro `--memory`. en este caso el valor indicado se asigna a los dos parámetros.
+
+	Si al crear la máquina con `virt-install`, queremos asignar distintos valores, tendremos que usar, por ejemplo, el parámetro `--memory memory=1024,maxmemory=2048`. En este caso, el valor de `memory` se corresponde al valor de la etiqueta `<currentMemory>` y el valor de `maxmemory` se corresponde con el valor de la etiqueta `<memory>`. En el ejemplo, asignaremos un 1 Gb a la máquina, y podremos cambiar esta asignación "en caliente" hasta el límite de 2 Gb.
+
 * La vCPU asignadas la encontramos definida en la etiqueta `<vcpu>`.
 * Con la etiqueta `<os>` tenemos información de la arquitectura de la máquina virtualizada, además con las etiquetas `<boot>` indicamos el orden de arranque entre distintos dispositivos.
 * La información de la CPU la encontramos en la etiqueta `<cpu>`.
