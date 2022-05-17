@@ -43,4 +43,30 @@ domain type='kvm' id='6'>
 
 A continuación nos encontramos la etiqueta `<devices>` donde se definen los distintos dispositivos hardware que forman parte de la máquina. Veamos algunos ejemplos:
 
-* Los discos se definen con la etiqueta `<disk>`. Encontramos información del tipo (en este caso fichero), tipo del fichero (en este caso qcow2), ruta donde se encuentra el fichero,... 
+* Los discos se definen con la etiqueta `<disk>`. Encontramos información del tipo (en este caso fichero), tipo del fichero (en este caso qcow2), ruta donde se encuentra el fichero,... Es importante señalar que, por defecto, se configura el disco con un controlador **VirtIO** (`bus='virtio`), es decir, es un dispositivo paravirtualizado que nos ofrece mayor rendimiento. Veamos la definición del disco:
+
+```
+	<disk type='file' device='disk'>
+      <driver name='qemu' type='qcow2'/>
+      <source file='/var/lib/libvirt/images/prueba1.qcow2'/>
+      <target dev='vda' bus='virtio'/>
+      <address type='pci' domain='0x0000' bus='0x04' slot='0x00' function='0x0'/>
+    </disk>
+```
+
+* Las interfaces de red se definen con la etiqueta `<interface>`. Encontramos información como la mac, la red a la que está conectada (en este caso la red `default`),... También observamos que el modelo de la tarjeta es **VirtIO** (`<model type='virtio'/>`), de nuevo se configura un dispositivo paravirtualizado de alto rendimiento.
+
+```
+	<interface type='network'>
+      <mac address='52:54:00:8a:50:d1'/>
+      <source network='default'/>
+      <model type='virtio'/>
+      <address type='pci' domain='0x0000' bus='0x01' slot='0x00' function='0x0'/>
+    </interface>
+```
+
+* Si nos fijamos en otros dispositivos podremos encontrar la definición del teclado, del ratón, el adaptador gráfico, controladores PCI, CDROM, ...
+
+---
+
+[Índice](https://github.com/josedom24/curso_virtualizacion_linux)
