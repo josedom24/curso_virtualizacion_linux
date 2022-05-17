@@ -22,7 +22,21 @@ Domain 'prueba1' is being shutdown
 
 Tenemos dos opciones para realizar la modificación:
 
-1. Editando directamente el documento XML y cambiando el contenido de la etiqueta `<name>`.
+1. Editando directamente el documento XML. Tenemos que tener en cuanta que para cada máquina virtual se establece una relación entre su nombre y su UIDD, por lo tanto cambiamos el contenido de la etiqueta `<name>` y eliminamos la etiqueta `<uuid>`.
 
 		virsh -c qemu:///system shutdown prueba1
 		
+		<domain type='kvm'>
+		  <name>prueba2</name>
+		  <metadata>
+		  ...
+
+		  Domain 'prueba2' XML configuration edited.
+		
+2. Utilizando el comando `virsh domrename`, que modificará internamente la definición XML:
+
+		virsh -c qemu:///system domrename prueba2 prueba1
+		Domain 'prueba2' XML configuration edited.
+
+## Modificar el uso de memoria RAM
+

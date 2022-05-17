@@ -18,7 +18,7 @@ La información que tenemos que proporcionar a `virt-install` para la creación 
 * La cantidad de memoria RAM (parámetro `--memory`).
 * La cantidad de vCPU asignadas a la máquina (parámetro `--vcpus`).
 
-Podemos indicar muchos más parámetros a la hora de crear la nueva máquina. Puedes obtener toda la información en la [documentación oficial](https://linux.die.net/man/1/virt-install) de la aplicación. Iremos usando, a lo largo del curso, diferentes parámetros de esta herramienta.
+Podemos indicar muchos más parámetros a la hora de crear la nueva máquina. Puedes obtener toda la información en la [documentación oficial](https://github.com/virt-manager/virt-manager/blob/main/man/virt-install.rst) de la aplicación. Iremos usando, a lo largo del curso, diferentes parámetros de esta herramienta.
 
 ## Creación de nuestra primera máquina virtual.
 
