@@ -38,5 +38,11 @@ Tenemos dos opciones para realizar la modificación:
 		virsh -c qemu:///system domrename prueba2 prueba1
 		Domain 'prueba2' XML configuration edited.
 
-## Modificar el uso de memoria RAM
+## Modificar la asignación de vCPU
+
+https://www.unixarena.com/2015/12/linux-kvm-how-to-add-remove-vcpu-to-guest-on-fly.html/
+
+## Modificar la asignación de memoria RAM
+
+https://www.unixarena.com/2015/12/linux-kvm-how-to-add-remove-memory-to-guest-on-fly.html/
 
