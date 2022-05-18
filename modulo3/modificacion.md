@@ -55,5 +55,37 @@ También podríamos cambiar la asignación de vCPU "en caliente" con el camando 
 
 ## Modificar la asignación de memoria RAM
 
+Volvemos a suponer que la máquina está parada. Podemos editar la configuración XML y modificar las dos etiquetas relacionadas con la memoria:
 
+* `<memory>`: Valor máximo de RAM que podemos asignar a la máquina "en caliente" (funcionando).
+* `<currentMemory>`: Cantidad de memoria asignada a la máquina.
 
+Por ejemplo, dejamos la asignación de memoria en un 1 Gb, y cambiamos la memoria máxima a 3 Gb:
+
+```
+virsh -c qemu:///system edit prueba1
+...
+  <memory unit='KiB'>3145728</memory>
+  <currentMemory unit='KiB'>1048576</currentMemory>
+...
+```
+
+Podemos comprobar el cambio:
+
+```
+virsh -c qemu:///system dominfo prueba1
+...
+Memoria máxima: 3145728 KiB
+Memoria utilizada: 1048576 KiB
+...
+```
+
+Ahora iniciamos la máquina y podemos cambiar "en caliente" la memoria de la máquina hasta un máximo de 3 Gb, para ello vamos a usar el comando `virsh setmem`.
+
+```
+virsh -c qemu:///system start prueba1
+
+virsh -c qemu:///system setmem prueba1 2048M
+```
+
+https://www.unixarena.com/2015/12/linux-kvm-how-to-add-remove-memory-to-guest-on-fly.html/
