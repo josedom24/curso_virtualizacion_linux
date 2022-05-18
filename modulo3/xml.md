@@ -10,11 +10,9 @@ Para obtener la definición XML de una máquina virtual, ejecutamos la siguiente
 virsh -c qemu:///system  dumpxml prueba1
 ```
 
-El fichero XML con la definición se guarda en el directorio `/etc/libvirt/qemu/prueba1.xml`.
-
 Veamos algunos elementos de la definición:
 
-* El documento XML empieza con la etiqueta `<domain type='kvm' id='6'>` donde se indica el tipo de virtualización utilizada para gestionar la máquina y su identificador.
+* El documento XML empieza con la etiqueta `<domain>` donde se indica el tipo de virtualización utilizada para gestionar la máquina y su identificador si la máquina está ejecutándose..
 * El nombre de la máquina se indica con la etiqueta `<name>`.
 * La etiqueta `<currentMemory>` nos indica la memoria asignada actualmente a la máquina. Podemos modificar esta memoria asignada sin reiniciar la máquina hasta el límite indicado por la etiqueta `<memory>`. Por lo tanto, el valor asignado a `<memory>` no puede ser menor que el valor asociado a `<currentMemory>`.
 
