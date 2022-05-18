@@ -15,10 +15,10 @@ Veamos algunos ejemplos:
 
 En este caso la modificación la vamos a realizar con el comando `virsh domrename`, que modificará internamente la definición XML:
 
-``
+```
 virsh -c qemu:///system domrename prueba2 prueba1
 Domain 'prueba2' XML configuration edited.
-``
+```
 
 Este cambio requiere que la máquina esté parada.
 
