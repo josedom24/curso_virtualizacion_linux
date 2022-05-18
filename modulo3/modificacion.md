@@ -33,13 +33,10 @@ CPU(s):         1
 ...
 ```
 
-Podemos editar la configuración XML y cambiar el valor de la etiqueta <vcpu>`:
+Podemos editar la configuración XML y cambiar el valor de la etiqueta ``<vcpu>`:
 
 ```
 virsh -c qemu:///system edit prueba1
-...
-```
-virsh -c qemu:///system dominfo prueba1
 ...
   <vcpu placement='static'>2</vcpu>
 ...
