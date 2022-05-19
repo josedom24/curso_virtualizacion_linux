@@ -30,8 +30,6 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 	* Creación de máquinas virtuales Windows
 	* Gestión de máquinas virtuales
 	* Detalles de las máquinas virtuales
-	* Instalación de Qemu-guest-agent en las máquinas virtuales
-	* Acceso a las máquinas virtuales desde el exterior: ssh RDP, virt-viewer,...
 
 5. Gestión del  almacenamiento en QEMU/KVM + libvirt
 	* Introducción al almacenamiento en QEMU/KVM + libvirt
