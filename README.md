@@ -26,10 +26,9 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 
 4. Creación de máquinas virtuales con virt-manager
 	* [Primeros pasos con virt-manager](modulo4/instalacion.md)
-	* Vista general de virt-manager
-	* Creación de máquinas virtuales (windows) 
+	* Creación de máquinas virtuales Windows
 	* Gestión de máquinas virtuales
-	* Características y hardware de las máquinas virtuales 
+	* Detalles de las máquinas virtuales
 	* Instalación de Qemu-guest-agent en las máquinas virtuales
 	* Acceso a las máquinas virtuales desde el exterior: ssh RDP, virt-viewer,...
 
