@@ -16,9 +16,7 @@ Veamos algunos elementos de la definición:
 * El nombre de la máquina se indica con la etiqueta `<name>`.
 * La etiqueta `<currentMemory>` nos indica la memoria asignada actualmente a la máquina. Podemos modificar esta memoria asignada sin reiniciar la máquina hasta el límite indicado por la etiqueta `<memory>`. Por lo tanto, el valor asignado a `<memory>` no puede ser menor que el valor asociado a `<currentMemory>`.
 
-	En este ejemplo, los dos valores son iguales porque al crear la máquina con `virt-install` usamos el parámetro `--memory` y se asigna el valor indicado a los dos parámetros.
-
-	Si al crear la máquina con `virt-install`, queremos asignar distintos valores, tendremos que usar, por ejemplo, el parámetro `--memory memory=1024,maxmemory=2048`. En este caso, el valor de `memory` se corresponde al valor de la etiqueta `<currentMemory>` y el valor de `maxmemory` se corresponde con el valor de la etiqueta `<memory>`. En el ejemplo, asignaremos un 1 Gb a la máquina, y podremos cambiar esta asignación "en caliente" hasta el límite de 2 Gb.
+	En este ejemplo, los dos valores son iguales porque al crear la máquina con `virt-install` usamos el parámetro `--memory` y se asigna el valor indicado a los dos parámetros. Más adelante estudiaremos como modificar estos parámetros.
 
 * La vCPU asignadas la encontramos definida en la etiqueta `<vcpu>`.
 * Con la etiqueta `<os>` tenemos información de la arquitectura de la máquina virtualizada, además con las etiquetas `<boot>` indicamos el orden de arranque entre distintos dispositivos.
