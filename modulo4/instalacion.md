@@ -28,9 +28,13 @@ Al elegir el detalle de la conexión, podemos comprobar que es una conexión loc
 
 ![virt-manager](img/virt-manager3.png)
 
+### Redes disponibles
+
 También podemos gestionar las redes de esta conexión. Podemos ver las redes creadas, crear nuevas redes, eliminarlas, modificarlas, ... Vemos que tenemos creada la red `deafult` y ver sus características (tipo NAT, direccionamiento del DHCP, Linux Bridge que gestiona,... Por defecto está inactiva, para activarla, la seleccionamos y pulsamos sobre el botón ▶.
 
 ![virt-manager](img/virt-manager4.png)
+
+### Pools de almacenamiento disponibles
 
 Otro elemento que podemos gestionar son los Pool de almacenamiento que tenemos en la conexión. Recordamos que teníamos dos creados: el pool `default`, donde se guardaban las imágenes de discos, y el pool `iso`, donde ibamos almacenar los ficheros iso para las instalaciones de los sistemas operativos. Además podemos ver los volúmenes (en este caso los ficheros) que hay creado en cada pool.
 
