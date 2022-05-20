@@ -70,6 +70,8 @@ A continuación nos encontramos la etiqueta `<devices>` donde se definen los dis
 
 * Si nos fijamos en otros dispositivos podremos encontrar la definición del teclado, del ratón, el adaptador gráfico, controladores PCI, CDROM, ...
 
+Iremos estudiando más elementos de la definición XML de una máquina virtual, pero podeís profundizar en el formato en la documentación oficial: [Domain XML format](https://libvirt.org/formatdomain.html).
+
 ---
 
 [Índice](https://github.com/josedom24/curso_virtualizacion_linux)
