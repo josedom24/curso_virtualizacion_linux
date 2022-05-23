@@ -25,7 +25,7 @@ Como comentábamos en el punto anterior, la máquina que hemos creado se conecta
 
 Podemos comprobar que la maqúina tiene un disco de 10 Gb y de memoria RAM 1Gb:
 
-![características](img/caracteristica2![características](img/caracteristica1.png).png)
+![características](img/caracteristica2.png)
 
 ## Almacenamiento
 
