@@ -44,7 +44,7 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 7. Clonación de maquinas virtuales
 	* Clonación con virt-clone
 	* Clonación con virt-manager
-	* Clonación manual virt-sysprep
+	* Clonación manual virt-sysprep https://onthedock.github.io/post/190213-como-clonar-vms-y-usar-sysprep-en-kvm/
 	* Clonación usando aprovisionamiento ligero
 	
 8. Gestión de redes en QEMU/KVM + libvirt
