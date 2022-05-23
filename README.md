@@ -36,8 +36,7 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 	* Trabajo con imágenes de disco: qemu-img
 	* Operaciones sobre volúmenes
 	* Añadir nuevos discos a una máquina virtual
-	* Creación de un pool de almacenamiento de tipo LVM????
-	* Aprovisionamiento ligero
+	* ¿¿¿aprovisionamiento ligero.  linked clone??? mejor backing store - imagen base
 	* Instantáneas (snapshots)
 
 6. Almacenamiento con virt-manager
