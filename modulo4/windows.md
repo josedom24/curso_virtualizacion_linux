@@ -68,3 +68,25 @@ Y escogemos la carpeta del CDROM donde hemos montado los drivers VirtIO: `NetKVM
 
 ![virt-manager](img/virt-manager25.png)
 
+## Creación de una máquina virtual Windos con virt-install
+
+Si queremos crear con `virt-install` una máquina virtual para la instalación de Windows con la misma configuración que hemos visto anteriormente, podemos ejecutar la siguiente instrucción:
+
+```
+virt-install --connect qemu:///system \
+			 --virt-type kvm \
+			 --name prueba4 \
+			 --cdrom ~/iso/Win10_21H2_Spanish_x64.iso \
+			 --os-variant win10 \
+			 --disk size=40,bus=virtio \
+			 --disk ~/iso/virtio-win-0.1.217.iso,device=cdrom \
+			 --network=default,model=virtio \
+			 --memory 2048 \
+			 --vcpus 2
+```
+
+Tenemos que tener en cuanta algunas cosas nuevas que hemos introducido:
+
+* `--disk size=40,bus=virtio`: En la declaración del disco indicamos el controlador VirtIO.
+* `--disk ~/iso/virtio-win-0.1.217.iso,device=cdrom`: El segundo CDROM se indica con el parámetro `disk` indicando `device=cdrom`.
+* `--network=default,model=virtio`: de la misma manera, indicamos el modelo de tarjeta de red como VirtIO.
