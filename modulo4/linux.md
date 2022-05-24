@@ -20,7 +20,7 @@ Elegimos como fuente de instalación: instalación local desde una imagen ISO qu
 
 ## Seleccionar la ISO de instalación
 
-Elegimos fichero ISO desde donde vamos a relalizar la instalación. Si no se detecta la variante del sistema operativo, tenemos que añadirla manualmente escogiendo la versión más parecida a la que vamos a instalar.
+Elegimos fichero ISO desde donde vamos a realizar la instalación. Si no se detecta la variante del sistema operativo, tenemos que añadirla manualmente escogiendo la versión más parecida a la que vamos a instalar.
 
 ![virt-manager](img/virt-manager9.png)
 
