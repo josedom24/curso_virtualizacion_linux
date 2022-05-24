@@ -22,4 +22,49 @@ En la pantalla final del asistente de creación de la máquina virtual, escogere
 
 ![virt-manager](img/virt-manager16.png)
 
+## Elegimos dispositivos VirtIO
+
+El primer cambio será elegir el driver VirtIO para el disco. Como observamos se ha configurado con el driver SATA, que será compatible con Windows, pero al ser un dispositivo emulado, nos dará menos rendimiento. Escogemos la opción **VirtIO**, y pulsamos en el botón **Aplicar**:
+
+![virt-manager](img/virt-manager17.png)
+
+A continuación, cambiamos el driver de la tarjeta de red. Del mismo modo, observamos que ha escogido un modelo *e1000e*, compatible con Windows, pero del mismo modo nos ofrece menos rendimiento que la opción **VirtIO**. cuando hagamos el cambio, volvemos a pulsar sobre el botón **Aplicar**. **Nota: Como hemos comentado Windows no es compatible con este modelo de tarjeta de red, por lo que durante la instalación no tendremos conexión a internet. Si necesitamos tener conexión, podríamos dejar el modelo escogido por defecto, y posteriormente modificar la configuración de la tarjeta.**
+
+![virt-manager](img/virt-manager18.png)
+
+## Añadimos un CDROM con los drivers VirtIO
+
+Antes de iniciar la máquina, le añadimos un CD-ROM con la imagen ISO de los drivers VirtIO. Para ello, pulsamos el botón **Agregar Hardware**, y añadimos un nuevo dispositivo de almacenamiento:
+
+![virt-manager](img/virt-manager19.png)
+
+Además, nos tenemos que asegurar que en el orden de arranque el CDROM donde hemos montado la ISO de Windows esté por delante que el CDROM con los drivers VirtIO, y sea la primera opción. Una vez terminado pulsamos el botón **Aplicar** y el botón **Iniciar la instalación** para comenzar la instalación.
+
+![virt-manager](img/virt-manager20.png)
+
+## Comenzamos la instalación
+
+Iniciamos la máquina, accedemos a la consola y comenzamos la instalación, hasta que llegamos a la pantalla donde tenemos que escoger el disco duro donde vamos a realizar la instalación.
+
+![virt-manager](img/virt-manager21.png)
+
+Como vemos no se puede detectar el disco duro, ya que Windows no puede reconocer inicialmente el controlador VirtIO. Vamos a cargar los controladores de dispositivo VirtIO que necesitamos del CDROM que hemos montado:
+
+Elegimos la opción *Cargar contr.*, le damos a *Examinar* y elegimos del CDROM donde tenemos los drivers VirtIO la carpeta de nuestra arquitectura (*amd64*) y la versión de Windows.
+
+![virt-manager](img/virt-manager22.png)
+
+Y ya podemos continuar con la instalación de Windows porque ya detecta el disco duro:
+
+![virt-manager](img/virt-manager23.png)
+
+## Configuración de la red
+
+Como indicábamos anteriormente, también hemos escogido el controlador VirtIO para la tarjeta de red. Una vez realizada la configuración tendremos que instalar los drivers adecuados para que funcione la tarjeta de red. Para ello, actualizamos el controlador del dispositivo **Controladora Ethernet** en el **Administrador de dispositivos**:
+
+![virt-manager](img/virt-manager24.png)
+
+Y escogemos la carpeta del CDROM donde hemos montado los drivers VirtIO: `NetKVM\<carpeta con el nombre de tu versión de windows>\amd64`:
+
+![virt-manager](img/virt-manager25.png)
 
