@@ -89,4 +89,4 @@ Tenemos que tener en cuanta algunas cosas nuevas que hemos introducido:
 
 * `--disk size=40,bus=virtio`: En la declaración del disco indicamos el controlador VirtIO.
 * `--disk ~/iso/virtio-win-0.1.217.iso,device=cdrom`: El segundo CDROM se indica con el parámetro `disk` indicando `device=cdrom`.
-* `--network=default,model=virtio`: de la misma manera, indicamos el modelo de tarjeta de red como VirtIO.
+* `--network=default,model=virtio`: De la misma manera, indicamos el modelo de tarjeta de red como VirtIO.
