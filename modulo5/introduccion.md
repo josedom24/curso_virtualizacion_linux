@@ -26,7 +26,7 @@ Veamos algunos de los tipos de almacenamiento con los que podemos trabajar:
 
 	En un Pool de Almacenamiento de tipo **dir**, los **volúmenes** son ficheros de imágenes de disco. Los Pools de Almacenamiento con lo que hemos trabajado hasta ahora (`default` y `iso`) son de este tipo.
 
-* **Logical**: En este caso, utilizamos LVM (Logical Volume Manager). El Pool de Almacenamiento controlará un Grupo de Volúmenes, y los **volúmenes** (los discos de las máquinas virtuales) serán volúmenes lógicos que se crearán en el grupo de volúmenes. Este tipo de almacenamiento no ofrece la compartición, si admite los snapshots y puede utilizar aprovisionamiento ligero si utilizamos LVM-Thin.
+* **logical**: En este caso, utilizamos LVM (Logical Volume Manager). El Pool de Almacenamiento controlará un Grupo de Volúmenes, y los **volúmenes** (los discos de las máquinas virtuales) serán volúmenes lógicos que se crearán en el grupo de volúmenes. Este tipo de almacenamiento no ofrece la compartición, si admite los snapshots y puede utilizar aprovisionamiento ligero si utilizamos LVM-Thin.
 * **netfs**: Este tipo de Pool de Almacenamiento montará un directorio desde un servidor NAS (nfs, glusterfs, cifs,...). Por lo tanto obtendremos la característica de compartición y de migración en vivo. Los **volúmenes** serán ficheros de imágenes de disco.
 
 ## Conclusiones
