@@ -32,8 +32,8 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 	* [Creación de máquinas virtuales Windows](modulo4/windows.md)
 
 5. Gestión del  almacenamiento en QEMU/KVM + libvirt
-	* Introducción al almacenamiento en QEMU/KVM + libvirt
-	* Trabajo con imágenes de disco: qemu-img
+	* [Introducción al almacenamiento en QEMU/KVM + libvirt](modulo5/introduccion.md)
+	* Gestión de Pools de Almacenamiento
 	* Operaciones sobre volúmenes
 	* Añadir nuevos discos a una máquina virtual
 	* ¿¿¿aprovisionamiento ligero.  linked clone??? mejor backing store - imagen base
