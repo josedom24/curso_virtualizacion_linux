@@ -16,5 +16,10 @@ Vamos a abrir una ventana con las siguientes opciones:
 
 ## Vista Consola
 
+![detalles](img/detalles2.png)
+
+Accedemos a una consola desde donde podemos controlar la máquina virtual. Desde el menú vista podemos configurar el tamaño de la pantalla (pantalla completa, escalar monitor, ...). Puede ser una buena herramienta para realizar pequeñas modificaciones a la máquina, pero es recomendable utilizar distintos protocolos para el acceso y gestión de la máquina virtual (SSH, VCN, RDP,...)
 
 ## Vista Detalles
+
+![detalles](img/detalles3.png)
