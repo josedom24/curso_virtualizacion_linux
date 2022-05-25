@@ -12,7 +12,7 @@ virsh -c qemu:///system pool-list
  iso       activo   si
 ```
 
-Recuerda que el pool pode defecto donde se guardan las imágenes de disco es `default`, podemos obtener información de ese pool, con la instrucción:
+Recuerda que el pool por defecto donde se guardan las imágenes de disco, es `default`. Podemos obtener información de ese pool con la instrucción:
 
 ```
 virsh -c qemu:///system pool-info default 
@@ -34,6 +34,8 @@ Sin embargo, vamos a usar otro comando que nos permite indicar la información d
 virsh -c qemu:///system pool-define-as vm-images dir --target /srv/images
 El grupo vm-images ha sido definido
 ```
+
+**Nota: Si utilizamos `pool-create` o `pool-create-as`, el pool se crea temporalmente, no será persistente y después de un reinicio del host no existirá.**
 
 A continuación creamos el directorio indicado, con la instrucción:
 
@@ -75,4 +77,23 @@ Autoinicio:     si
 ...
 ```
 
+Ya podemos usar este pool de almacenamiento para guardar ficheros de imágenes de disco. Si en algún momento queremos eliminarlo, es recomendable pararlo:
 
+```
+virsh -c qemu:///system pool-destroy vm-images 
+El grupo vm-images ha sido destruid
+```
+
+A continuación, opcionalmente, podemos borrar el directorio creado:
+
+```
+virsh -c qemu:///system pool-delete vm-images 
+El grupo vm-images ha sido eliminado
+```
+
+Y por último lo eliminamos:
+
+```
+virsh -c qemu:///system pool-undefine vm-images 
+Se ha quitado la definición del grupo vm-images
+```
