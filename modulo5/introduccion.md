@@ -31,3 +31,8 @@ Veamos algunos de los tipos de almacenamiento con los que podemos trabajar:
 
 ## Conclusiones
 
+Tenemos la posibilidad de crear distintos tipos de Pools de Almacenamiento, que nos ofrecen distintas características. Podemos ver los distintos tipos al crear un Pool desde virt-manager:
+
+![pool](img/pool1.png)
+
+En este curso vamos a trabajar con los Pool de Almacenamiento de tipo **dir**. Si quieres profundizar en las características de los distintos tipos de almacenamiento puedes ver la documentación oficial: [Storage Management](https://libvirt.org/storage.html).
