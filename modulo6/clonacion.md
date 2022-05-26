@@ -36,7 +36,6 @@ Donde podemos indicar el nombre de la nueva máquina virtual, y si pulsamos sobr
 
 La máquina clon que hemos creado es igual a la original. La nueva máquina contiene identificadores que deberían ser únicos (como el machine ID, direcciones MAC, claves SSH de host, hodtname, ...).
 
-
 ![clonación](img/clonacion2.png)
-
+para eliminar todos estos identificadores únicos.
 Podemos acceder a la máquina y cambiar el fichero `/etc/hostname` para cambiar el nombre de la máquina, pero todavía tendríamos mucha información repetida entre las dos máquinas. En el siguiente apartado vamos a usar la apliocación `virt-sysprep` para eliminar todos estos identificadores únicos.
