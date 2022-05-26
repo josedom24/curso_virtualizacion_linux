@@ -12,8 +12,10 @@ Para obtener los volúmenes de un determinado pool (por ejemplo el pool `default
 virsh -c qemu:///system vol-list default
  Nombre            Ruta
 ------------------------------------------------------------
+ prueba1.qcow2   /var/lib/libvirt/images/prueba1.qcow2
+ prueba2.qcow2   /var/lib/libvirt/images/prueba2.qcow2
+ win10.qcow2     /var/lib/libvirt/images/win10.qcow2
 ```
-**TERMINARLO**
 
 Podemos comprobar que los volúmenes listados se corresponden con ficheros que se encuentran en el directorio del pool `default` (`/var/lib/libvirt/images`).
 
@@ -23,17 +25,23 @@ Al estar utilizando el formato de imagen `qcow2`, obtenemos la característica d
 virsh -c qemu:///system vol-list default --details
  Nombre            Ruta                                      Tipo      Capacidad   Alojamiento
 ------------------------------------------------------------------------------------------------
+ prueba1.qcow2   /var/lib/libvirt/images/prueba1.qcow2   archivo   10,00 GiB   2,06 GiB
+ prueba2.qcow2   /var/lib/libvirt/images/prueba2.qcow2   archivo   20,00 GiB   9,99 GiB
+ win10.qcow2     /var/lib/libvirt/images/win10.qcow2     archivo   40,00 GiB   10,06 GiB
+
 ```
-**TERMINARLO**
 
 Podemos obtener la información de un determinado volumen de un pool, ejecutando:
 
 ```
-virsh -c qemu:///system vol-info vol.qcow2 default
+virsh -c qemu:///system vol-info prueba1.qcow2 default
+Nombre:         prueba1.qcow2
+Tipo:           archivo
+Capacidad:      10,00 GiB
+Ubicación:     2,06 GiB
 ```
-**TERMINARLO**
 
-De la misma forma que los pools, los volúmenes están definidos en libvirt con el formato XML. Para ver la definición XML del volumen `vol.qcow2` del pool `default`, podemos ejecutar `virsh -c qemu:///system vol-dumpxml vol.qcow2 default`. A partir de un fichero XML con la definición de un nuevo volumen, podríamos crearlo con el subcomando `virsh vol-create`. **Nota: En este caso no existe el subcomandos `vol-define`, ya que los volúmenes no se pueden crear temporalmente.**
+De la misma forma que los pools, los volúmenes están definidos en libvirt con el formato XML. Para ver la definición XML del volumen `vol.qcow2` del pool `default`, podemos ejecutar `virsh -c qemu:///system vol-dumpxml vol.qcow2 default`. A partir de un fichero XML con la definición de un nuevo volumen, podríamos crearlo con el comando `virsh vol-create`. **Nota: En este caso no existe el comandos `virsh vol-define`, ya que los volúmenes no se pueden crear temporalmente.**
 
 **Nota: Para profundizar en el formato XML que define los volúmenes puedes consultar la documentación oficial: [Storage pool and volume XML format](https://libvirt.org/formatstorage.html).**
 
@@ -70,7 +78,7 @@ Tenemos a nuestra disposición más operaciones sobre los volúmenes, estudiarem
 
 Desde la pestaña **Almacenamiento** de los **Detalles de la conexión** podemos ver los pools y los volúmenes que tenemos creados y podemos gestionarlos:
 
-**Imagen de almacenamiento**
+![volumen](img/volumen1.png)
 
 Tenemos las siguientes opciones relacionadas con los volúmenes:
 
@@ -85,4 +93,4 @@ Si creamos un nuevo volumen, vemos la siguiente pantalla donde indicamos la sigu
 * Backing store: Nos proporciona la característica de aprovisionamiento ligero usando una imagen base para la creación del volumen. Lo estudiaremos más adelante en el curso.
 * Capacidad: Indicamos el tamaño del volumen. Por defecto, si usamos el formato qcow2 obtendremos la característica de aprovisionamiento ligero, el tamaño indicado será el que ve la máquina virtual, pero no lo que se ocupa realmente en el disco del host. Si elegimos la opción **Allocate entire volume now**, se perderá esa característica y se ocupara el disco la capacidad total elegida.
 
-**Imagen de nuevo volumen**
+![volumen](img/volumen2.png)
