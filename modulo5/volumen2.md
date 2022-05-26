@@ -42,5 +42,6 @@ Para refrescar un pool desde `virt-manager` usamos el siguiente botón:
 
 **Imagen almacenamiento refrescar pool**
 
-La herramienta `qemu-img` es muy potente y nos permite realizar muchas operaciones: redimensionar el fichero de imagen, convertir entre formatos de imágenes, crear imaǵenes a a partir de imágenes base, crear instantáneas de imágenes, ... Utilizaremos algunas de estas funciones en apartados posteriores del curso.
+La herramienta `qemu-img` es muy potente y nos permite realizar muchas operaciones: redimensionar el fichero de imagen, convertir entre formatos de imágenes, crear imágenes a a partir de imágenes base, crear instantáneas de imágenes, ... Utilizaremos algunas de estas funciones en apartados posteriores del curso.
 
+**Nota: Si estuviéramos trabajando con otro tipo de Pool de Almacenamiento, podríamos usar herramienstas especificar para gestionar los medios de almacenamientos adecuados. Por ejmplo, si estuvieramos trabajando con un pool de tipo logical, usaríamos las herramientas de comando de LVM para crear y gestionar los volúmenes lógicos que se corresponderían con los volúmenes de este tipo de pool.**
