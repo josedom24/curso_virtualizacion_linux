@@ -35,20 +35,19 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 5. Gestión del  almacenamiento en QEMU/KVM + libvirt
 	* [Introducción al almacenamiento en QEMU/KVM + libvirt](modulo5/introduccion.md)
 	* [Gestión de Pools de Almacenamiento](modulo5/pool.md)
-	* Gestión de volúmenes de almacenamiento - Creación de mv en el nuevo pool de almacenamiento
+	* Gestión de volúmenes de almacenamiento con libvirt
+	* Gestión de volúmenes de almacenamiento con herramientas específicas
+	* Creación de mv en el nuevo pool de almacenamiento
 	* Añadir nuevos discos a una máquina virtual
-	* ¿¿¿aprovisionamiento ligero.  linked clone??? mejor backing store - imagen base
-	* Instantáneas (snapshots)
 
-6. Almacenamiento con virt-manager
-
-7. Clonación de maquinas virtuales
+6. Clonación e instantáneas de maquinas virtuales
 	* Clonación con virt-clone
 	* Clonación con virt-manager
 	* Clonación manual virt-sysprep https://onthedock.github.io/post/190213-como-clonar-vms-y-usar-sysprep-en-kvm/
-	* Clonación usando aprovisionamiento ligero
+	* Clonación usando aprovisionamiento ligero linked clone
+	* Instantáneas (snapshots)
 	
-8. Gestión de redes en QEMU/KVM + libvirt
+7. Gestión de redes en QEMU/KVM + libvirt
 	* Introducción a la configuración de redes en sistemas virtuales
 	* Tipos de redes
 	* Redes privadas basadas en NAT
@@ -57,6 +56,4 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 	* Configuración de red en las máquina virtuales
 	* Introducción a Network Filters
 	
-9. Redes con virt-manager	
-
-10. Trabajando con contenedores LXC
+8. Trabajando con contenedores LXC
