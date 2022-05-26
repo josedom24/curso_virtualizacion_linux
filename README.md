@@ -37,8 +37,7 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 	* [Gestión de Pools de Almacenamiento](modulo5/pool.md)
 	* [Gestión de volúmenes de almacenamiento con libvirt](modulo5/volumen1.md)
 	* [Gestión de volúmenes de almacenamiento con herramientas específicas](modulo5/volumen2.md)
-	* Creación de mv en el nuevo pool de almacenamiento
-	* Añadir nuevos discos a una máquina virtual
+	* Trabajar con volúmenes en las máquinas virtuales
 
 6. Clonación e instantáneas de maquinas virtuales
 	* Clonación con virt-clone
