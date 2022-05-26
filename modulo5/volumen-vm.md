@@ -55,6 +55,48 @@ Y podríamos formatear, montar y usar el nuevo disco:
 
 ![volumen](img/volumen7.png)
 
-
-
 ## Redimensión de discos en máquinas virtuales
+
+Antes de desconectar el disco de la máquina, vamos a realizar una operación de redimensión. Vamos a aumentar el tamaño del volumen, por lo que la máquina verá un disco más grande, pero hay que recordar que también tendremos que redimensionar el sistemas de ficheros.
+
+Para realizar la redimensión tenemos dos alternativas: o usar la API de libvirt usando, por ejemplo `virsh` o usar herramientas especificas, en este caso `qemu-img`.
+
+Para redimensionar el volumen de una máquina que este parada, podemos usar `virsh`:
+
+```
+virsh -c qemu:///system vol-resize vol2.qcow2 3G --pool vm-images
+```
+
+O podemos usar `qemu-img`:
+
+```
+qemu-img resize /srv/images/vol2.qcow2 3G
+```
+
+Para hacer la redimensión "en caliente", con la máquina encendida, podemos obtener información de los discos conectados a una máquina:
+
+```
+virsh -c qemu:///system domblklist prueba4 
+ Destino   Fuente
+-----------------------------------------------
+ vda       /var/lib/libvirt/images/vol1.qcow2
+ vdb       /srv/images/vol2.qcow2
+```
+
+Y continuación redimensionamos el disco deseado:
+
+```
+virsh -c qemu:///system blockresize prueba4 /srv/images/vol2.qcow2 3G
+El dispositivo de bloque '/srv/images/vol2.qcow2' cambió de tamaño
+```
+
+Podemos comprobar que se ha producido la redimensión en el disco de la máquina:
+
+![volumen](img/volumen8.png)
+
+1. El disco ahora tiene 3GB.
+2. Pero el sistema de archivo sigue teneido 2Gb. 
+3. Desmontamos el disco, y lo redimensionamos con `resize2fs`.
+4. Volvemos a montarlo y comprobamos que ahora ya tiene los 3Gb.
+
+
