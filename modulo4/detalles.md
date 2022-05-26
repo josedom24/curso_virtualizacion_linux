@@ -30,19 +30,19 @@ Veamos los elementos fundamentales:
 
 * **Repaso**: Nos da la información general de la máquina virtual. 
 
-**Imagen de repaso** 
+![detalles](img/detalles4.png)
 
 Además, en todo momento podemos acceder a la definición XML:
 
-**Imagen XML** 
+![detalles](img/detalles5.png)
 
 * **CPUs**: Configuración de las vCPU asignadas a la máquina. Podemos modificar este valor. Si la máquina está ejecutándose la modificación será efectiva en el siguiente arranque de la máquina.
 
-**Imagen de CPU**
+![detalles](img/detalles6.png)
 
 * **Memoria**: Del mismo modo, vemos la configuración de asignación de memoria RAM de la máquina. Podemos modificar la **memoria actual** y la **memoria máxima**. Del mismo modo, necesitamos reiniciar la máquina para que tenga efecto el cambio.
 
-**Imagen de memoria**
+![detalles](img/detalles7.png)
 
 * **Opciones de arranque**: Podemos ver y configurar el orden de los dispositivos de arranque.
 
@@ -52,17 +52,17 @@ A continuación se nos muestra los distintos dispositivos hardware que tiene con
 
 * **Discos**: Nos da información del disco que tiene configurada la máquina. Es importante, como ya hemos indicado anteriormente, que el el driver sea VirtIO para obtener mayor rendimiento. Vemos que podemos añadir a las máquinas virtuales tantos discos como sean necesarios.
 
-**Imagen de disco**
+![detalles](img/detalles8.png)
 
 * **Interfaces de red**: Obtenemos la información de las distintas interfaces de red de la máquina. en este caso también usamos VirtIO como modelo de dispositivo. Vemos a que red está conectada. Si la máquina se está ejecutando, podemos ver la dirección IP de la interfaz. Del mismo modo, los cambios serán efectivos tras el reinicio de la máquina.
 
-**Imagen de red**
+![detalles](img/detalles9.png)
 
 Por último, tenemos dos operaciones referente a los dispositivos hardware:
 
 * Si seleccionamos uno de ellos, y pulsamos el botón derecho del ratón nos da la posibilidad de **Eliminar Hardware**.
 * Con el botón **Agregar Hardware**, tenemos la posibilidad de añadir nuevos componentes a la configuración de la máquina. Hay que indicar que algunos dispositivos se pueden agregar "en caliente", con la máquina en estado de ejecución. En los próximos apartados del curso usaremos está opción para añadir nuevos componentes a nuestras máquinas virtuales.
 
-**Imagen agregar hardware**
+![detalles](img/detalles10.png)
 
 
