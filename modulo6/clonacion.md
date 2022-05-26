@@ -19,9 +19,17 @@ El clon 'prueba4-clone' ha sido creado exitosamente.
 
 Es la forma más sencilla, se crea una nueva máquina que se llama como la original y se le añade la palabra `-clone`, todos los discos de la máquina original se clonan, y se llaman igual a los originales con la coletilla `-clone`.
 
-Si queremos indicar el nombre de la nueva máquina:
+Si queremos indicar el nombre de la nueva máquina: usamos el parámetro `--name` y si queremos indicar el nombre del nuevo volumen usamos `--file`:
 
 ```
-virt-clone --connect=qemu:///system --original prueba4 --name prueba5 --auto-clone
+virt-clone --connect=qemu:///system --original prueba4 --name prueba5 --file /var/lib/libvirt/images/vol_prueba5.qcow2
 ```
+## Uso de virt-manager para realizar la clonación
+
+Si elegimos una máquina virtual y pulsamos el botón derecho del ratón tenemos a nuestra disposición la opción **Clonar**:
+
+![volumen](img/clonacion1.png)
+
+Donde podemos indicar el nombre de la nueva máuiina virtual, y si pulsamos sobre el botón **Detail** podemos cambiar el nombre del nuevo fichero de imagen donde se realiza la clonación.
+
 
