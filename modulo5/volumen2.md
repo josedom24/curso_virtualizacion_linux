@@ -11,15 +11,27 @@ Vamos a crear un nuevo fichero de imagen llamado `vol2.qcow2`, con el formato `q
 ```
 cd /srv/images/
 qemu-img create -f qcow2 vol2.qcow2 2G
+Formatting 'vol2.qcow2', fmt=qcow2 cluster_size=65536 extended_l2=off compression_type=zlib size=2147483648 lazy_refcounts=off refcount_bits=16
+
 ```
-**TERMINARLO**
 
 Podemos obtener información de la imagen que hemos creado, ejecutando en el mismo directorio:
 
 ```
 qemu-img info vol2.qcow2
+image: vol2.qcow2
+file format: qcow2
+virtual size: 2 GiB (2147483648 bytes)
+disk size: 196 KiB
+cluster_size: 65536
+Format specific information:
+    compat: 1.1
+    compression type: zlib
+    lazy refcounts: false
+    refcount bits: 16
+    corrupt: false
+    extended l2: false
 ```
-**TERMINARLO**
 
 La creación del fichero de imagen, no conlleva de forma automática la creación del volumen en el pool de almacenamiento. Si vemos la lista de volúmenes en el pool `vm-images` comprobamos que no se ha creado:
 
@@ -40,7 +52,7 @@ Y comprobamos que ya tenemos el volumen creado ejecutando: `virsh -c qemu:///sys
 
 Para refrescar un pool desde `virt-manager` usamos el siguiente botón:
 
-**Imagen almacenamiento refrescar pool**
+![volumen](img/volumen3.png)
 
 La herramienta `qemu-img` es muy potente y nos permite realizar muchas operaciones: redimensionar el fichero de imagen, convertir entre formatos de imágenes, crear imágenes a a partir de imágenes base, crear instantáneas de imágenes, ... Utilizaremos algunas de estas funciones en apartados posteriores del curso.
 
