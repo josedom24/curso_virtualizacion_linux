@@ -26,7 +26,11 @@ Hemos utilizado la opción `--disk vol=default/vol1.qcow2`, indicando el volumen
 * `--disk path=/var/lib/libvirt/images/vol1.qcow2`: Donde indicamos directamente la ruta donde se encuentra el fichero de imagen de disco.
 * `--pool wm-images,size=10`: En este caso no se reutiliza el volumen que tenemos creado, sino que se crearía un nuevo volumen de 10GB en el pool indicado.
 
-Si utilizamos `virt-manager`, para crear la nueva máquina, durante el asistente de creación de la máquina, podemos escoger el volumen que tenemos creado:
+Si utilizamos `virt-manager`, para crear la nueva máquina, durante el asistente de creación de la máquina, elegimos la opción **Manual install**, ya que no vamos a usar una imagen ISO:
+
+![volumen](img/volumen9.png)
+
+Y posteriormente, escogemos el volumen que tenemos creado:
 
 ![volumen](img/volumen4.png)
 
