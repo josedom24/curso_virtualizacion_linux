@@ -29,9 +29,23 @@ Veamos algunos de los tipos de almacenamiento con los que podemos trabajar:
 * **logical**: En este caso, utilizamos LVM (Logical Volume Manager). El Pool de Almacenamiento controlará un Grupo de Volúmenes, y los **volúmenes** (los discos de las máquinas virtuales) serán volúmenes lógicos que se crearán en el grupo de volúmenes. Este tipo de almacenamiento no ofrece la compartición, si admite los snapshots y puede utilizar aprovisionamiento ligero si utilizamos LVM-Thin.
 * **netfs**: Este tipo de Pool de Almacenamiento montará un directorio desde un servidor NAS (nfs, glusterfs, cifs,...). Por lo tanto obtendremos la característica de compartición y de migración en vivo. Los **volúmenes** serán ficheros de imágenes de disco.
 
+# Gestión de volúmenes de almacenamiento
+
+Los volúmenes son los medios de medios de almacenamiento que utilizarán las máquinas virtuales. Un Pool de Almacenamiento estará formado por volúmenes. Dependiendo del tipo del pool, el volumen corresponderá a un medio de almacenamiento determinado. Veamos un ejemplo:
+
+* Si el tipo del pool es **dir**, es decir, un directorio del sistema de fichero del host, el volumen corresponde a un fichero (el fichero que contiene la imagen del disco).
+* Si el tipo del pool es **logical**, es decir, gestiona un grupo de volúmenes LVM, el volumen corresponderá a un volumen lógico LVM.
+
+Por lo tanto tenemos dos enfoques para crear los volúmenes:
+
+* Usar **la API de libvirt**, es decir, usar herramientas como `virsh` o `virt-manager` para gestionar los volúmenes. En este caso, si creamos un volumen en un pool de tipo **dir**, estaríamos creando un fichero de imagen de disco. Del mismo modo, si lo creamos en un pool de tipo **logical** estaríamos creando un volumen lógico LVM.
+* Utilizar herramientas específicas para crear los medios de almacenamiento y posteriormente **refrescar** el pool para que añada el nuevo volumen. Ejemplo: podemos usar la herramienta `qemu-img` para la creación de un fichero de imagen de disco y posteriormente actualizaremos el pool de tipo **dir** para añadir el nuevo volumen que corresponde al fichero que hemos creado. Otro ejemplo: usar la línea de comandos de LVM, creando un volumen lógico con el comando `lvcreate` y posteriormente actualizamos el pool de tipo **logical** para añadir el nuevo volumen.
+
+Si estamos trabajando localmente en un servidor donde tenemos QEMU/KVM + libvirt instalado, no hay muchas diferencias de usar una y otra opción. El uso de la API de libvirt puede ser más interesante si estamos conectados a la API de libvirt de forma remota, ya que al gestionar los volúmenes estaríamos gestionando los recursos de almacenamiento (ficheros, volúmenes lógicos,...) sin necesidad de acceder al servidor y crearlos con herramientas específicas.
+
 ## Conclusiones
 
-Tenemos la posibilidad de crear distintos tipos de Pools de Almacenamiento, que nos ofrecen distintas características. Podemos ver los distintos tipos al crear un Pool desde virt-manager:
+Tenemos la posibilidad de crear distintos tipos de Pools de Almacenamiento, que nos ofrecen distintas características. Podemos ver los distintos tipos al crear un Pool desde `virt-manager`:
 
 ![pool](img/pool1.png)
 
