@@ -26,6 +26,8 @@ virsh -c qemu:///system vol-info vol.qcow2 default
 
 De la misma forma que los pools, los volúmenes están definidos en libvirt con el formato XML. Para ver la definición XML de un volumen del pool `default` podemos ejecutar `virsh -c qemu:///system vol-dumpxml vol.qcow2 default`. A partir de un fichero XML con la definición de un nuevo volumen, podríamos crearlo con el subcomando virsh vol-create. **Nota: En este caso no existe el subcomandos `vol-define`, ya que los volúmenes no se pueden crear temporalmente.**
 
+**Nota: Puedes profundizar en el formato XML que define los volúmenes puedes consultar la documentación oficial: [Storage pool and volume XML format](https://libvirt.org/formatstorage.html).**
+
 Sin embargo, vamos a usar otro comando que nos permite indicar la información del nuevo volumen por medio de parámetros. Vamos a crear un nuevo volumen en el pool `default`, cuyo nombre será `vol1.qcow2`, formato `qcow2` y tamaño de 10G:
 
 ```
