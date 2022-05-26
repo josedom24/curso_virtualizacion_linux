@@ -65,12 +65,14 @@ Para redimensionar el volumen de una máquina que este parada, podemos usar `vir
 
 ```
 virsh -c qemu:///system vol-resize vol2.qcow2 3G --pool vm-images
+El tamaño de volumen 'vol2.qcow2' se ha cambiado correctamente a 3G
 ```
 
-O podemos usar `qemu-img`:
+O podemos usar `qemu-img`, se ejecuta con un usuario con privilegios o con `sudo`:
 
 ```
-qemu-img resize /srv/images/vol2.qcow2 3G
+sudo qemu-img resize /srv/images/vol2.qcow2 3G
+Image resized.
 ```
 
 Para hacer la redimensión "en caliente", con la máquina encendida, podemos obtener información de los discos conectados a una máquina:
@@ -98,5 +100,3 @@ Podemos comprobar que se ha producido la redimensión en el disco de la máquina
 2. Pero el sistema de archivo sigue teneido 2Gb. 
 3. Desmontamos el disco, y lo redimensionamos con `resize2fs`.
 4. Volvemos a montarlo y comprobamos que ahora ya tiene los 3Gb.
-
-
