@@ -29,7 +29,14 @@ usuario@kvm:~$ virsh -c qemu:///system net-start default
 La red default se ha iniciado
 ```
 
-Y ejecutando de nuevo `virsh -c qemu:///system net-list`, aparece la red como *activa*.
+Además es recomendable activar la propiedad de **Incio autómatico**, para que se inicie de forma automática después de reiniciar el host, para ello:
+
+```
+virsh -c qemu:///system net-autostart default
+La red default ha sido marcada para iniciarse automáticamente
+```
+
+Y ejecutando de nuevo `virsh -c qemu:///system net-list`, aparece la red como *activa* y *Inicio automático* a si.
 
 Aunque estudiaremos la redes con profundidad en el módulo correspondiente, podemos señalar que las máquinas virtuales que se conecten a esta red, tendrán las siguientes características:
 

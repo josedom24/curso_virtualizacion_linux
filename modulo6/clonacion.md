@@ -1,4 +1,4 @@
-# Clonación con virt-clone
+# Clonación de máquinas virtuales
 
 La clonación de una máquina virtual copia la configuración XML de la máquina de origen y sus imágenes de disco, y realiza ajustes en las configuraciones para asegurar la unicidad de la nueva máquina. Esto incluye cambiar el nombre de la máquina y asegurarse de que utiliza los clones de las imágenes de disco. No obstante, los datos almacenados en los discos virtuales del clon son idénticos a los de la máquina de origen. 
 
@@ -30,6 +30,6 @@ Si elegimos una máquina virtual y pulsamos el botón derecho del ratón tenemos
 
 ![volumen](img/clonacion1.png)
 
-Donde podemos indicar el nombre de la nueva máuiina virtual, y si pulsamos sobre el botón **Detail** podemos cambiar el nombre del nuevo fichero de imagen donde se realiza la clonación.
+Donde podemos indicar el nombre de la nueva máquina virtual, y si pulsamos sobre el botón **Details...** podemos cambiar el nombre del nuevo fichero de imagen donde se realiza la clonación.
 
 
