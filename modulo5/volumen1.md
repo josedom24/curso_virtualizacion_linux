@@ -53,7 +53,7 @@ virsh -c qemu:///system vol-delete vol1.qcow2 default
 Se ha eliminando el volumen vol1.qcow2
 ```
 
-Tenemos a nuestra disposición más operaciones sobre los volúmenes, estudiaremos algunas de ellas en apartados posteriores: `vol-clone`, para clonar, `vol-resize`, para redimensionar, `vol-download`, para descargar el volumen en un fichero, `vol-upload`, para cargar información a un volumen desde un fichero,...
+Tenemos a nuestra disposición más operaciones sobre los volúmenes, estudiaremos algunas de ellas en apartados posteriores: `vol-clone`: para clonar el volumen, `vol-resize`: para redimensionar, `vol-download`: para descargar el volumen en un fichero, `vol-upload`: para cargar información a un volumen desde un fichero,...
 
 **Nota: Hay que recordar que todas estas operaciones se realizan sobre volúmenes, y por tanto el mediod e almacenamiento que gestionan dependerán del tipo del pool con el que estemos trabajando. De esta forma, un `vol-create-as` en un pool de tipo logical crearía un volumen lógico LVM.**
 
