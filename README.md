@@ -40,13 +40,11 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 	* [Trabajar con volúmenes en las máquinas virtuales](modulo5/volumen-mv.md)
 
 6. Clonación e instantáneas de maquinas virtuales
-	* Clonación con virt-clone
-	* Clonación con virt-manager
-	* Clonación manual virt-sysprep 
-		* https://onthedock.github.io/post/190213-como-clonar-vms-y-usar-sysprep-en-kvm/
-		* https://access.redhat.com/documentation/es-es/red_hat_enterprise_linux/8/html/configuring_and_managing_virtualization/preparing-a-virtual-machine-template_cloning-virtual-machines
-	* Clonación usando aprovisionamiento ligero linked clone
-	* Instantáneas (snapshots)
+	* [Clonación de máquinas virtuales](modulo6/clonacion.md)
+	* [Creación de plantillas de máquinas virtuales](modulo6/plantillas.md)	
+	* Clonación completa a partir de plantillas de máquinas virtuales
+	* Clonación ligera a partir de plantillas de máquinas virtuales
+	* Instantáneas de máquinas virtuales
 	
 7. Gestión de redes en QEMU/KVM + libvirt
 	* Introducción a la configuración de redes en sistemas virtuales
