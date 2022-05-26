@@ -21,7 +21,7 @@ virt-install --connect qemu:///system \
 			 --vcpus 1
 ```			 
 
-Hemos utilizado la opción `--disk vol=default/vol1.qcow2`, indicando el volumen usando el formato `/pool/volumen`. Otras opciones que podríamos poner serían:
+Hemos utilizado la opción `--disk vol=default/vol1.qcow2`, indicando el volumen usando el formato `pool/volumen`. Otras opciones que podríamos poner serían:
 
 * `--disk path=/var/lib/libvirt/images/vol1.qcow2`: Donde indicamos directamente la ruta donde se encuentra el fichero de imagen de disco.
 * `--pool wm-images,size=10`: En este caso no se reutiliza el volumen que tenemos creado, sino que se crearía un nuevo volumen de 10GB en el pool indicado.
@@ -31,5 +31,30 @@ Si utilizamos `virt-manager`, para crear la nueva máquina, durante el asistente
 ![volumen](img/volumen4.png)
 
 ## Añadir nuevos discos a máquinas virtuales
+
+Para añadir un disco a una máquina virtual. vamos a modificar su definición XML. Podríamos usar `virsh edit` e incluir la definición XML del nuevo disco. Sin embargo, vamos a usar un comando de `virsh` que nos facilita la operación de añadir un nuevo disco y por tanto, la modificación de la definción XML de la máquina. Hay que indicar que esta modificación se puede hacer "en caliente", con la máquina funcionando.
+
+Por lo tanto, vamos añadir el volumen `vol2.qcow2` que creamos en el apartado anterior, a la máquina que hemos creado en estado de ejecución, ejecutamos:
+
+```
+virsh -c qemu:///system attach-disk prueba4 /srv/images/vol2.qcow2 vdb --driver=qemu --type disk --subdriver qcow2 --persistent
+El disco ha sido asociado exitosamente
+```
+
+Indicamos el nombre de la máquina, el path del fichero de imagen, el dispositivo de bloque que se va a crear, indicamos el driver, el tipo que será un disco, y el formato de la imagen que se va a añadir. Por último, con la opción `--persistent` hacemos el cambio de forma persistente, para que en el próximo reinicio de la máquina se vuelva a añadir el disco.
+
+También lo podemos hacer desde `virt-manager`. Si **añadimos nuevo hardware** en la vista detalle de la máquina, podemos añadir nuevo almacenamiento:
+
+![volumen](img/volumen5.png)
+
+Como hemos comentado la máquina `prueba4` está en ejecución y podemos comprobar que se ha añadido el disco:
+
+![volumen](img/volumen6.png)
+
+Y podríamos formatear, montar y usar el nuevo disco:
+
+![volumen](img/volumen7.png)
+
+
 
 ## Redimensión de discos en máquinas virtuales
