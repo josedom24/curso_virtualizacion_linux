@@ -28,6 +28,8 @@ Disponible:     50,48 GiB
 
 Al igual que las máquinas virtuales, los Pools de Almacenamiento se definen por un documento XML. Para ver la definición XML del pool `default` podemos ejecutar `virsh -c qemu:///system pool-dumpxml default`. A partir de un fichero XML con la definición de un nuevo pool, podríamos crearlo con el subcomando `virsh pool-define`. 
 
+**Nota: Puedes profundizar en el formato XML que define los Pools de Almacenamiento en la documentación oficial: [Storage pool and volume XML format](https://libvirt.org/formatstorage.html).**
+
 Sin embargo, vamos a usar otro comando que nos permite indicar la información del nuevo pool por medio de parámetros. Vamos a crear un nuevo pool que vamos a llamar `mv-images`, de tipo **dir** y cuyo directorio será `/srv/images`. Supongamos que hemos añadido más almacenamiento al host y que hemos montado el disco en el directorio `/srv/images` y queremos guardar las imágenes de disco en esa nueva localización. Para crear el nuevo pool, de forma persistente ejecutamos:
 
 ```
