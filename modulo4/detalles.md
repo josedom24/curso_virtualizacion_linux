@@ -23,3 +23,46 @@ Accedemos a una consola desde donde podemos controlar la máquina virtual. Desde
 ## Vista Detalles
 
 ![detalles](img/detalles3.png)
+
+En esta vista se nos muestra la definición XML de la máquina virtual de forma gráfica. Además, nos posibilita hacer cambios en la configuración de la misma. Vemos la configuración general de la máquina y las características de los dispositivos hardware que tiene configurada. Podemos quitas dispositivos y añadir otros nuevos.
+
+Veamos los elementos fundamentales:
+
+* **Repaso**: Nos da la información general de la máquina virtual. 
+
+**Imagen de repaso** 
+
+Además, en todo momento podemos acceder a la definición XML:
+
+**Imagen XML** 
+
+* **CPUs**: Configuración de las vCPU asignadas a la máquina. Podemos modificar este valor. Si la máquina está ejecutándose la modificación será efectiva en el siguiente arranque de la máquina.
+
+**Imagen de CPU**
+
+* **Memoria**: Del mismo modo, vemos la configuración de asignación de memoria RAM de la máquina. Podemos modificar la **memoria actual** y la **memoria máxima**. Del mismo modo, necesitamos reiniciar la máquina para que tenga efecto el cambio.
+
+**Imagen de memoria**
+
+* **Opciones de arranque**: Podemos ver y configurar el orden de los dispositivos de arranque.
+
+**Imagen de opciones de arranque**
+
+A continuación se nos muestra los distintos dispositivos hardware que tiene configurado la máquina: unidades de disco, interfaces de red, teclado, ratón, adaptador de vídeo, interfaces, ... Pudiendo hacer también, modificaciones en los mismos. Veamos algunos de ellos:
+
+* **Discos**: Nos da información del disco que tiene configurada la máquina. Es importante, como ya hemos indicado anteriormente, que el el driver sea VirtIO para obtener mayor rendimiento. Vemos que podemos añadir a las máquinas virtuales tantos discos como sean necesarios.
+
+**Imagen de disco**
+
+* **Interfaces de red**: Obtenemos la información de las distintas interfaces de red de la máquina. en este caso también usamos VirtIO como modelo de dispositivo. Vemos a que red está conectada. Si la máquina se está ejecutando, podemos ver la dirección IP de la interfaz. Del mismo modo, los cambios serán efectivos tras el reinicio de la máquina.
+
+**Imagen de red**
+
+Por último, tenemos dos operaciones referente a los dispositivos hardware:
+
+* Si seleccionamos uno de ellos, y pulsamos el botón derecho del ratón nos da la posibilidad de **Eliminar Hardware**.
+* Con el botón **Agregar Hardware**, tenemos la posibilidad de añadir nuevos componentes a la configuración de la máquina. Hay que indicar que algunos dispositivos se pueden agregar "en caliente", con la máquina en estado de ejecución. En los próximos apartados del curso usaremos está opción para añadir nuevos componentes a nuestras máquinas virtuales.
+
+**Imagen agregar hardware**
+
+
