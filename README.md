@@ -35,8 +35,8 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 5. Gestión del  almacenamiento en QEMU/KVM + libvirt
 	* [Introducción al almacenamiento en QEMU/KVM + libvirt](modulo5/introduccion.md)
 	* [Gestión de Pools de Almacenamiento](modulo5/pool.md)
-	* Gestión de volúmenes de almacenamiento con libvirt
-	* Gestión de volúmenes de almacenamiento con herramientas específicas
+	* [Gestión de volúmenes de almacenamiento con libvirt](modulo5/volumen1.md)
+	* [Gestión de volúmenes de almacenamiento con herramientas específicas](modulo5/volumen2.md)
 	* Creación de mv en el nuevo pool de almacenamiento
 	* Añadir nuevos discos a una máquina virtual
 
