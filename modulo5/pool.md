@@ -101,7 +101,7 @@ Se ha quitado la definición del grupo vm-images
 ```
 ## Gestión de Pools de Almacenamiento con virt-amanger
 
-Desde la pestaña **Almacenamiento** de los **Detalles de la conexión** podemos ver los pools que tenemos creado y podemos gestionarlos:
+Desde la pestaña **Almacenamiento** de los **Detalles de la conexión** podemos ver los pools que tenemos creados y podemos gestionarlos:
 
 ![pool](img/pool2.png)
 
@@ -116,11 +116,11 @@ Si creamos un nuevo pool, vemos la siguiente pantalla donde indicamos el nombre,
 
 ![pool](img/pool3.png)
 
-Una vez creado, observamos que está inciado y que tiene marcada como activa la propiedad de autoiniciar:
+Una vez creado, observamos que está iniciado y que tiene marcada como activa la propiedad de autoiniciar:
 
 ![pool](img/pool4.png)
 
-Por último, recordad que desde virt-manager podemos ver la definción XML de los recursos con los que trabajamos:
+Por último, recordar que desde `virt-manager` podemos ver la definción XML de los recursos con los que trabajamos:
 
 ![pool](img/pool5.png)
 

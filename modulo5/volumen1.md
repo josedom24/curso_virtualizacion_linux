@@ -59,5 +59,21 @@ Tenemos a nuestra disposición más operaciones sobre los volúmenes, estudiarem
 
 ## Gestión de volúmenes de almacenamiento con virt-manager
 
+Desde la pestaña **Almacenamiento** de los **Detalles de la conexión** podemos ver los pools y los volúmenes que tenemos creados y podemos gestionarlos:
 
+**Imagen de almacenamiento**
 
+Tenemos las siguientes opciones relacionadas con los volúmenes:
+
+* **Botón 1**: Añadir un nuevo volumen en el pool seleccionado.
+* **Botón 2**: Refrescar el pool seleccionado. Actualiza el contenido del pool para incluir los volúmnes que se han creado o modificado con herramientas específicas.
+* **Botón 3**: Eliminar el volumen seleccionado.
+
+Si creamos un nuevo volumen, vemos la siguiente pantalla donde indicamos la siguiente información (la información solicitada dependerá del tipo de pool con elq ue estemos trabajando):
+
+* El nombre del volumen.
+* El formato: qcow2 o raw.
+* Backing store: Nos proporciona la característica de aprovisionamiento ligero usando una imagen base para la creación del volumen. Lo estudiaremos más adelante en el curso.
+* Capacidad: Indicamos el tamaño del volumen. Por defecto, si usamos el formato qcow2 obtendremos la característica de aprovisionamiento ligero, el tamaño indicado será el que ve la máquina virtual, pero no lo que se ocupa realmente en el disco del host. Si elegimos la opción **Allocate entire volume now**, se perderá esa característica y se ocupara el disco la capacidad total elegida.
+
+**Imagen de nuevo volumen**
