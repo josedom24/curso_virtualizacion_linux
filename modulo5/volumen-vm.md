@@ -13,7 +13,7 @@ Si los hacemos con `virt-install`:
 ```
 virt-install --connect qemu:///system \
 			 --virt-type kvm \
-			 --name prueba1 \
+			 --name prueba4 \
 			 --cdrom ~/iso/debian-11.3.0-amd64-netinst.iso \
 			 --os-variant debian10 \
 			 --disk vol=default/vol1.qcow2 \
@@ -21,6 +21,14 @@ virt-install --connect qemu:///system \
 			 --vcpus 1
 ```			 
 
+Hemos utilizado la opción `--disk vol=default/vol1.qcow2`, indicando el volumen usando el formato `/pool/volumen`. Otras opciones que podríamos poner serían:
+
+* `--disk path=/var/lib/libvirt/images/vol1.qcow2`: Donde indicamos directamente la ruta donde se encuentra el fichero de imagen de disco.
+* `--pool wm-images,size=10`: En este caso no se reutiliza el volumen que tenemos creado, sino que se crearía un nuevo volumen de 10GB en el pool indicado.
+
+Si utilizamos `virt-manager`, para crear la nueva máquina, durante el asistente de creación de la máquina, podemos escoger el volumen que tenemos creado:
+
+![volumen](img/volumen4.png)
 
 ## Añadir nuevos discos a máquinas virtuales
 
