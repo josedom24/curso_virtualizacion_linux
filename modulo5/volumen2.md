@@ -1,13 +1,46 @@
+# Gestión de volúmenes de almacenamiento con herramientas específicas
 
+En este apartado vamos a gestionar los volúmenes con herramienta especificas. Es decir, si estamos trabajando con un pool de tipo **dir** y con volúmenes que corresponde a ficheros de imágenes de disco, vamos a trabajar con la herramienta `qemu-img`. Esta potente herramienta nos permite la gestión completa de los ficheros de imágenes de disco.
 
+## Gestión de imágenes de disco con qemu-img
 
+La herramienta `qemu-img` es una utilidad para gestionar ficheros de imagen de disco. Puedes profundizar en el uso de esta herramienta consultando la documentación oficial: [QEMU disk image utility](https://qemu.readthedocs.io/en/latest/tools/qemu-img.html).
 
-  525  cd /srv/images/
-  526  ls
-  527  ls -al
-  528  qemu-img info vol1.qcow2 
-  529  qemu-img create -f qcow2 vol2.qcow2 2G
-  530  virsh vol-list prueba
-  531  virsh pool-refresh prueba 
-  532  virsh vol-list prueba
-  533  virsh vol-info vol1.qcow2 prueba
+Vamos a crear un nuevo fichero de imagen llamado `vol2.qcow2`, con el formato `qcow2`, con un tamaño de 2G, en el directorio `/srv/images`, correspondiente al pool `vm-images`, que creamos en un apartado anterior (si quisiéramos trabajar con el pool `default` trabajaríamos en el directorio `/var/lib/libvirt/images`).
+
+```
+cd /srv/images/
+qemu-img create -f qcow2 vol2.qcow2 2G
+```
+**TERMINARLO**
+
+Podemos obtener información de la imagen que hemos creado, ejecutando en el mismo directorio:
+
+```
+qemu-img info vol2.qcow2
+```
+**TERMINARLO**
+
+La creación del fichero de imagen, no conlleva de forma automática la creación del volumen en el pool de almacenamiento. Si vemos la lista de volúmenes en el pool `vm-images` comprobamos que no se ha creado:
+
+```
+virsh -c qemu:///system vol-list vm-images
+ Nombre            Ruta
+------------------------------------------------------------
+```
+
+Para que se cree un nuevo volumen a partir del fichero que hemos creado, necesitamos **refrescar** el pool, para ello:
+
+```
+virsh -c qemu:///system pool-refresh vm-images
+El grupo vm-images ha sido actualizado
+```
+
+Y comprobamos que ya tenemos el volumen creado ejecutando: `virsh -c qemu:///system vol-list vm-images`.
+
+Para refrescar un pool desde `virt-manager` usamos el siguiente botón:
+
+**Imagen almacenamiento refrescar pool**
+
+La herramienta `qemu-img` es muy potente y nos permite realizar muchas operaciones: redimensionar el fichero de imagen, convertir entre formatos de imágenes, crear imaǵenes a a partir de imágenes base, crear instantáneas de imágenes, ... Utilizaremos algunas de estas funciones en apartados posteriores del curso.
+

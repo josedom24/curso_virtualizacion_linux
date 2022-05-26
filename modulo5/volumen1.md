@@ -17,6 +17,15 @@ virsh -c qemu:///system vol-list default
 
 Podemos comprobar que los volúmenes listados se corresponden con ficheros que se encuentran en el directorio del pool `default` (`/var/lib/libvirt/images`).
 
+Al estar utilizando el formato de imagen `qcow2`, obtenemos la característica de aprovisionamiento ligero, el fichero tiene un tamaño virtual (el que hemos indicado en su creación y el que verá la máquina virtual que lo utilice) y el espacio ocupado en el disco del host (que irá creciendo conforme vayamos guardando información en la imagen). Podemos ver esta característica ejecutando la siguiente instrucción:
+
+```
+virsh -c qemu:///system vol-list default --details
+ Nombre            Ruta                                      Tipo      Capacidad   Alojamiento
+------------------------------------------------------------------------------------------------
+```
+**TERMINARLO**
+
 Podemos obtener la información de un determinado volumen de un pool, ejecutando:
 
 ```
