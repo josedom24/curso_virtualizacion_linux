@@ -14,7 +14,6 @@ Si los hacemos con `virt-install`:
 virt-install --connect qemu:///system \
 			 --virt-type kvm \
 			 --name prueba4 \
-			 --cdrom ~/iso/debian-11.3.0-amd64-netinst.iso \
 			 --os-variant debian10 \
 			 --disk vol=default/vol1.qcow2 \
 			 --memory 1024 \
