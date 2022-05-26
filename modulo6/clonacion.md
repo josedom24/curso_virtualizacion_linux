@@ -28,8 +28,15 @@ virt-clone --connect=qemu:///system --original prueba4 --name prueba5 --file /va
 
 Si elegimos una máquina virtual y pulsamos el botón derecho del ratón tenemos a nuestra disposición la opción **Clonar**:
 
-![volumen](img/clonacion1.png)
+![clonación](img/clonacion1.png)
 
 Donde podemos indicar el nombre de la nueva máquina virtual, y si pulsamos sobre el botón **Details...** podemos cambiar el nombre del nuevo fichero de imagen donde se realiza la clonación.
 
+## Las máquinas virtuales clonadas son iguales a las originales
 
+La máquina clon que hemos creado es igual a la original. La nueva máquina contiene identificadores que deberían ser únicos (como el machine ID, direcciones MAC, claves SSH de host, hodtname, ...).
+
+
+![clonación](img/clonacion2.png)
+
+Podemos acceder a la máquina y cambiar el fichero `/etc/hostname` para cambiar el nombre de la máquina, pero todavía tendríamos mucha información repetida entre las dos máquinas. En el siguiente apartado vamos a usar la apliocación `virt-sysprep` para eliminar todos estos identificadores únicos.
