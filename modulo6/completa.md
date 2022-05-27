@@ -44,7 +44,7 @@ ssh usuario@192.168.122.253
 ssh: connect to host 192.168.122.253 port 22: Connection refuse
 ```
 
-Esto es debido a que cuando ejecutamos el `virt-sysprep` uno de los datos que se eliminaron fueron las claves SSH de la máquina para que no fueran los mismos que los de la máquina original. Por lo tanto tenemos que regenerar estas claves en la nueva máquina, y de paso le vamos a cambiar el `hostname`:
+Esto es debido a que cuando ejecutamos el `virt-sysprep` uno de los datos que se eliminaron fueron las claves SSH de la máquina para que no fueran los mismos que los de la máquina original. Por lo tanto tenemos que regenerar estas claves en la nueva máquina ejecutando el comando `ssh-keygen -A`, y de paso le vamos a cambiar el `hostname`:
 
 ![plantilla](img/plantilla4.png)
 
