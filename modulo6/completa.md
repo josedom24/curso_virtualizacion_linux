@@ -18,7 +18,7 @@ El proceso puede ser lento, ya que se hace una copia completa de la imagen origi
 
 Si elegimos la plantilla y pulsamos el botón derecho del ratón tenemos a nuestra disposición la opción **Clonar**:
 
-![plantilla](img/plantilla1.png)
+![plantilla](img/plantilla2.png)
 
 Donde podemos indicar el nombre de la nueva máquina virtual, y si pulsamos sobre el botón **Details...** podemos cambiar el nombre del nuevo fichero de imagen donde se realiza la clonación.
 
@@ -35,7 +35,7 @@ virsh -c qemu:///system domifaddr clone1
 
 O usando `virt-manager` vemos el detalle de la interfaz de red:
 
-![plantilla](img/plantilla2.png)
+![plantilla](img/plantilla3.png)
 
 Si desde el host intentamos acceder por SSH, obtenemos:
 
@@ -46,7 +46,7 @@ ssh: connect to host 192.168.122.253 port 22: Connection refuse
 
 Esto es debido a que cuando ejecutamos el `virt-sysprep` uno de los datos que se eliminaron fueron las claves SSH de la máquina para que no fueran los mismos que los de la máquina original. Por lo tanto tenemos que regenerar estas claves en la nueva máquina, y de paso le vamos a cambiar el `hostname`:
 
-![plantilla](img/plantilla3.png)
+![plantilla](img/plantilla4.png)
 
 Una reiniciada la máquina ya podemos acceder por SSH desde el host:
 
