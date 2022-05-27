@@ -57,6 +57,6 @@ Si intentamos ejecutar la plantilla, nos dará un error:
 
 ![plantilla](img/plantilla1.png)
 
-En cualquier momento si podemos cambiar la configuración de la plantilla, todas las nuevas máquinas clonadas a partir de ella tendrán la misma configuración.
+En cualquier momento podemos cambiar la configuración de la plantilla. Todas las nuevas máquinas clonadas a partir de ella tendrán la misma configuración.
 
 Ya tenemos la plantilla lista para ser clonada. Lo veremos en los siguientes apartados.
