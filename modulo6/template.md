@@ -26,7 +26,7 @@ Para poder utilizar `virt-sysprep` tenemos que instalar el siguiente paquete:
 apt-get install libguestfs-tools
 ```
 
-`virt-sysprep` puede trabajar con un fichero de imaǵen, usando la opción `-a`, pero en nuestro caso vamos indicarle una máquina virtual, usando el parámetro `-d`.
+[`virt-sysprep`](https://libguestfs.org/virt-sysprep.1.html) puede trabajar con un fichero de imaǵen, usando la opción `-a`, pero en nuestro caso vamos indicarle una máquina virtual, usando el parámetro `-d`.
 
 Vamos a suponer que vamos a convertir en plantilla nuestra máquina `prueba1` que tiene un sistema GNU/Linux Debian 11 instalado. Nuestra máquina original tiene que estar parada. Y para generalizarla, ejecutamos como superusuario:
 
@@ -35,6 +35,8 @@ sudo virt-sysprep -d prueba1 --hostname plantilla-debian11
 [   0.0] Examining the guest ...
 ...
 ```
+
+`virt-sysprep` tienes muchas opciones de configuración, hemos usado el parámetro `-hostname` para cambiar el nombre de la máquina de la plantilla.
 
 En último lugar, tenemos que evitar ejecutar está máquina de nuevo, ya que la generalización que hemos hecho se perdería. Para conseguirlo vamos a **configurar la imagen original de solo lectura**, de esta manera al intentar ejecutar la plantilla nos dará un error. Para ello como superusuario:
 
