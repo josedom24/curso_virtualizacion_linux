@@ -1,4 +1,4 @@
-# Conexión local no privilegiada a QEMU/KVM
+# Conexión local no privilegiada a libvirt
 
 Como hemos comentado en el punto anterior, un usuario sin privilegio puede crear sus máquinas virtuales. Para ello realizará una conexión local a la URI `qemu:///session`. En este modo de conexión, el usuario no tiene permisos para crear conexiones de red, por lo que se limita su uso de la red no privilegiada de qemu ([SLIRP](https://wiki.qemu.org/Documentation/Networking#User_Networking_.28SLIRP.29)) que es útil para casos simples, pero que tiene bajo rendimiento y es poco configurable. 
 

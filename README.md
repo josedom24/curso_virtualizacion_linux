@@ -14,8 +14,9 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 2. Instalación de QEMU/KVM + libvirt
 	* [Preparación del escenario de instalación](modulo2/escenario.md)
 	* [Instalación de QEMU/KVM + libvirt](modulo2/instalacion.md)
-	* [Conexión local no privilegiada a QEMU/KVM](modulo2/session.md)
-	* [Conexión local privilegiada a QEMU/KVM](modulo2/system.md)
+	* [Conexión local no privilegiada a libvirt](modulo2/session.md)
+	* [Conexión local privilegiada a libvirt](modulo2/system.md)
+	* [Conexión remota a libvirt]
 
 3. Creación de máquinas virtuales desde la línea de comandos
 	* [Creación de máquinas virtuales con virt-install](modulo3/virt-install.md)
@@ -48,11 +49,8 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 	
 7. Gestión de redes en QEMU/KVM + libvirt
 	* Introducción a la configuración de redes en sistemas virtuales
-	* Tipos de redes
-	* Redes privadas basadas en NAT
-	* Redes privadas aisladas (isolated)
-	* Redes públicas conectadas a un bridge externo
+	* Gestión de redes privadas
+	* Gestión de redes públicas
 	* Configuración de red en las máquina virtuales
-	* Introducción a Network Filters
 	
 8. Trabajando con contenedores LXC
