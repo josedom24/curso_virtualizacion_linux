@@ -48,7 +48,7 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 	* [Instantáneas de máquinas virtuales](modulo6/snapshot.md)
 	
 7. Gestión de redes en QEMU/KVM + libvirt
-	* Introducción a la configuración de redes en sistemas virtuales
+	* Introducción a la gestión de redes en libvirt
 	* Gestión de redes privadas
 	* Gestión de redes públicas
 	* Configuración de red en las máquina virtuales
