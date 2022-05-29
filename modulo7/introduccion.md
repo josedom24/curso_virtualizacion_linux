@@ -50,4 +50,4 @@ La clasificación depende de la forma utilizada para conectar las máquinas virt
 
 En este caso necesitamos crear un bridge virtual (normalmente llamado `br0`) al que conectaremos la máquina física y las máquinas virtuales. En este caso las máquinas virtuales estarán en la misma red red que el host y estarán conectadas directamente al router de esta red, tomando la configuración dhcp (si la hubiera) del mismo modo que la toma el host.
 
-![red_publica](img/red_publica.drawio.png
+![red_publica](img/red_publica.drawio.png)
