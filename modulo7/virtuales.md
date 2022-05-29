@@ -14,7 +14,7 @@ virsh -c qemu:///system net-list --all
 
 Utilizamos la opción `--all` para listar las redes iniciadas y paradas.
 
-Las redes se crean a partir de su definción XML que tenemos guardado en un fichero. En este caso tenemos el fichero `red-nat.xml`, donde tenemos la definción de una red virtual de tipo NAT, con el siguiente contenido:
+Las redes se crean a partir de su definición XML que tenemos guardado en un fichero. En este caso tenemos el fichero `red-nat.xml`, donde tenemos la definición de una red virtual de tipo NAT, con el siguiente contenido:
 
 ```xml
 <network>
@@ -88,7 +88,3 @@ Comprobamos que se ha creado el bridge virtual.
 **Terminarlo**
 
 ## Gestión de Redes Virtuales con virt-manager
-
-
-
-
