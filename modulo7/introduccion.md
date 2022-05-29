@@ -32,4 +32,13 @@ Es un Red Virtual Privada, donde las máquinas virtuales tomas direccionamiento 
 
 ![red_aislada](img/red_aislada.drawio.png)
 
-Por lo tanto tienen las mismas características que una REd Virtual de tipo NAT, pero sin la característica de router/nat. Se gestiona un bridge virtual donde se conectan las máquinas virtuales y el host, seguimos teniendo un servidor DNS y es posible tener un servidor DHCP en el host que asigna dinámicamente un direccionamiento privado a las máquinas.
+Por lo tanto tienen las mismas características que una Red Virtual de tipo NAT, pero sin la característica de router/nat. Se gestiona un bridge virtual donde se conectan las máquinas virtuales y el host, seguimos teniendo un servidor DNS y es posible tener un servidor DHCP en el host que asigna dinámicamente un direccionamiento privado a las máquinas.
+
+## Redes Virtuales muy aisladas (Very Isolated)
+
+Es un Red Virtual Aislada, en la que el host no está conectado a las máquians virtuales. Por lo tanto,no tenemos servidor DNS ni DHCP para ser utilizados por las máquinas. Al ser aislada, tampoco tienen salida al exterior.
+
+![red_muy_aislada](img/red_muy_aislada.drawio.png)
+
+En este tipo de red se suele configurar la red de las máquinas virtuales de forma estática.
+
