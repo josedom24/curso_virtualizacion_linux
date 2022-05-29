@@ -22,3 +22,12 @@ con virsh
 
 con virt-manager
 
+
+
+
+https://kashyapc.fedorapeople.org/virt/add-network-card-in-guest.txt
+
+attach-interface domain type source [--target target] [--mac mac] [--script script] [--model model] [--config] [--inbound average,peak,burst] [--outbound average,peak,burst]
+Attach a new network interface to the domain. type can be either network to indicate a physical network device or bridge to indicate a bridge to a device. source indicates the source device. target allows to indicate the target device in the guest. Names starting with 'vnet' are considered as auto-generated an hence blanked out. mac allows to specify the MAC address of the network interface. script allows to specify a path to a script handling a bridge instead of the default one. model allows to specify the model type. --config indicates the changes will affect the next boot of the domain, for compatibility purposes, --persistent is alias of --config. inbound and outbound control the bandwidth of the interface. peak and burst are optional, so "average,peak", "average,,burst" and "average" are also legal.
+Note: the optional target value is the name of a device to be created as the back-end on the node. If not provided a device named "vnetN" or "vifN" will be created automatically.
+
