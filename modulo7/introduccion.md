@@ -26,7 +26,7 @@ La red `default` con la que hemos trabajado es de este tipo. Veamos sus caracter
 * En el host también se configura un **servidor DNS** que es el que se configura en las máquinas virtuales.
 * El host hace la función de **router/nat** de tal manera que las máquinas virtuales tienen conectividad al exterior, usando la dirección IP de la interfaz de red del host que está conectada al exterior.
 
-## Redes Virtuales aisladas (Isolated)
+### Redes Virtuales aisladas (Isolated)
 
 Es un Red Virtual Privada, donde las máquinas virtuales tomas direccionamiento privado. No tenemos un mecanismo de router/nat, por lo que las máquinas virtuales no tienen conectividad con el exterior. 
 
@@ -34,7 +34,7 @@ Es un Red Virtual Privada, donde las máquinas virtuales tomas direccionamiento 
 
 Por lo tanto tienen las mismas características que una Red Virtual de tipo NAT, pero sin la característica de router/nat. Se gestiona un bridge virtual donde se conectan las máquinas virtuales y el host, seguimos teniendo un servidor DNS y es posible tener un servidor DHCP en el host que asigna dinámicamente un direccionamiento privado a las máquinas.
 
-## Redes Virtuales muy aisladas (Very Isolated)
+### Redes Virtuales muy aisladas (Very Isolated)
 
 Es un Red Virtual Aislada, en la que el host no está conectado a las máquians virtuales. Por lo tanto,no tenemos servidor DNS ni DHCP para ser utilizados por las máquinas. Al ser aislada, tampoco tienen salida al exterior.
 
@@ -42,3 +42,12 @@ Es un Red Virtual Aislada, en la que el host no está conectado a las máquians 
 
 En este tipo de red se suele configurar la red de las máquinas virtuales de forma estática.
 
+## Tipos de Redes Punte
+
+La clasificación depende de la forma utilizada para conectar las máquinas virtuales al exterior.
+
+### Redes Puente conectadas a un bridge externo
+
+En este caso necesitamos crear un bridge virtual (normalmente llamado `br0`) al que conectaremos la máquina física y las máquinas virtuales. En este caso las máquinas virtuales estarán en la misma red red que el host y estarán conectadas directamente al router de esta red, tomando la configuración dhcp (si la hubiera) del mismo modo que la toma el host.
+
+![red_publica](img/red_publica.drawio.png
