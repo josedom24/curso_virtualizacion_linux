@@ -1,4 +1,4 @@
-# Introducción a la gestión de redes en libvirt
+# Introducción a la gestión de redes en QEMU/KVM + libvirt
 
 libvirt nos proporciona las herramientas necesarias para gestionar las redes virtuales a las que se conectan nuestras máquinas virtuales.
 
