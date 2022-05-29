@@ -46,7 +46,7 @@ virsh -c qemu:///system net-start red_nat
 La red red_nat se ha iniciado
 ```
 
-Si vamos a usar esta red con mucha frecuencia es recomendable activar la propiedad de autoarranque para que se inicie de forma automática al iniciar el host. Para ello:
+Si vamos a usar esta red con mucha frecuencia es recomendable activar la propiedad de autoiniciar para que se inicie de forma automática al iniciar el host. Para ello:
 
 ```
 virsh -c qemu:///system net-autostart red_nat
@@ -91,7 +91,11 @@ ip a
 
 Podemos considerar que la interfaz de red del bridge virtual corresponde a la conexión del host con el bridge.
 
+Para ver la definición XML de la red que hemos creado, ejecutamos:
 
+```
+virsh -c qemu:///system net-dumpxml red_nat
+```
 
 Podemos crear también una red muy aislada de la que tenemos guardada la definición XML en el fichero `red-muy-aislada.md`, con el contenido:
 
@@ -131,4 +135,29 @@ ip a
     link/ether 52:54:00:d5:1f:31 brd ff:ff:ff:ff:ff:
 ```
 
+Finalmente indicar que para una red utilizamos el comando `virsh net-stop` y para eliminarla el comando `virsh undefined`.
+
 ## Gestión de Redes Virtuales con virt-manager
+
+Desde la pestaña **Redes virtuales** de los **Detalles** de la conexión podemos ver las redes que tenemos creadas y podemos gestionarlas:
+
+![network](img/network1.png)
+
+Tenemos las siguientes opciones:
+
+* **Botón 1**: Añadir una nueva red.
+* **Botón 2**: Iniciar la red seleccionada.
+* **Botón 3**: Parar la red seleccionada.
+* **Botón 4**: Eliminar la red seleccionada.
+
+Si creamos una red, indicamos un nombre, el tipo y la configuración. Por ejemplo, vamos a crear una red de tipo aislada con servidor DHCP:
+
+![network](img/network2.png)
+
+Una vez creado, observamos que está iniciado y que tiene marcada como activa la propiedad de autoiniciar. Además observamos que el nombre del bridge lo ah asignado de forma automática:
+
+![network](img/network3.png)
+
+Por último, recordar que desde `virt-manager` podemos ver la definición XML de los recursos con los que trabajamos:
+
+![network](img/network4.png)
