@@ -73,7 +73,7 @@ Partimos de que en el host tenemos creado un bridge virtual (que se suele llamar
 
 ## Definición de Redes Puentes compartiendo la interfaz física del host
 
-En este caso se comparte una interfaz física del host para conectar la máquina virtual a la red física. La definción sería:
+En este caso se comparte una interfaz física del host para conectar la máquina virtual a la red física. La definición sería:
 
 ```xml
 <network>
