@@ -6,7 +6,7 @@ Sin embargo, en este apartado vamos a aprender algunas cosas nuevas: crear nueva
 
 ## Creación de máquinas virtuales con volúmenes existentes
 
-En apartados anterior creamos un volumen de 10Gb llamado `vol1.qcow2`. Vamos a crear una nueva máquina virtual que tenga como disco duro este volumen.
+En apartados anterior creamos un volumen de 10 GB llamado `vol1.qcow2`. Vamos a crear una nueva máquina virtual que tenga como disco duro este volumen.
 
 Si los hacemos con `virt-install`:
 
