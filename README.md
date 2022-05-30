@@ -52,7 +52,7 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 	* [Definición de redes en libvirt](modulo7/definicion.md) 
 	* [Gestión de Redes Virtuales](modulo7/virtuales.md)
 	* [Creación de un Puente Externo con Linux Bridge](modulo7/bridge.md)
-	* [Gestión de Redes Puentes](moudlo7/puentes.md)
+	* [Gestión de Redes Puentes](modulo7/puentes.md)
 	* Configuración de red en las máquina virtuales
 	
 8. Trabajando con contenedores LXC
