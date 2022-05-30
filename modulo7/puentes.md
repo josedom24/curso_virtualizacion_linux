@@ -62,3 +62,4 @@ La definición de este tipo de red le hemos guardado en el fichero `red-interfac
 
 Debes indicar la interfaz que vayas a usar en la etiqueta `<interface>`.
 
+Para utilizar este tipo de red, la interfaz que utilicemos no puede estar conectado a un puente virtual.
