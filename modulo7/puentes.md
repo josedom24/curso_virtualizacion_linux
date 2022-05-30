@@ -74,7 +74,66 @@ virbr3		8000.52540052838e	yes
 
 ### Creación de un bridge externo en Debian
 
+Si estamos trabajando en un servidor con Linux Debian instalado y no tenemos instalado NetworkManager, la configuración se hará directamente en el fichero de configuración de red `/etc/network/intefaces`:
+
+```
+auto lo
+iface lo inet loopback
+
+auto enp1s0
+iface enp1s0 inet manual
+
+auto br0
+iface br0 inet dhcp
+        bridge-ports enp1s0
+```
+
+Donde vemos como hemos configurado la interfaz física `enp1s0` de tipo `manaual` para que no tome direccionamiento. Además hemos declarado nuestro puente `br0` para que tome direccionamiento de forma dinámica y hemos indicado que tendrá una interfaz conectada (`bridge-ports`) que será la física (`enp1s0`).
+
+Finalmente, reiniciamos la red como superusuario:
+
+```
+ifdown enp1s0
+systemctl restart networking.service
+```
+
+Y comprobamos:
+
+```
+ip a
+...
+2: enp1s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master br0 state UP group default qlen 1000
+    link/ether 52:54:00:22:d7:3f brd ff:ff:ff:ff:ff:ff
+3: br0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 92:d8:69:79:60:69 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.121.169/24 brd 192.168.121.255 scope global dynamic br0
+       valid_lft 3595sec preferred_lft 3595sec
+```
+
 ### Creación de un bridge externo en Ubuntu
+
+En Ubuntu vamos a configurar el fichero `/etc/netplan/01-network-manager-all.yaml` de la siguiente forma:
+
+```
+# Let NetworkManager manage all devices on this system
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp1s0:
+      dhcp4: no
+  bridges:
+    br0:
+      dhcp4: yes
+      interfaces:
+             - enp1s0
+```
+
+Y reiniciamos la red ejecutando:
+
+```
+sudo netplan apply
+```
 
 ### Gestión de Redes Puentes conectadas a un bridge externo con virsh
 
