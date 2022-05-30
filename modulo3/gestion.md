@@ -25,7 +25,7 @@ virsh -c qemu:///system list --all
  2    prueba1   ejecutando
 ```
 
-Veamos como podemos controlar el ciclo de vida de la máquina virtual:
+**Nota: Podemos referencia una máquina virtual por su nombre o por su id.**
 
 ## Ciclo de vida de una máquina virtual
 
