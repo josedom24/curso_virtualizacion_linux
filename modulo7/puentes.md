@@ -47,8 +47,7 @@ virsh -c qemu:///system net-list --all
 
 ##  Redes Puente compartiendo la interfaz física del host
 
-En este caso vamos a usar una conexión macvtap, que nos permite conectarnos a la red física directamente a través de una interfaz física del host (sin usar un dispositivo bridge). Al igual que con la red anterior, las máquinas virtuales estarán conectados directamente a la red física, por lo que sus direcciones IP estarán todas en la subred de la red física. Existe una una limitación en la implementación de macvtap: estas conexiones no permiten la comunicación directa entre el host y los invitados.
-
+En este caso vamos a usar una conexión macvtap, que nos permite conectarnos a la red física directamente a través de una interfaz física del host (sin usar un dispositivo bridge). Al igual que con la red anterior, las máquinas virtuales estarán conectados directamente a la red física, por lo que sus direcciones IP estarán todas en la subred de la red física. 
 La definición de este tipo de red le hemos guardado en el fichero `red-interface.xml` y sería la siguiente:
 
 ```
