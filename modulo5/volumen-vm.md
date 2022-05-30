@@ -58,6 +58,17 @@ Y podríamos formatear, montar y usar el nuevo disco:
 
 ![volumen](img/volumen7.png)
 
+Para desconectar un disco de una máquina virtual podemos ejecutar:
+
+```
+virsh -c qemu:///system detach-disk prueba4 vdb --persistent
+El disco ha sido desmontado exitosamente
+```
+
+Indicando la máquina virtual, el dispositivo que se había creado y la opción para que sea un cambio persistente.
+
+Desde `virt-manager` simplemente pulsaríamos con el botón derecho sobre el dispositivo de disco en la vista detalle, y pulsaríamos sobre **Eliminar Hardware**.
+
 ## Redimensión de discos en máquinas virtuales
 
 Antes de desconectar el disco de la máquina, vamos a realizar una operación de redimensión. Vamos a aumentar el tamaño del volumen, por lo que la máquina verá un disco más grande, pero hay que recordar que también tendremos que redimensionar el sistemas de ficheros.
