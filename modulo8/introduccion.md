@@ -11,3 +11,5 @@ Vamos a trabajar sobre una distribuci√≥n GNU/Linux Debian 11. Para la instalaci√
 ```
 apt install lxc
 ```
+
+lxc-create -t download -n u1 -- -d ubuntu -r DISTRO-SHORT-CODENAME -a amd64
