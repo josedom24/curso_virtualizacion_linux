@@ -14,7 +14,7 @@ virt-install --connect qemu:///system \
 			 --name prueba5 \
 			 --cdrom ~/iso/debian-11.3.0-amd64-netinst.iso \
 			 --os-variant debian10 \
-			 --network=red_nat \
+			 --network red_nat \
 			 --disk size=10 \
 			 --memory 1024 \
 			 --vcpus 1
