@@ -34,5 +34,66 @@ También podemos escoger el puente virtual al que nos queremos conectar:
 
 ## Añadir nuevas interfaces de red a máquinas virtuales
 
-Para añadir una nueva interfaz de red a una máquina virtual, vamos a modificar su definición XML. Podríamos usar `virsh edit` e incluir la definición XML del nuevo disco. Sin embargo, vamos a usar un comando de `virsh` que nos facilita la operación de añadir una nueva interfaz de red y por tanto, la modificación de la definición XML de la máquina. Hay que indicar que esta modificación se puede hacer "en caliente", con la máquina funcionando.
+Para añadir una nueva interfaz de red a una máquina virtual, vamos a modificar su definición XML. Podríamos usar `virsh edit` e incluir la definición XML del nuevo disco. Sin embargo, vamos a usar un comando de `virsh` que nos facilita la operación de añadir una nueva interfaz de red y por tanto, la modificación de la definición XML de la máquina.Es recomendable hacer esta operación con la máquina parada.
 
+Por lo tanto, vamos a añadir a la máquina `prueba4` una interfaz de red conectada a la red `red_nat`. Para ello, ejecutamos:
+
+```
+virsh -c qemu:///system attach-interface prueba4 network red_nat --model virtio --persistent
+La interfaz ha sido asociada exitosamente
+```
+
+Si la máquina virtual no tiene entorno gráfico y por tanto no tiene instalado el programa `NetworkManager` habrá que acceder a ella y configurar la nueva interfaz de red.
+
+En nuestro caso es una máquina virtual con Debian 11, donde se ha creado un  interfaz con el nombre `enp10s0`. Para configurarla modificamos el fichero `/etc/network/interfaces`:
+
+![configuración](img/configuracion3.png)
+
+Levantamos la interfaz y comprobamos que la nueva interfaz de red ha tomado configuración de red en el direccionamiento que habíamos configura en la red `red_nat`:
+
+![configuración](img/configuracion4.png)
+
+Además, podríamos ver la configuración de las interfaces de red con el comando `virsh`:
+
+```
+virsh -c qemu:///system domifaddr prueba4
+ Nombre     dirección MAC       Protocol     Address
+-------------------------------------------------------------------------------
+ vnet7      52:54:00:d6:0a:19    ipv4         192.168.122.201/24
+ vnet8      52:54:00:2a:37:fc    ipv4         192.168.123.225/24
+```
+
+
+Podríamos añadir una nueva interfaz de red indicando el puente virtual al que queremos realizar la conexión. En este caso tendríamos que ejecutar la misma instrucciómn pero el tipo de la conexión será `bridge`:
+
+```
+virsh -c qemu:///system attach-interface prueba4 bridge virbr1 --model virtio --persistent
+La interfaz ha sido asociada exitosamente
+```
+
+
+Y comprobamos que tenemos una tercera interfaz:
+
+```
+virsh -c qemu:///system domiflist prueba4
+ Interfaz   Tipo      Fuente    Modelo   MAC
+------------------------------------------------------------
+ -          network   default   virtio   52:54:00:d6:0a:19
+ -          network   red_nat   virtio   52:54:00:2a:37:fc
+ -          bridge    virbr1    virtio   52:54:00:0c:06:2a
+```
+
+Por último indicar que si queremos desconectar una interfaz de red tenemos que indicar el tipo (`network` o `bridge`) y la dirección MAC:
+
+```
+virsh -c qemu:///system detach-interface prueba4 bridge --mac 52:54:00:0c:06:2a --persistent 
+La interfaz ha sido desmontada exitosamente
+```
+
+También lo podemos hacer desde `virt-manager`. Si **añadimos nuevo hardware** en la vista detalle de la máquina, podemos añadir una nueva conexión indicando la red:
+
+
+O indicando el puente virtual donde nos vamos a conectar:
+
+
+Para eliminar la interfaz de red desde `virt-manager` simplemente pulsaríamos con el botón derecho sobre el dispositivo de red en la vista detalle, y pulsaríamos sobre **Eliminar Hardware**.

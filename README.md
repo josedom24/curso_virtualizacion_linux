@@ -53,8 +53,8 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 	* [Gestión de Redes Virtuales](modulo7/virtuales.md)
 	* [Creación de un Puente Externo con Linux Bridge](modulo7/bridge.md)
 	* [Gestión de Redes Puentes](modulo7/puentes.md)
-	* [Configuración de red en las máquinas virtuales](modulo7/configuracion.md)
-	
+	* [Configuración de redes virtuales en las máquinas virtuales](modulo7/configuracion.md)
+	* Configuración de redes puentes en las máquinas virtuales
 8. Trabajando con contenedores LXC
 	* Introducción a Linux Containers (LXC)
 	* Creación y gestión de contenedores LXC
@@ -62,10 +62,3 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 	* Redes en LXC
 	* Almacenamiento en LXC
 	* Introducción a LXD
-
-
----
-
-![Licencia de Creative Commons](https://i.creativecommons.org/l/by-nc/4.0/80x15.png) 
-
-Esta obra está bajo una [licencia de Creative Commons Reconocimiento-NoComercial 4.0 Internacional](http://creativecommons.org/licenses/by-nc/4.0/).
