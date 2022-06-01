@@ -119,7 +119,7 @@ Para eliminar la interfaz de red desde `virt-manager` simplemente pulsaríamos c
 
 	![configuración](img/configuracion8.png)
 
-* Finalmente, si conectamos a una **Red de tipo Bridge compartiendo la interfaz física del host** también se debe configurar en la misma red local del host. Para realizar la conexión podríamos conectarnos a la red `red_interface` como hemos anteriormente. Desde `virt-manager` tambén podemos hacer la conexión indicando el dispositivo físico que vamos a usar:
+* Finalmente, si conectamos a una **Red de tipo Bridge compartiendo la interfaz física del host** también se debe configurar en la misma red local del host. Para realizar la conexión podríamos conectarnos a la red `red_interface` como hemos anteriormente. Desde `virt-manager` también podemos hacer la conexión indicando el dispositivo físico que vamos a usar:
 
 	![configuración](img/configuracion9.png)
 
