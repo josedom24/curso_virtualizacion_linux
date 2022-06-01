@@ -62,3 +62,7 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 	* Redes en LXC
 	* Almacenamiento en LXC
 	* Introducción a LXD
+
+
+![Licencia de Creative Commons](https://i.creativecommons.org/l/by-nc/4.0/80x15.png) /></a><br />
+Este obra está bajo una [licencia de Creative Commons Reconocimiento-NoComercial 4.0 Internacional](http://creativecommons.org/licenses/by-nc/4.0/).
