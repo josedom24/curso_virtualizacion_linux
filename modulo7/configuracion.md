@@ -14,10 +14,22 @@ virt-install --connect qemu:///system \
 			 --name prueba5 \
 			 --cdrom ~/iso/debian-11.3.0-amd64-netinst.iso \
 			 --os-variant debian10 \
-			 --network red_nat \
+			 --network network=red_nat \
 			 --disk size=10 \
 			 --memory 1024 \
 			 --vcpus 1
+```
 
+* Con la opción `--network network=red_nat` indicamos que la máquina tendrá una interfaz de red conectada a la red cuyo nombre es `red_nat`.
+* Para conectar una máquina a una red también podemos indicar el bridge virtual al que queremos conectarla. en este caso utilizaríamos la opción `--network bridge=virbr1`. `vribr1` era el bridge virtual que gestiona la red `red_nat`.
+* Si indicamos varios parámetros `--network`, estaríamos añadiendo a la nueva máquina varias interfaces de red.
+
+Si utilizamos `virt-manage`r, para crear la nueva máquina, durante el asistente de creación de la máquina, el el último paso, podemos escoger la red a la que nos vamos a conectar:
+
+![configuración](img/configuracion1.png)
+
+También podemos escoger el puente virtual al que nos queremos conectar:
+
+![configuración](img/configuracion2.png)
 
 ## Añadir nuevas interfaces de red a máquinas virtuales
