@@ -21,10 +21,10 @@ virt-install --connect qemu:///system \
 ```
 
 * Con la opción `--network network=red_nat` indicamos que la máquina tendrá una interfaz de red conectada a la red cuyo nombre es `red_nat`.
-* Para conectar una máquina a una red también podemos indicar el bridge virtual al que queremos conectarla. en este caso utilizaríamos la opción `--network bridge=virbr1`. `vribr1` era el bridge virtual que gestiona la red `red_nat`.
+* Para conectar una máquina a una red también podemos indicar el bridge virtual al que queremos conectarla. en este caso utilizaríamos la opción `--network bridge=virbr1`. `vribr1` es el bridge virtual que gestiona la red `red_nat`.
 * Si indicamos varios parámetros `--network`, estaríamos añadiendo a la nueva máquina varias interfaces de red.
 
-Si utilizamos `virt-manage`r, para crear la nueva máquina, durante el asistente de creación de la máquina, el el último paso, podemos escoger la red a la que nos vamos a conectar:
+Si utilizamos `virt-manager`, para crear la nueva máquina, durante el asistente de creación de la máquina, el el último paso, podemos escoger la red a la que nos vamos a conectar:
 
 ![configuración](img/configuracion1.png)
 
@@ -33,3 +33,6 @@ También podemos escoger el puente virtual al que nos queremos conectar:
 ![configuración](img/configuracion2.png)
 
 ## Añadir nuevas interfaces de red a máquinas virtuales
+
+Para añadir una nueva interfaz de red a una máquina virtual, vamos a modificar su definición XML. Podríamos usar `virsh edit` e incluir la definición XML del nuevo disco. Sin embargo, vamos a usar un comando de `virsh` que nos facilita la operación de añadir una nueva interfaz de red y por tanto, la modificación de la definición XML de la máquina. Hay que indicar que esta modificación se puede hacer "en caliente", con la máquina funcionando.
+

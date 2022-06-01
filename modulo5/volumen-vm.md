@@ -35,7 +35,7 @@ Y posteriormente, escogemos el volumen que tenemos creado:
 
 ## Añadir nuevos discos a máquinas virtuales
 
-Para añadir un disco a una máquina virtual. vamos a modificar su definición XML. Podríamos usar `virsh edit` e incluir la definición XML del nuevo disco. Sin embargo, vamos a usar un comando de `virsh` que nos facilita la operación de añadir un nuevo disco y por tanto, la modificación de la definción XML de la máquina. Hay que indicar que esta modificación se puede hacer "en caliente", con la máquina funcionando.
+Para añadir un disco a una máquina virtual, vamos a modificar su definición XML. Podríamos usar `virsh edit` e incluir la definición XML del nuevo disco. Sin embargo, vamos a usar un comando de `virsh` que nos facilita la operación de añadir un nuevo disco y por tanto, la modificación de la definición XML de la máquina. Hay que indicar que esta modificación se puede hacer "en caliente", con la máquina funcionando.
 
 Por lo tanto, vamos añadir el volumen `vol2.qcow2` que creamos en el apartado anterior, a la máquina que hemos creado en estado de ejecución, ejecutamos:
 
