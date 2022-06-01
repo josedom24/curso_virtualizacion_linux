@@ -64,7 +64,7 @@ virsh -c qemu:///system domifaddr prueba4
 ```
 
 
-Podríamos añadir una nueva interfaz de red indicando el puente virtual al que queremos realizar la conexión. En este caso tendríamos que ejecutar la misma instrucciómn pero el tipo de la conexión será `bridge`:
+Podríamos añadir una nueva interfaz de red indicando el puente virtual al que queremos realizar la conexión. En este caso tendríamos que ejecutar la misma instrucción pero el tipo de la conexión será `bridge`:
 
 ```
 virsh -c qemu:///system attach-interface prueba4 bridge virbr1 --model virtio --persistent
