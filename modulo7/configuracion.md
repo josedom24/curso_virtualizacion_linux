@@ -1,4 +1,4 @@
-# Configuración de red en las máquinas virtuales
+# Configuración de redes virtuales en las máquinas virtuales
 
 Todas las máquinas que hemos creado durante el curso se han conectado de forma predeterminada a la red `default`. 
 
@@ -92,8 +92,16 @@ La interfaz ha sido desmontada exitosamente
 
 También lo podemos hacer desde `virt-manager`. Si **añadimos nuevo hardware** en la vista detalle de la máquina, podemos añadir una nueva conexión indicando la red:
 
+![configuración](img/configuracion5.png)
 
 O indicando el puente virtual donde nos vamos a conectar:
 
+![configuración](img/configuracion6.png)
+
+También podemos modificar en cualquier momento a la red o al puente al que estamos conectado, modificando la interfaz de red desde la vista detalles:
+
+![configuración](img/configuracion7.png)
 
 Para eliminar la interfaz de red desde `virt-manager` simplemente pulsaríamos con el botón derecho sobre el dispositivo de red en la vista detalle, y pulsaríamos sobre **Eliminar Hardware**.
+
+
