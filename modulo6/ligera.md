@@ -1,4 +1,4 @@
-# Clonación ligera a partir de plantillas
+# Clonación enlazada a partir de plantillas
 
 En este tipo de clonación la imagen de la máquina clonada utiliza la imagen de la plantilla como imagen base (**backing store**) en modo de sólo lectura, en la imagen de la nueva máquina sólo se guardan los cambios del sistema de archivo. Requiere menos espacio en disco, pero no puede ejecutarse sin acceso a la imagen de plantilla base. Podemos entender esta técnica como aprovisionamiento ligero** ya que en un principio la imagen de la nueva máquina no ocupara nada en el disco e irá creciendo con las modificaciones que vayamos haciendo a la máquina.
 
@@ -35,7 +35,7 @@ Otra opción es usando `virt-manager`, creando un nuevo volumen e indicando dura
 
 ![plantilla](img/plantilla6.png)
 
-## Uso virt-clone para realizar la clonación ligera
+## Uso virt-clone para realizar la clonación enlazada
 
 Una vez que tenemos creado el volumen basada en el imagen base de la plantilla, podemos crear un nuevo clon con `virt-clone`, para ello ejecutamos:
 
@@ -45,9 +45,9 @@ virt-clone --connect=qemu:///system --original plantilla-prueba1 --name clone2 -
 
 Indicamos como fichero el volumen que hemos creado, pero con la opción `--preserve-data` no se copia el volumen original al nuevo, simplemente se usa. Se puede comprobar que la clonación no tarda nada de tiempo, no se está copiando un volumen en otro.
 
-## Uso virt-manager para realizar la clonación ligera
+## Uso virt-manager para realizar la clonación enlazada
 
-Con `virt-manager` no podemos hacer una clonación ligera desde el volumen que hemos creado. No nos permite elegir la opción de no realizar la copia del volumen de la plantilla al volumen de la máquina que estamos creando.
+Con `virt-manager` no podemos hacer una clonación enlazada desde el volumen que hemos creado. No nos permite elegir la opción de no realizar la copia del volumen de la plantilla al volumen de la máquina que estamos creando.
 
 Como alternativa, lo que podemos hacer es crear una nueva máquina virtual con el volumen que hemos creado.
 
