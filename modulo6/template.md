@@ -8,7 +8,7 @@ Con la herramienta `virt-clone` hemos creado un clon de una máquina virtual, es
 Una vez tengamos una plantilla, tendremos dos manera de crear las nuevas máquinas:
 
 * **Clonación completa (Full)**: Creamos una copia completa de la máquina virtual que es totalmente independiente de la plantilla. Requiere el mismo espacio en disco que el original.
-* **Clonación ligera (Thin)**: Utiliza la imagen de la plantilla como imagen base en modo de sólo lectura y vincula una imagen adicional de "copia en escritura" para almacenar los nuevos datos generados. Requiere menos espacio en disco, pero no puede ejecutarse sin acceso a la imagen de plantilla base.
+* **Clonación enlazada (Linked)**: Utiliza la imagen de la plantilla como imagen base en modo de sólo lectura y vincula una imagen adicional de "copia en escritura" para almacenar los nuevos datos generados. Requiere menos espacio en disco, pero no puede ejecutarse sin acceso a la imagen de plantilla base.
 
 ## Creación de plantillas
 

@@ -44,7 +44,7 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 	* [Clonación de máquinas virtuales](modulo6/clonacion.md)
 	* [Plantillas de máquinas virtuales](modulo6/template.md)	
 	* [Clonación completa a partir de plantillas](modulo6/completa.md)
-	* [Clonación ligera a partir de plantillas](modulo6/ligera.md)
+	* [Clonación enlazada a partir de plantillas](modulo6/ligera.md)
 	* [Instantáneas de máquinas virtuales](modulo6/snapshot.md)
 	
 7. Gestión de redes en QEMU/KVM + libvirt
