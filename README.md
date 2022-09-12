@@ -9,7 +9,7 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 	* [Tipos de virtualización](modulo1/tipos.md)
 	* [Introducción a QEMU/KVM](modulo1/qemu-kvm.md)
 	* [Introducción a libvirt](modulo1/libvirt.md)
-	* Introducción a LXC
+	* [Introducción a LXC](modulo1/lxc.md)
 
 2. Instalación de QEMU/KVM + libvirt
 	* [Preparación del escenario de instalación](modulo2/escenario.md)
