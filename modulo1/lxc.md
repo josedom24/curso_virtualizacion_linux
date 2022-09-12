@@ -1,6 +1,6 @@
 # Introducción a LXC
 
-**LinuX Containers**, también conocido por el acrónimo **LXC**, es una tecnología de virtualización lígera o por contenedores, que es un método de virtualización en el que, sobre el núcleo del sistema operativo se ejecuta una capa de virtualización que permite que existan múltiples instancias aisladas de espacios de usuario, en lugar de solo uno. A estas instancias la llamamos **contenedores**.
+**LinuX Containers**, también conocido por el acrónimo **LXC**, es una tecnología de virtualización ligera o por contenedores, que es un método de virtualización en el que, sobre el núcleo del sistema operativo se ejecuta una capa de virtualización que permite que existan múltiples instancias aisladas de espacios de usuario, en lugar de solo uno. A estas instancias la llamamos **contenedores**.
 
 Todo esto ha sido posible por el desarrollo de dos componentes del nucleo de Linux:
 
