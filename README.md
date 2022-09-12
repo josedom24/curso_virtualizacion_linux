@@ -5,8 +5,8 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 ## Contenidos
 
 1. Introducción a la virtualización
-	* ¿Qué es la virtualización?
-	* Tipos de virtualización
+	* [¿Qué es la virtualización?](modulo1/virtualizacion.md)
+	* [Tipos de virtualización](modulo1/tipos.md)
 	* [Introducción a QEMU/KVM](modulo1/qemu-kvm.md)
 	* [Introducción a libvirt](modulo1/libvirt.md)
 	* Introducción a LXC
