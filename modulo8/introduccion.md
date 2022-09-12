@@ -12,4 +12,5 @@ Vamos a trabajar sobre una distribuci√≥n GNU/Linux Debian 11. Para la instalaci√
 apt install lxc
 ```
 
-lxc-create -t download -n u1 -- -d ubuntu -r DISTRO-SHORT-CODENAME -a amd64
+Podemos crear contenedores LXC *privilegiados* (ejecutados como root) y *no privilegiados* (ejecutados por un usuario normal). En este curso vamos a trabajar con contenedores *privilegiados*.
+
