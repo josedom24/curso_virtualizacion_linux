@@ -74,12 +74,24 @@ Y comprobamos que hemos creado un contenedor y una máquina virtual:
 
 ```
 lxc list
-+------------------+---------+----------------------+-----------------------------------------------+-----------------+-----------+
-|       NAME       |  STATE  |         IPV4         |                     IPV6                      |      TYPE       | SNAPSHOTS |
-+------------------+---------+----------------------+-----------------------------------------------+-----------------+-----------+
-| ubuntu-container | RUNNING | 10.242.154.69 (eth0) | fd42:40c4:7788:440e:216:3eff:fe61:66b0 (eth0) | CONTAINER       | 0         |
-+------------------+---------+----------------------+-----------------------------------------------+-----------------+-----------+
-| ubuntu-vm        | RUNNING |                      | fd42:40c4:7788:440e:216:3eff:fea3:8748 (eth0) | VIRTUAL-MACHINE | 0         |
-+------------------+---------+----------------------+-----------------------------------------------+-----------------+-----------+
++------------------+---------+-------------------------+-------------------------------------------------+-----------------+-----------+
+|       NAME       |  STATE  |          IPV4           |                      IPV6                       |      TYPE       | SNAPSHOTS |
++------------------+---------+-------------------------+-------------------------------------------------+-----------------+-----------+
+| ubuntu-container | RUNNING | 10.242.154.69 (eth0)    | fd42:40c4:7788:440e:216:3eff:fe61:66b0 (eth0)   | CONTAINER       | 0         |
++------------------+---------+-------------------------+-------------------------------------------------+-----------------+-----------+
+| ubuntu-vm        | RUNNING | 10.242.154.119 (enp5s0) | fd42:40c4:7788:440e:216:3eff:fea3:8748 (enp5s0) | VIRTUAL-MACHINE | 0         |
++------------------+---------+-------------------------+-------------------------------------------------+-----------------+-----------+
 ```
+
+## Gestión de instancia
+
+Vamos a usar la utilidad de línea de comandos `lxc`, para ver todas las funcionalidades puedes ejecutar `lxc --help`. Veamos algunas de ella:
+
+* `lxc list`: Listar instancias. Podemos filtrar la lista, por ejemplo `lxc list type=container` o `lxc list ubuntu.*`.
+* `lxc info`: Nos da información de una instancia. Con la opción `--show-log` nos mietra los logs de la instancia.
+* `lxc start`: Inicia una instancia.
+* `lxc stop`: Detiene una instancia.
+* `lxc delete`: Borra una instancia.
+
+
 
