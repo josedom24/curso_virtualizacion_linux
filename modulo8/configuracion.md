@@ -11,7 +11,7 @@ lxc.apparmor.profile = generated
 lxc.apparmor.allow_nesting = 1
 ```
 
-Como vemos se indica a que red se va a conectar (`lxc.net.`) (lo veremos en otra entrada del blog). Una vez creado un contenedor, el contenido de este fichero se copia a su fichero de configuración (al que se añaden otras configuraciones por defecto). Por ejemplo el fichero de configuración del contenedor `contenedor1` lo encontramos en el fichero `/var/lib/lxc/contenedor1/config`. en este caso, su contenido es:
+Como vemos se indica a que red se va a conectar (`lxc.net.`). Una vez creado un contenedor, el contenido de este fichero se copia a su fichero de configuración (al que se añaden otras configuraciones por defecto). Por ejemplo el fichero de configuración del contenedor `contenedor1` lo encontramos en el fichero `/var/lib/lxc/contenedor1/config`. en este caso, su contenido es:
 
 ```bash
 lxc.net.0.type = veth
