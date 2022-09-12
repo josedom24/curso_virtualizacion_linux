@@ -59,6 +59,6 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 	* [Introducción a Linux Containers (LXC)](modulo8/introduccion.md)
 	* [Creación y gestión de contenedores LXC](modulo8/creacion.md)
 	* [Configuración de contenedores LXC](modulo8/configuracion.md)
-	* Redes en LXC
-	* Almacenamiento en LXC
+	* [Redes en LXC](modulo8/redes.md)
+	* [Almacenamiento en LXC](modulo8/almacenamiento.md)
 	* Introducción a LXD
