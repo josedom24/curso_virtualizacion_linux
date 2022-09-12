@@ -25,7 +25,7 @@ Nos conectamos a la URI `qemu+ssh:///system`. En las conexiones citadas anterior
 libvirt proporciona una API que puede ser utilizada por diferentes [aplicaciones](https://libvirt.org/apps.html) (CLI, GUI o web). Podemos destacar algunas que vamos a utilizar en este curso:
 
 * **virsh**: Es el cliente por línea de comandos "oficial" de libvirt. Ofrece una shell completa para el manejo de la API.
-* **virt-manager**: Es una aplicación grágica (GUI) que nos proporciona muchas de las funcionalidades para trabajar con libvrit.
+* **virt-manager**: Es una aplicación gráfica (GUI) que nos proporciona muchas de las funcionalidades para trabajar con libvrit.
 * **virtinst**: Paquete que proporciona los comandos `virt-clone`, `virt-install` y `virt-xml` útiles para crear y copiar máquinas virtuales.
 * **virt-viewer**: Programa que nos permite acceder a a la consola gráfica de una máquina virtual.
 * **gnome-boxes**: Aplicación gráfica muy simple, que utilizando el acceso local con usuario no privilegiado, nos permite gestionar, de forma sencilla, máquinas virtuales.
