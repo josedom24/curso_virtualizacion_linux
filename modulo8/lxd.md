@@ -83,6 +83,26 @@ lxc list
 +------------------+---------+-------------------------+-------------------------------------------------+-----------------+-----------+
 ```
 
+## Gestión de imágenes
+
+En la creación de las dos instancias hemos descargado dos imágenes que podemos gestionar con el subcomando `lxc image`, por ejemplo para ver las imagenes que hemos descargado:
+
+
+```
+lxc image  list
++-------+--------------+--------+-------------------------------------+--------------+-----------------+----------+------------------------------+
+| ALIAS | FINGERPRINT  | PUBLIC |             DESCRIPTION             | ARCHITECTURE |      TYPE       |   SIZE   |         UPLOAD DATE          |
++-------+--------------+--------+-------------------------------------+--------------+-----------------+----------+------------------------------+
+|       | 3aa3fa64e5d0 | no     | Ubuntu focal amd64 (20220911_07:42) | x86_64       | VIRTUAL-MACHINE | 230.98MB | Sep 12, 2022 at 7:28am (UTC) |
++-------+--------------+--------+-------------------------------------+--------------+-----------------+----------+------------------------------+
+|       | 7628425e768e | no     | Ubuntu focal amd64 (20220911_07:42) | x86_64       | CONTAINER       | 110.65MB | Sep 12, 2022 at 7:22am (UTC) |
++-------+--------------+--------+-------------------------------------+--------------+-----------------+----------+------------------------------+
+```
+
+Para más información ejecuta `lxc image --help`.
+
+
+
 ## Gestión de instancia
 
 Vamos a usar la utilidad de línea de comandos `lxc`, para ver todas las funcionalidades puedes ejecutar `lxc --help`. Veamos algunas de ella:
@@ -93,5 +113,58 @@ Vamos a usar la utilidad de línea de comandos `lxc`, para ver todas las funcion
 * `lxc stop`: Detiene una instancia.
 * `lxc delete`: Borra una instancia.
 
+Si queremos ejecutar un comando en una instancia, ejecutamos:
 
+```
+lxc exec <instance_name> -- <command>
+```
+
+Por ejemplo:
+
+```
+lxc exec ubuntu-container -- apt update
+```
+
+Si queremos acceder a una shell de la instancia:
+
+```
+lxc exec ubuntu-container -- /bin/bash
+```
+
+Si queremos conectarnos a una instancia por una consola, ejecutamos:
+
+```
+lxc console <instance_name>
+```
+
+Nota: Deberíamos configurar una contraseña para un usuario anteriormente accediendo al bash de la instancia.
+
+## Configuración de las instancias
+
+Tenemos muchos [parámetros de configuración](https://linuxcontainers.org/lxd/docs/master/instances) de las instancias, que podemos devivir en tres bloques: [propiedades de las instancias](https://linuxcontainers.org/lxd/docs/master/instances#properties), [openciones de las instancias](https://linuxcontainers.org/lxd/docs/master/instances#keyvalue-configuration) y [dispositivos de las instancias](https://linuxcontainers.org/lxd/docs/master/instances#device-types).
+
+Al crear una instancia podemos indicar los parámetros de configuración deseados, por ejemplo, si queremos limitar el numero de CPU y la memoria de un contenedor, podemos ejecutar:
+
+```
+lxc launch images:ubuntu/20.04 ubuntu-limited -c limits.cpu=1 -c limits.memory=192MiB
+```
+
+Con el subcomando `lxc config` podemos gestionar la configuración de las instancias, por ejemplo para mostrar la configuración de una instancia, ejecutamos:
+
+```
+lxc config show ubuntu-container
+```
+
+Por ejemplo, para cambiar un parámetro:
+
+```
+lxc config set ubuntu-container limits.memory=128MiB
+```
+
+## Para seguir profundizando
+
+* [Más información](https://linuxcontainers.org/lxd/docs/master/configuration/) sobre la configuración de instancias.
+* [Más información](https://linuxcontainers.org/lxd/docs/master/images/) sobre la gestión de imágenes.
+* Con el subcomando `lxc network` gestionamos las redes. [Más información](https://linuxcontainers.org/lxd/docs/master/networks/).
+* Con el subcomando `lxc storage` gestionamos los pools de almacenamiento. [Más información](https://linuxcontainers.org/lxd/docs/master/storage/).
 
