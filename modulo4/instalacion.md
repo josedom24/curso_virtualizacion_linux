@@ -40,6 +40,12 @@ Otro elemento que podemos gestionar son los Pool de almacenamiento que tenemos e
 
 ![virt-manager](img/virt-manager5.png)
 
+## Conexión remota con virt-manager
+
+Si quisiéramos conectarnos d forma remota a un servidor donde se está ejecutando libvirt, podríamos crear una nueva conexión: **Archivo -> Añadir conexión...**, y crear una conexión y elegir la opción **Conectar a anfitrión mediante SSH**:
+
+![virt-manager](img/virt-manager4-1.png)
+
 ## Conclusión
 
 `virt-manager` es otra aplicación que nos permite hacer conexiones a libvirt, como hacemos con la aplicación `virsh` o `virt-install`. Por lo tanto, los recursos virtualizados que gestionamos con estas aplicaciones cuando nos conectamos a `qemu:///system` son los mismos. Los cambios que hagamos con una aplicación se ven relejados en cualquiera de las otras. `virt-maanger` es más fácil de usar, pero nos ofrece menos opciones que la aplicación `virsh` o `virt-install`.
