@@ -6,7 +6,7 @@ En este apartado vamos  a estudiar como trabajar con las redes puentes.
 
 Una vez que tenemos configurado un bridge virtual, podemos crear una red para conectar las máquinas virtuales al bridge.
 
-La configuración la tenemos en el fichero `red-bridge-xml`, con el contenido:
+La configuración la tenemos en el fichero `red-bridge.xml`, con el contenido:
 
 ```
 <network>
