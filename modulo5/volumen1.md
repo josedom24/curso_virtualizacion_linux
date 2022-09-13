@@ -72,7 +72,7 @@ Se ha eliminando el volumen vol1.qcow2
 
 Tenemos a nuestra disposición más operaciones sobre los volúmenes, estudiaremos algunas de ellas en apartados posteriores: `vol-clone`: para clonar el volumen, `vol-resize`: para redimensionar, `vol-download`: para descargar el volumen en un fichero, `vol-upload`: para cargar información a un volumen desde un fichero,...
 
-**Nota: Hay que recordar que todas estas operaciones se realizan sobre volúmenes, y por tanto el mediod e almacenamiento que gestionan dependerán del tipo del pool con el que estemos trabajando. De esta forma, un `vol-create-as` en un pool de tipo logical crearía un volumen lógico LVM.**
+**Nota: Hay que recordar que todas estas operaciones se realizan sobre volúmenes, y por tanto el medio de almacenamiento que gestionan dependerán del tipo del pool con el que estemos trabajando. De esta forma, un `vol-create-as` en un pool de tipo *logical* crearía un volumen lógico LVM.**
 
 ## Gestión de volúmenes de almacenamiento con virt-manager
 
@@ -83,7 +83,7 @@ Desde la pestaña **Almacenamiento** de los **Detalles de la conexión** podemos
 Tenemos las siguientes opciones relacionadas con los volúmenes:
 
 * **Botón 1**: Añadir un nuevo volumen en el pool seleccionado.
-* **Botón 2**: Refrescar el pool seleccionado. Actualiza el contenido del pool para incluir los volúmnes que se han creado o modificado con herramientas específicas.
+* **Botón 2**: Refrescar el pool seleccionado. Actualiza el contenido del pool para incluir los volúmenes que se han creado o modificado con herramientas específicas.
 * **Botón 3**: Eliminar el volumen seleccionado.
 
 Si creamos un nuevo volumen, vemos la siguiente pantalla donde indicamos la siguiente información (la información solicitada dependerá del tipo de pool con el que estemos trabajando):
