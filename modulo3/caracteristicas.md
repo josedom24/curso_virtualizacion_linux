@@ -12,7 +12,7 @@ virsh -c qemu:///system list
 Si queremos acceder a la terminal de una máquina podemos usar `virt-view` de la siguiente forma:
 
 ```
-virt-view -c qemu:///system prueba1
+virt-viewer -c qemu:///system prueba1
 ```
 
 ## Red
