@@ -31,7 +31,7 @@ La red `default` con la que hemos trabajado es de este tipo. Veamos sus caracter
 	* **Modo bridge**: Donde se usan rutas de encaminamiento en el host. En este modo hay que configurar con rutas estáticas los elementos de enrutamiento de la red local para que funcione de manera adecuada.
 	* **Modo abierto**: Similar a la anterior, excepto que no se añaden reglas de firewall para asegurar que cualquier tráfico pase o no. Se asume que, o bien no son necesarias, o bien se configuran fuera del ámbito de libvirt.
 
-En este curso vamos a trabajar con Redes Virtuales de tipo NAT.
+	En este curso vamos a trabajar con Redes Virtuales de tipo NAT.
 
 ### Redes Virtuales aisladas (Isolated)
 
