@@ -11,6 +11,12 @@ Un bridge externo es un bridge virtual que estarán conectada al router de la re
 
 **Nota: Si conectamos al bridge una interfaz de tipo wifi podemos tener problemas de conectividad. No todas las tarjetas inalámbricas permiten la conexión a punetes virtuales.**
 
+No aseguremos que tenemos instalado el siguiente paquete que nos permite trabajar con Linux Bridge:
+
+```
+apt install bridge-utils
+```
+
 ## Creación de un bridge externo con NetworkManager
 
 **NetworkManager** es una utilidad de gráfica para simplificar el uso de redes en sistemas Linux. Normalmente la tenemos instaladas con sistemas Linux con entornos gráficos como Gnome. Junto a esa utilidad tenemos otra que se puede ejecutar con el comando `nm-connection-editor`, y que se llama **Configuración avanzada de redes**:
