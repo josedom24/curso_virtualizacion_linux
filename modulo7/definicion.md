@@ -22,7 +22,7 @@ La red `default` con la que hemos trabajado es de este tipo. La configuración d
 Veamos las etiquetas:
 
 * `<name>`: Nombre de la red.
-* `<bridge>`: Indicamos el nombre del bidge virtual que se va a utilizar.
+* `<bridge>`: Indicamos el nombre del bridge virtual que se va a utilizar.
 * `<forward>`: Indica que las máquinas virtuales van a tener conectividad con el exterior. Por defecto, si no se indicada nada, el tipo es nat: `<forward mode="nat"/>`. El modo también puede ser:
 	* `router`: Las redes tipo [router](https://wiki.libvirt.org/page/VirtualNetworking#Routed_mode) también dan acceso a las máquinas virtuales al exterior, pero en ese caso no se utiliza el mecanismo de NAT, sino que se usan rutas de encaminamiento en el host.
 	* `open`: Similar a la anterior, excepto que no se añaden reglas de firewall para asegurar que cualquier tráfico pase o no. 
