@@ -92,7 +92,7 @@ iface br0 inet dhcp
         bridge-ports enp1s0
 ```
 
-Donde vemos como hemos configurado la interfaz física `enp1s0` de tipo `manaual` para que no tome direccionamiento. Además hemos declarado nuestro puente `br0` para que tome direccionamiento de forma dinámica y hemos indicado que tendrá una interfaz conectada (`bridge-ports`) que será la física (`enp1s0`).
+Donde vemos como hemos configurado la interfaz física `enp1s0` de tipo `manual` para que no tome direccionamiento. Además hemos declarado nuestro puente `br0` para que tome direccionamiento de forma dinámica y hemos indicado que tendrá una interfaz conectada (`bridge-ports`) que será la física (`enp1s0`).
 
 Finalmente, reiniciamos la red como superusuario:
 
