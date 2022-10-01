@@ -135,7 +135,7 @@ ip a
     link/ether 52:54:00:d5:1f:31 brd ff:ff:ff:ff:ff:
 ```
 
-Finalmente indicar que para una red utilizamos el comando `virsh net-stop` y para eliminarla el comando `virsh undefined`.
+Finalmente indicar que para parar una red utilizamos el comando `virsh net-stop` y para eliminarla el comando `virsh undefined`.
 
 ## Gestión de Redes Virtuales con virt-manager
 
