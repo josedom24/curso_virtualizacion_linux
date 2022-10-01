@@ -49,7 +49,7 @@ Es un Red Virtual Aislada, en la que el host no está conectado a las máquians 
 
 En este tipo de red se suele configurar la red de las máquinas virtuales de forma estática.
 
-## Tipos de Redes Punte
+## Tipos de Redes Puente
 
 La clasificación depende de la forma utilizada para conectar las máquinas virtuales al exterior.
 
