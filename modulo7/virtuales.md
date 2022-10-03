@@ -97,7 +97,7 @@ Para ver la definición XML de la red que hemos creado, ejecutamos:
 virsh -c qemu:///system net-dumpxml red_nat
 ```
 
-Podemos crear también una red muy aislada de la que tenemos guardada la definición XML en el fichero `red-muy-aislada.md`, con el contenido:
+Podemos crear también una red muy aislada de la que tenemos guardada la definición XML en el fichero `red-muy-aislada.xml`, con el contenido:
 
 ```xml
 <network>
