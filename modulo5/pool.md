@@ -56,7 +56,7 @@ Se ha iniciado el grupo vm-images
 Y si lo deseamos lo podemos auto iniciar, para que en el reinicio del host vuelva a estar activo:
 
 ```
-virsh -c qemu:///system pool-start vm-images 
+virsh -c qemu:///system pool-autostart vm-images 
 Se ha iniciado el grupo vm-images
 ```
 
