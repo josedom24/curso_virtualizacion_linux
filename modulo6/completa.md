@@ -10,7 +10,7 @@ Podemos usar el siguiente comando para realizar la clonación:
 virt-clone --connect=qemu:///system --original plantilla-prueba1 --name clone1 --auto-clone
 ```
 
-Recuerda que puedes usar el parámetro `--file` para indicar el nombre d la imagen de la nueva maquina que clonamos.
+Recuerda que puedes usar el parámetro `--file` para indicar el nombre de la imagen de la nueva máquina que clonamos.
 
 El proceso puede ser lento, ya que se hace una copia completa de la imagen original a la de la nueva máquina virtual.
 
@@ -56,5 +56,3 @@ ssh usuario@192.168.122.253
 
 usuario@clone1:~$ 
 ```
-
-
