@@ -2,8 +2,8 @@
 
 LXC nos ofrece distintos [mecanismos](https://linuxcontainers.org/lxd/docs/master/networks/) para conectar nuestros contenedores a una red. En este curso nos vamos a centrar en las conexiones de tipo **bridge**. Tenemos dos posibilidades:
 
-* Podemos crear manualmente el *bridge* o usar libvirt para su creación (podemos crear [distintos tipos de redes con libvirt](https://wiki.libvirt.org/page/Networking)).
-* Podemos usar `lxc-net`, servicio ofrecido por LXC, que nos facilita la creación de un bridge, que por defecto se llama `lxcbr0`, y que nos ofrece una una red de tipo NAT con los servicios de DHCP y DNS.
+* Podemos crear manualmente el *bridge* o usar libvirt para su creación (podemos crear distintos tipos de redes con libvirt](https://wiki.libvirt.org/page/Networking)).
+* Podemos usar `lxc-net`, servicio ofrecido por LXC, que nos facilita la creación de un bridge, que por defecto se llama `lxcbr0`, y que nos ofrece una red de tipo NAT con los servicios de DHCP y DNS.
 
 ## Redes con lxc-net
 
@@ -30,7 +30,7 @@ lxc.net.0.flags = up
 ...
 ```
 
-Por lo tanto podemos comprobar que el `contenedor1` esta conectado a sea red. Por ejemplo, si mostramos los contenedores que hemos creado, vemos que ha recibido una ip en ese rango:
+Por lo tanto podemos comprobar que el `contenedor1` está conectado a esa red. Por ejemplo, si mostramos los contenedores que hemos creado, vemos que ha recibido una ip en ese rango:
 
 ```bash
 $ lxc-ls -f
@@ -115,7 +115,7 @@ contenedor2 RUNNING 1         -      192.168.122.228 -    false
 
 Vemos como el `contenedor2` ha tomado en una ip de la red `default`.
 
-Si quisiéramos cambiar la conexión del un contenedor ya existente deberiamos hacer la modificación en su fichero de configuración: `/var/lib/lxc/<NOMBRE_CONTENEDOR>/config` y reiniciar el contenedor.
+Si quisiéramos cambiar la conexión del un contenedor ya existente deberíamos hacer la modificación en su fichero de configuración: `/var/lib/lxc/<NOMBRE_CONTENEDOR>/config` y reiniciar el contenedor.
 
 También podríamos conectar el `contenedor1` a la red `default`, para ello vamos a añadir la información de la conexión en su fichero de configuración `/var/lib/lxc/contenedor1/config`:
 
@@ -177,3 +177,4 @@ $ lxc-ls -f
 NAME        STATE   AUTOSTART GROUPS IPV4                        IPV6 UNPRIVILEGED 
 contenedor1 RUNNING 1         -      10.0.3.10, 192.168.122.196  -    false        
 contenedor2 RUNNING 1         -      192.168.122.228             -    false    
+```
