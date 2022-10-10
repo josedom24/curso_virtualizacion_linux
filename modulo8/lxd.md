@@ -40,7 +40,7 @@ Would you like stale cached images to be updated automatically? (yes/no) [defaul
 Would you like a YAML "lxd init" preseed to be printed? (yes/no) [default=no]: 
 ```
 
-Hemos dejado todos los valores por defecto, a excepción del tipo de pool de almacenamiento que he indicado que sea un directorio (**dir**). También ha creado un red puente para conectar los contenedores.
+Hemos dejado todos los valores por defecto, a excepción del tipo de pool de almacenamiento que he indicado que sea un directorio (**dir**). También ha creado una red puente para conectar los contenedores.
 
 ## Creación de un contenedor
 
@@ -58,7 +58,7 @@ lxc launch images:ubuntu/20.04 ubuntu-container
 
 ## Creación de máquinas virtuales
 
-Para crear una maquina virtual, ejecutamos:
+Para crear una máquina virtual, ejecutamos:
 
 ```
 lxc launch <image_server>:<image_name> <instance_name> --vm
@@ -85,7 +85,7 @@ lxc list
 
 ## Gestión de imágenes
 
-En la creación de las dos instancias hemos descargado dos imágenes que podemos gestionar con el subcomando `lxc image`, por ejemplo para ver las imagenes que hemos descargado:
+En la creación de las dos instancias hemos descargado dos imágenes que podemos gestionar con el subcomando `lxc image`, por ejemplo para ver las imágenes que hemos descargado:
 
 
 ```
@@ -108,7 +108,7 @@ Para más información ejecuta `lxc image --help`.
 Vamos a usar la utilidad de línea de comandos `lxc`, para ver todas las funcionalidades puedes ejecutar `lxc --help`. Veamos algunas de ella:
 
 * `lxc list`: Listar instancias. Podemos filtrar la lista, por ejemplo `lxc list type=container` o `lxc list ubuntu.*`.
-* `lxc info`: Nos da información de una instancia. Con la opción `--show-log` nos mietra los logs de la instancia.
+* `lxc info`: Nos da información de una instancia. Con la opción `--show-log` nos muestra los logs de la instancia.
 * `lxc start`: Inicia una instancia.
 * `lxc stop`: Detiene una instancia.
 * `lxc delete`: Borra una instancia.
@@ -143,7 +143,7 @@ Nota: Deberíamos configurar una contraseña para un usuario anteriormente acced
 
 Tenemos muchos [parámetros de configuración](https://linuxcontainers.org/lxd/docs/master/instances) de las instancias, que podemos devivir en tres bloques: [propiedades de las instancias](https://linuxcontainers.org/lxd/docs/master/instances#properties), [openciones de las instancias](https://linuxcontainers.org/lxd/docs/master/instances#keyvalue-configuration) y [dispositivos de las instancias](https://linuxcontainers.org/lxd/docs/master/instances#device-types).
 
-Al crear una instancia podemos indicar los parámetros de configuración deseados, por ejemplo, si queremos limitar el numero de CPU y la memoria de un contenedor, podemos ejecutar:
+Al crear una instancia podemos indicar los parámetros de configuración deseados, por ejemplo, si queremos limitar el número de CPU y la memoria de un contenedor, podemos ejecutar:
 
 ```
 lxc launch images:ubuntu/20.04 ubuntu-limited -c limits.cpu=1 -c limits.memory=192MiB
@@ -167,4 +167,3 @@ lxc config set ubuntu-container limits.memory=128MiB
 * [Más información](https://linuxcontainers.org/lxd/docs/master/images/) sobre la gestión de imágenes.
 * Con el subcomando `lxc network` gestionamos las redes. [Más información](https://linuxcontainers.org/lxd/docs/master/networks/).
 * Con el subcomando `lxc storage` gestionamos los pools de almacenamiento. [Más información](https://linuxcontainers.org/lxd/docs/master/storage/).
-
