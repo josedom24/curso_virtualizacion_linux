@@ -11,7 +11,7 @@ lxc.apparmor.profile = generated
 lxc.apparmor.allow_nesting = 1
 ```
 
-Como vemos se indica a que red se va a conectar (`lxc.net.`). Una vez creado un contenedor, el contenido de este fichero se copia a su fichero de configuración (al que se añaden otras configuraciones por defecto). Por ejemplo el fichero de configuración del contenedor `contenedor1` lo encontramos en el fichero `/var/lib/lxc/contenedor1/config`. en este caso, su contenido es:
+Como vemos se indica a qué red se va a conectar (`lxc.net.`). Una vez creado un contenedor, el contenido de este fichero se copia a su fichero de configuración (al que se añaden otras configuraciones por defecto). Por ejemplo el fichero de configuración del contenedor `contenedor1` lo encontramos en el fichero `/var/lib/lxc/contenedor1/config`. en este caso, su contenido es:
 
 ```bash
 lxc.net.0.type = veth
@@ -33,7 +33,7 @@ lxc.pty.max = 1024
 ```
 Vemos que se han copiado los parámetros de la configuración general (`/etc/lxc/default.conf`) y se han añadido nuevos parámetros: número máximo de terminales (`lxc.tty.max`,`lxc.pty.max`), nombre del contenedor (`lxc.uts.name`), arquitectura (`lxc.pty.max`), ubicación del sistema de fichero (`lxc.rootfs.path`), ...
 
-Puedes ver los distintos parámetros que podemos incluir en la [documentación oficial](https://linuxcontainers.org/lxc/manpages/man5/lxc.container.conf.5.html). Por ejemplo si queremos que los contenedores se inicien automáticamente al iniciar el host pondríamos:
+Puedes ver los distintos parámetros que podemos incluir en la [documentación oficial](https://linuxcontainers.org/lxc/manpages/man5/lxc.container.conf.5.html). Por ejemplo si queremos que los contenedores se inicien automáticamente al iniciar el host podríamos:
 
 ```
 lxc.start.auto = 1
@@ -65,7 +65,7 @@ Con la opción `-i` sólo nos da  la dirección ip, con la opción `-S` nos da l
 
 ## Limitando los recursos para los contenedores LXC
 
-Por defectos los contenedores LXC pueden usar todos los recursos de CPU, RAM, disco del host. Podemos limitar estos recursos. El componente del nucleo que posibilita limitar los recursos para cada contenedor son los *Grupos de control* [cgroups](https://wiki.archlinux.org/title/Cgroups), en concreto en Debian 11 se utiliza [cgroupsv2](https://medium.com/nttlabs/cgroup-v2-596d035be4d7).
+Por defectos los contenedores LXC pueden usar todos los recursos de CPU, RAM, disco del host. Podemos limitar estos recursos. El componente del núcleo que posibilita limitar los recursos para cada contenedor son los *Grupos de control* [cgroups](https://wiki.archlinux.org/title/Cgroups), en concreto en Debian 11 se utiliza [cgroupsv2](https://medium.com/nttlabs/cgroup-v2-596d035be4d7).
 
 Vamos a limitar el uso de memoria RAM (512Mb) y de número de procesadores (1 CPU: la CPU 0) (en la máquina donde estoy corriendo los contenedores tenemos "gb de RAM y 2 CPUs), para ello en el fichero de configuración del `contenedor1` indicamos los siguientes parámetros:
 
