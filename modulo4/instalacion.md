@@ -14,7 +14,7 @@ apt install virt-manager
 
 ![virt-manager](img/virt-manager1.png)
 
-Pode defecto, podemos ver que virt-manager tiene configurado una conexión local privilegiada que se llama **QEMU/KVM**. Vemos las máquina virtuales que están creada en esa conexión (en este caso `prueba1`, que creamos en el módulo anterior).
+Pode defecto, podemos ver que virt-manager tiene configurado una conexión local privilegiada que se llama **QEMU/KVM**. Vemos las máquinas virtuales que están creada en esa conexión (en este caso `prueba1`, que creamos en el módulo anterior).
 
 Con la opción **Archivo->Nueva conexión...** podemos dar de alta una nueva conexión.
 
@@ -30,23 +30,22 @@ Al elegir el detalle de la conexión, podemos comprobar que es una conexión loc
 
 ### Redes disponibles
 
-También podemos gestionar las redes de esta conexión. Podemos ver las redes creadas, crear nuevas redes, eliminarlas, modificarlas, ... Vemos que tenemos creada la red `deafult` y ver sus características (tipo NAT, configuración ofrecida por un servidor  DHCP, Linux Bridge que gestiona,...). Por defecto está inactiva, para activarla, la seleccionamos y pulsamos sobre el botón ▶.
+También podemos gestionar las redes de esta conexión. Podemos ver las redes creadas, crear nuevas redes, eliminarlas, modificarlas, ... Vemos que tenemos creada la red `default` y ver sus características (tipo NAT, configuración ofrecida por un servidor  DHCP, Linux Bridge que gestiona,...). Por defecto está inactiva, para activarla, la seleccionamos y pulsamos sobre el botón ▶.
 
 ![virt-manager](img/virt-manager4.png)
 
 ### Pools de almacenamiento disponibles
 
-Otro elemento que podemos gestionar son los Pool de almacenamiento que tenemos en la conexión. Recordamos que teníamos dos creados: el pool `default`, donde se guardaban las imágenes de discos, y el pool `iso`, donde almacenábamos los ficheros ISO para las instalaciones de los sistemas operativos. Además, podemos ver los volúmenes (en este caso, los ficheros) que hay creados en cada pool.
+Otro elemento que podemos gestionar son los Pool de almacenamiento que tenemos en la conexión. Recordamos que teníamos dos creados: el pool `default`, donde se guardaban las imágenes de discos, y el pool `iso`, donde almacenamos los ficheros ISO para las instalaciones de los sistemas operativos. Además, podemos ver los volúmenes (en este caso, los ficheros) que hay creados en cada pool.
 
 ![virt-manager](img/virt-manager5.png)
 
 ## Conexión remota con virt-manager
 
-Si quisiéramos conectarnos d forma remota a un servidor donde se está ejecutando libvirt, podríamos crear una nueva conexión: **Archivo -> Añadir conexión...**, y crear una conexión y elegir la opción **Conectar a anfitrión mediante SSH**:
+Si quisiéramos conectarnos de forma remota a un servidor donde se está ejecutando libvirt, podríamos crear una nueva conexión: **Archivo -> Añadir conexión...**, y crear una conexión y elegir la opción **Conectar a anfitrión mediante SSH**:
 
 ![virt-manager](img/virt-manager4-1.png)
 
 ## Conclusión
 
-`virt-manager` es otra aplicación que nos permite hacer conexiones a libvirt, como hacemos con la aplicación `virsh` o `virt-install`. Por lo tanto, los recursos virtualizados que gestionamos con estas aplicaciones cuando nos conectamos a `qemu:///system` son los mismos. Los cambios que hagamos con una aplicación se ven relejados en cualquiera de las otras. `virt-maanger` es más fácil de usar, pero nos ofrece menos opciones que la aplicación `virsh` o `virt-install`.
-
+`virt-manager` es otra aplicación que nos permite hacer conexiones a libvirt, como hacemos con la aplicación `virsh` o `virt-install`. Por lo tanto, los recursos virtualizados que gestionamos con estas aplicaciones cuando nos conectamos a `qemu:///system` son los mismos. Los cambios que hagamos con una aplicación se ven reflejados en cualquiera de las otras. `virt-manager` es más fácil de usar, pero nos ofrece menos opciones que la aplicación `virsh` o `virt-install`.

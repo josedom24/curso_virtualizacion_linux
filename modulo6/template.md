@@ -3,7 +3,7 @@
 Una plantilla de máquina virtual, o simplemente **plantilla** es una imagen preconfigurada de un sistema operativo que puede utilizarse para desplegar rápidamente
 máquinas virtuales. El uso de plantillas permite evitar muchas tareas repetitivas de instalación y configuración. El resultado es la creación de máquinas virtuales totalmente instaladas y listas para funcionar en menos tiempo de lo que tardaría una instalación manual.
 
-Con la herramienta `virt-clone` hemos creado un clon de una máquina virtual, es decir, una copia de una máquina. Una platilla es una *copia maestra* que podemos utilizar para crear muchos clones.
+Con la herramienta `virt-clone` hemos creado un clon de una máquina virtual, es decir, una copia de una máquina. Una plantilla es una *copia maestra* que podemos utilizar para crear muchos clones.
 
 Una vez tengamos una plantilla, tendremos dos manera de crear las nuevas máquinas:
 

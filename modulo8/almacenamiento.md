@@ -1,6 +1,6 @@
 # Almacenamiento en LXC
 
-Veamos como montar un directorio del host en un contenedor. Imaginemos que tenemos el directorio `/opt/contenedor1` con un fichero `index.html` y lo queremos montar en el `contenedor1` en el directorio `/srv/www`. Tenemos que tener en cuenta los siguiente:
+Veamos cómo montar un directorio del host en un contenedor. Imaginemos que tenemos el directorio `/opt/contenedor1` con un fichero `index.html` y lo queremos montar en el `contenedor1` en el directorio `/srv/www`. Tenemos que tener en cuenta los siguiente:
 
 El directorio de montaje debe existir en el contenedor:
 

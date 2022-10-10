@@ -54,10 +54,9 @@ Podemos ejecutar un comando en un contenedor que se esté ejecutando de la sigui
 $ lxc-attach contenedor1 -- ls -al
 ```
 
-si el contenedor está apagado, lo haríamos de a siguiente forma:
+si el contenedor está apagado, lo haríamos de la siguiente forma:
 
 ```bash
 $ lxc-stop contenedor1
 $ lxc-execute contenedor1 -- ls -al
 ```
-
