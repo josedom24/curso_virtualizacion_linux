@@ -2,9 +2,9 @@
 
 La clonación de una máquina virtual copia la configuración XML de la máquina de origen y sus imágenes de disco, y realiza ajustes en las configuraciones para asegurar la unicidad de la nueva máquina. Esto incluye cambiar el nombre de la máquina y asegurarse de que utiliza los clones de las imágenes de disco. No obstante, los datos almacenados en los discos virtuales del clon son idénticos a los de la máquina de origen. 
 
-La clonación nos permite crear nuevas máquinas de forma muy sencilla, sin necesidad de pasar por el proceso de instalación des de una imagen ISO.
+La clonación nos permite crear nuevas máquinas de forma muy sencilla, sin necesidad de pasar por el proceso de instalación desde una imagen ISO.
 
-Para realizar la clonación vamos a a partir de una máquina virtual que este apagada.
+Para realizar la clonación vamos a partir de una máquina virtual que esté apagada.
 
 ## Uso virt-clone para realizar la clonación
 
