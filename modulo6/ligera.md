@@ -1,10 +1,10 @@
 # Clonación enlazada a partir de plantillas
 
-En este tipo de clonación la imagen de la máquina clonada utiliza la imagen de la plantilla como imagen base (**backing store**) en modo de sólo lectura, en la imagen de la nueva máquina sólo se guardan los cambios del sistema de archivo. Requiere menos espacio en disco, pero no puede ejecutarse sin acceso a la imagen de plantilla base. Podemos entender esta técnica como aprovisionamiento ligero** ya que en un principio la imagen de la nueva máquina no ocupara nada en el disco e irá creciendo con las modificaciones que vayamos haciendo a la máquina.
+En este tipo de clonación la imagen de la máquina clonada utiliza la imagen de la plantilla como imagen base (**backing store**) en modo de sólo lectura, en la imagen de la nueva máquina sólo se guardan los cambios del sistema de archivo. Requiere menos espacio en disco, pero no puede ejecutarse sin acceso a la imagen de plantilla base. Podemos entender esta técnica como aprovisionamiento ligero** ya que en un principio la imagen de la nueva máquina no ocupa nada en el disco e irá creciendo con las modificaciones que vayamos haciendo a la máquina.
 
 ## Creación de imágenes de disco con backing store
 
-Para simplificar la creación de este tipo de imágenes vamos a poner como tamaño el mismo que tenga la imagen base de la plantilla. Como la imagen base ya tiene guardado un sistema de archivos con un tamaño determinado, el hecho de que creemos una nueva imagen con más tamaño no conllevará el redimensionado del sistema de archivo. Este cambio de tamaño se podría realizar, pero con operaciones un poco más compleja.
+Para simplificar la creación de este tipo de imágenes vamos a poner como tamaño el mismo que tenga la imagen base de la plantilla. Como la imagen base ya tiene guardado un sistema de archivos con un tamaño determinado, el hecho de que creemos una nueva imagen con más tamaño no conlleva el redimensionado del sistema de archivo. Este cambio de tamaño se podría realizar, pero con operaciones un poco más complejas.
 
 Para asegurarnos de crear un volumen del mismo tamaño que la imagen base vamos comprobar su tamaño:
 ```
@@ -53,11 +53,10 @@ Como alternativa, lo que podemos hacer es crear una nueva máquina virtual con e
 
 Podemos hacerlo como estudiamos en el apartado *Trabajar con volúmenes en las máquinas virtuales*, eligiendo la opción **Manual install** al crear la máquina y posteriormente seleccionando el volumen de la nueva máquina.
 
-Otra forma, sería es cogiendo la opción **Importar imagen de disco existente** en la creación de la máquina:
+Otra forma, sería escogiendo la opción **Importar imagen de disco existente** en la creación de la máquina:
 
 ![plantilla](img/plantilla7.png)
 
 Y eligiendo el volumen en siguiente paso:
 
 ![plantilla](img/plantilla8.png)
-
