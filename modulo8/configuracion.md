@@ -31,7 +31,7 @@ lxc.uts.name = contenedor1
 lxc.arch = amd64
 lxc.pty.max = 1024
 ```
-Vemos que se han copiado los parámetros de la configuración general (`/etc/lxc/default.conf`) y se han añadido nuevos parámetros: número máximo de terminales (`lxc.tty.max`,`lxc.pty.max`), nombre del contenedor (`lxc.uts.name`), arquitectura (`lxc.pty.max`), ubicación del sistema de fichero (`lxc.rootfs.path`), ...
+Vemos que se han copiado los parámetros de la configuración general (`/etc/lxc/default.conf`) y se han añadido nuevos parámetros: número máximo de terminales (`lxc.tty.max`,`lxc.pty.max`), nombre del contenedor (`lxc.uts.name`), arquitectura (`lxc.arch`), ubicación del sistema de fichero (`lxc.rootfs.path`), ...
 
 Puedes ver los distintos parámetros que podemos incluir en la [documentación oficial](https://linuxcontainers.org/lxc/manpages/man5/lxc.container.conf.5.html). Por ejemplo si queremos que los contenedores se inicien automáticamente al iniciar el host podríamos:
 
