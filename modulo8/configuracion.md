@@ -67,7 +67,7 @@ Con la opción `-i` sólo nos da  la dirección ip, con la opción `-S` nos da l
 
 Por defectos los contenedores LXC pueden usar todos los recursos de CPU, RAM, disco del host. Podemos limitar estos recursos. El componente del núcleo que posibilita limitar los recursos para cada contenedor son los *Grupos de control* [cgroups](https://wiki.archlinux.org/title/Cgroups), en concreto en Debian 11 se utiliza [cgroupsv2](https://medium.com/nttlabs/cgroup-v2-596d035be4d7).
 
-Vamos a limitar el uso de memoria RAM (512Mb) y de número de procesadores (1 CPU: la CPU 0) (en la máquina donde estoy corriendo los contenedores tenemos "gb de RAM y 2 CPUs), para ello en el fichero de configuración del `contenedor1` indicamos los siguientes parámetros:
+Vamos a limitar el uso de memoria RAM (512Mb) y de número de procesadores (1 CPU: la CPU 0) (en la máquina donde estoy corriendo los contenedores tenemos 2Gb de RAM y 2 CPUs), para ello en el fichero de configuración del `contenedor1` indicamos los siguientes parámetros:
 
 ```bash
 lxc.cgroup2.memory.max = 512M
