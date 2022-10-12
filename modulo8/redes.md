@@ -2,7 +2,7 @@
 
 LXC nos ofrece distintos [mecanismos](https://linuxcontainers.org/lxd/docs/master/networks/) para conectar nuestros contenedores a una red. En este curso nos vamos a centrar en las conexiones de tipo **bridge**. Tenemos dos posibilidades:
 
-* Podemos crear manualmente el *bridge* o usar libvirt para su creación (podemos crear distintos tipos de redes con libvirt](https://wiki.libvirt.org/page/Networking)).
+* Podemos crear manualmente el *bridge* o usar libvirt para su creación (podemos crear distintos tipos de redes con [libvirt](https://wiki.libvirt.org/page/Networking)).
 * Podemos usar `lxc-net`, servicio ofrecido por LXC, que nos facilita la creación de un bridge, que por defecto se llama `lxcbr0`, y que nos ofrece una red de tipo NAT con los servicios de DHCP y DNS.
 
 ## Redes con lxc-net
