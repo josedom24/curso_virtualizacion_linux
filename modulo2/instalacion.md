@@ -22,7 +22,7 @@ Ejecutando hypervisor: QEMU 5.2.0
 
 Vamos a usar la utilidad `virsh`, que nos proporciona una shell completa para el manejo de libvirt. Con el comando `list` mostramos las máquinas virtuales que hemos creado.
 
-Si con un usuario sin privilegios ejecutamos:
+Con un usuario sin privilegios ejecutamos:
 
 ```
 usuario@kvm:~$ virsh list
