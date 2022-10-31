@@ -114,3 +114,19 @@ Podemos comprobar que se ha producido la redimensión en el disco de la máquina
 2. Pero el sistema de archivo sigue teneido 2Gb. 
 3. Desmontamos el disco, y lo redimensionamos con `resize2fs`.
 4. Volvemos a montarlo y comprobamos que ahora ya tiene los 3Gb.
+
+## Redimensión del sistema de ficheros de una imagen de disco
+
+Otra alternativa para redimensionar el sistema de fichero de una imagen es usar la herramienta [virt-resize](https://libguestfs.org/virt-resize.1.html). `virt-resize` no trabaja sobre imágenes de discos de máquinas que se estén ejecutando, además no puede redimensionar sobre el mismo fichero de la imagen, por lo que vamos a hacer una copia del mismo.
+
+Si tenemos un fichero qcow2 que se llama `vol1.qcow`, podemos redimensionar el disco y su sistema de ficheros con al siguientes instrucciones:
+
+```
+qemu-img resize vol1.qcow2 10G
+cp vol1.qcow2 newvol1.qcow2
+virt-resize --expand /dev/sda1 vol1.qcow2 newvol1.qcow2
+mv newvol1.qcow2 vol1.qcow2
+```
+
+Resimensionamos el disco, como vimos en el apartado anterior. Como hemos indicado `virt-resize` no trabaja sobre un fichero qcow2 directamente, es por ello que lo hemos copiado a otro fichero y hemos ejecutado el comando. Finalmente el fichero `nwevol1.qcow2` tendrá un sistema de ficheros de 10Gb, por lo que terminamos copiándolo de nuevo (con el `mv`) sobre el disco original.
+
