@@ -90,7 +90,7 @@ Si creamos un nuevo volumen, vemos la siguiente pantalla donde indicamos la sigu
 
 * El nombre del volumen.
 * El formato: qcow2 o raw.
-* Backing store: Nos proporciona la característica de aprovisionamiento ligero usando una imagen base para la creación del volumen. Lo estudiaremos más adelante en el curso.
+* Backing store: Nos proporciona la característica de crear volúmenes a partir de un volumen base o imagen base. Lo estudiaremos más adelante en el curso.
 * Capacidad: Indicamos el tamaño del volumen. Por defecto, si usamos el formato qcow2 obtendremos la característica de aprovisionamiento ligero, el tamaño indicado será el que ve la máquina virtual, pero no lo que se ocupa realmente en el disco del host. Si elegimos la opción **Allocate entire volume now**, se perderá esa característica y se ocupara el disco la capacidad total elegida.
 
 ![volumen](img/volumen2.png)
