@@ -48,8 +48,27 @@ Otra opción es usando `virt-manager`, creando un nuevo volumen e indicando dura
 
 ### Información sobre imágenes de con disco con backing store
 
-Para comprobar que un volumen está creado con una imgen base podemos usar `virsh`:
+Para comprobar que un volumen está creado con una imagen base podemos usar `virsh`:
 
+```
+virsh -c qemu:///system vol-dumpxml prueba6.qcow2 default
+...
+<backingStore>
+    <path>/var/lib/libvirt/images/template-debian.qcow2</path>
+    <format type='qcow2'/>
+    <permissions>
+    ...
+```
+
+O usando el comando `qemu-img`:
+
+```
+sudo qemu-img info /var/lib/libvirt/images/prueba6.qcow2
+...
+backing file: template-debian.qcow2
+backing file format: qcow2
+...
+```
 
 
 ### Creación de la nueva máquina a partir de la imagen con backing store
