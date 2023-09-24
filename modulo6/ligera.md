@@ -2,9 +2,20 @@
 
 En este tipo de clonación la imagen de la máquina clonada utiliza la imagen de la plantilla como imagen base (**backing store**) en modo de sólo lectura, en la imagen de la nueva máquina sólo se guardan los cambios del sistema de archivo. Requiere menos espacio en disco, pero no puede ejecutarse sin acceso a la imagen de plantilla base. 
 
-## Creación de imágenes de disco con backing store
+Tenemos dos formas de hacer este tipo de clonación:
 
-Para simplificar la creación de este tipo de imágenes vamos a poner como tamaño el mismo que tenga la imagen base de la plantilla. Como la imagen base ya tiene guardado un sistema de archivos con un tamaño determinado, el hecho de que creemos una nueva imagen con más tamaño no conlleva el redimensionado del sistema de archivo. Este cambio de tamaño se podría realizar, pero con operaciones un poco más complejas.
+1. Creando el nuevo volumen a partir de la imagen base de la plantilla (**backing store**) y posteriormente usar `virt-install` o `virt-manager` para crear una nueva máquina a partir de este volumen.
+2. Usar la herramienta `virt-clone` para realizar la clonación enlazada.
+
+
+## Clonación ligera usando  `virt-install` o `virt-manager`
+
+En este caso lo primero que haremos es crear el volumen a partir de la imagen base (**backing store**) y posterior mente creareamos una nueva máquina con dicho volumen.
+
+
+### Creación de imágenes de disco con backing store
+
+Para no complicar la creación de volúmenes con backing store vamos a indicar el tamaño del nuevo volumen igual al de la imagen base. Como la imagen base ya tiene guardado un sistema de archivos con un tamaño determinado, el hecho de que creemos una nueva imagen con más tamaño no conlleva el redimensionado del sistema de archivo. Este cambio de tamaño se podría realizar, pero con operaciones un poco más complejas.
 
 Para asegurarnos de crear un volumen del mismo tamaño que la imagen base vamos comprobar su tamaño:
 ```
@@ -27,13 +38,46 @@ O podemos usar la aplicación `qemu-img` y posterior refrescamos el pool `defaul
 
 ```
 cd /var/lib/libvirt/images
-sudo qemu-img create -f qcow2 prueba6.qcow2 10G -b template-debian.qcow2
+sudo qemu-img create -f qcow2 -b template-debian.qcow2 -F qcow2 prueba6.qcow2 10G
 virsh -c qemu:///system pool-refresh default
 ```
 
 Otra opción es usando `virt-manager`, creando un nuevo volumen e indicando durante la dirección el volumen base:
 
 ![plantilla](img/plantilla6.png)
+
+### Información sobre imágenes de con disco con backing store
+
+Para comprobar que un volumen está creado con una imgen base podemos usar `virsh`:
+
+
+
+### Creación de la nueva máquina a parir de la imagen con backing store
+
+En este caso podemos usar la herramienta `virt-install`como vimos en capítulos anteriores:
+
+```
+virt-install --connect qemu:///system \
+			 --virt-type kvm \
+			 --name nueva_prueba \
+			 --os-variant debian10 \
+			 --disk path=/var/lib/libvirt/images/prueba6.qcow2` \
+			 --memory 1024 \
+			 --vcpus 1
+```			
+
+Usando `virt-manager` podemos crear una nueva máquina virtual con el volumen que hemos creado.
+
+Podemos hacerlo como estudiamos en el apartado *Trabajar con volúmenes en las máquinas virtuales*, eligiendo la opción **Manual install** al crear la máquina y posteriormente seleccionando el volumen de la nueva máquina.
+
+Otra forma, sería escogiendo la opción **Importar imagen de disco existente** en la creación de la máquina:
+
+![plantilla](img/plantilla7.png)
+
+Y eligiendo el volumen en siguiente paso:
+
+![plantilla](img/plantilla8.png)
+
 
 ## Uso virt-clone para realizar la clonación enlazada
 
@@ -45,18 +89,3 @@ virt-clone --connect=qemu:///system --original plantilla-prueba1 --name clone2 -
 
 Indicamos como fichero el volumen que hemos creado, pero con la opción `--preserve-data` no se copia el volumen original al nuevo, simplemente se usa. Se puede comprobar que la clonación no tarda nada de tiempo, no se está copiando un volumen en otro.
 
-## Uso virt-manager para realizar la clonación enlazada
-
-Con `virt-manager` no podemos hacer una clonación enlazada desde el volumen que hemos creado. No nos permite elegir la opción de no realizar la copia del volumen de la plantilla al volumen de la máquina que estamos creando.
-
-Como alternativa, lo que podemos hacer es crear una nueva máquina virtual con el volumen que hemos creado.
-
-Podemos hacerlo como estudiamos en el apartado *Trabajar con volúmenes en las máquinas virtuales*, eligiendo la opción **Manual install** al crear la máquina y posteriormente seleccionando el volumen de la nueva máquina.
-
-Otra forma, sería escogiendo la opción **Importar imagen de disco existente** en la creación de la máquina:
-
-![plantilla](img/plantilla7.png)
-
-Y eligiendo el volumen en siguiente paso:
-
-![plantilla](img/plantilla8.png)
