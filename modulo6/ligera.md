@@ -52,7 +52,7 @@ Para comprobar que un volumen está creado con una imgen base podemos usar `virs
 
 
 
-### Creación de la nueva máquina a parir de la imagen con backing store
+### Creación de la nueva máquina a partir de la imagen con backing store
 
 En este caso podemos usar la herramienta `virt-install`como vimos en capítulos anteriores:
 
