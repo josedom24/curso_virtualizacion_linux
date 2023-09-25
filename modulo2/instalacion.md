@@ -50,6 +50,12 @@ Para que el usuario `usuario` haga una conexión privilegiada tendrá que indica
 usuario@kvm:~$ virsh -c qemu:///system list
 ```
 
+De forma alternativa y según la [wiki de Debian](https://wiki.debian.org/es/KVM#M.2BAOE-quinas_virtuales_del_usuario_y_del_sistema), podemos usar la variable de entorno `LIBVIRT_DEFAULT_URI` con el siguiente comando:
+
+```bash
+export LIBVIRT_DEFAULT_URI='qemu:///system'
+```
+
 ---
 
 [Índice](https://github.com/josedom24/curso_virtualizacion_linux)
