@@ -8,6 +8,8 @@ Sin embargo, en este apartado vamos a aprender algunas cosas nuevas: crear nueva
 
 En apartados anterior creamos un volumen de 10 GB llamado `vol1.qcow2`. Vamos a crear una nueva máquina virtual que tenga como disco duro este volumen.
 
+### Con `virt-install`
+
 Si los hacemos con `virt-install`:
 
 ```
@@ -26,6 +28,8 @@ Hemos utilizado la opción `--disk vol=default/vol1.qcow2`, indicando el volumen
 
 * `--disk path=/var/lib/libvirt/images/vol1.qcow2`: Donde indicamos directamente la ruta donde se encuentra el fichero de imagen de disco.
 * `--pool wm-images,size=10`: En este caso no se reutiliza el volumen que tenemos creado, sino que se crearía un nuevo volumen de 10GB en el pool indicado.
+
+### Con `virt-manager`
 
 Si utilizamos `virt-manager`, para crear la nueva máquina, durante el asistente de creación de la máquina, elegimos el volumen que tenemos creado:
 
