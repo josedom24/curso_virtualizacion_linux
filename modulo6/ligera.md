@@ -2,18 +2,12 @@
 
 En este tipo de clonación la imagen de la máquina clonada utiliza la imagen de la plantilla como imagen base (**backing store**) en modo de sólo lectura, en la imagen de la nueva máquina sólo se guardan los cambios del sistema de archivo. Requiere menos espacio en disco, pero no puede ejecutarse sin acceso a la imagen de plantilla base. 
 
-Tenemos dos formas de hacer este tipo de clonación:
+El mecanismo es un poco más complejo, tenemos que realziar dos pasos:
 
-1. Creando el nuevo volumen a partir de la imagen base de la plantilla (**backing store**) y posteriormente usar `virt-install` o `virt-manager` para crear una nueva máquina a partir de este volumen.
-2. Usar la herramienta `virt-clone` para realizar la clonación enlazada.
+1. Creación del nuevo volumen a a partir de la imagen base de la plantilla (**backing store**)-
+2. Creación de la nueva máquina usando `virt-install`, `virt-manager` o `viirt-clone`.
 
-
-## Clonación ligera usando  `virt-install` o `virt-manager`
-
-En este caso lo primero que haremos es crear el volumen a partir de la imagen base (**backing store**) y posterior mente creareamos una nueva máquina con dicho volumen.
-
-
-### Creación de imágenes de disco con backing store
+## Creación de imágenes de disco con backing store
 
 Para no complicar la creación de volúmenes con backing store vamos a indicar el tamaño del nuevo volumen igual al de la imagen base. Como la imagen base ya tiene guardado un sistema de archivos con un tamaño determinado, el hecho de que creemos una nueva imagen con más tamaño no conlleva el redimensionado del sistema de archivo. Este cambio de tamaño se podría realizar, pero con operaciones un poco más complejas.
 
@@ -70,9 +64,7 @@ backing file format: qcow2
 ...
 ```
 
-### Creación de la nueva máquina a partir de la imagen con backing store
-
-#### Con `virt-install`
+## Creación de la nueva máquina a partir de la imagen con backing store con virt-install
 
 En este caso podemos usar la herramienta `virt-install` pero sin indicar el medio de instalación.
 
@@ -90,7 +82,7 @@ virt-install --connect qemu:///system \
 Usamos la opción `--import` para que no te pida que indique el medio de instalación, simplemente va a usar el volumen indicado como disco de la máquina virtual.
 
 
-#### Con `virt-manager`
+## Creación de la nueva máquina a partir de la imagen con backing store con virt-manager
 
 Si utilizamos `virt-manager`, para crear la nueva máquina, durante el asistente de creación de la máquina, elegimos la opción **Manual install**, ya que no vamos a usar una imagen ISO:
 
@@ -109,12 +101,12 @@ Y eligiendo el volumen en siguiente paso:
 ![plantilla](img/plantilla8.png)
 
 
-## Uso virt-clone para realizar la clonación enlazada
+## Creación de la nueva máquina a partir de la imagen con backing store con virt-clone
 
 Una vez que tenemos creado el volumen basada en el imagen base de la plantilla, podemos crear un nuevo clon con `virt-clone`, para ello ejecutamos:
 
 ```
-virt-clone --connect=qemu:///system --original plantilla-prueba1 --name clone2 --file /var/lib/libvirt/images/clone2.qcow2 --preserve-data
+virt-clone --connect=qemu:///system --original plantilla-prueba1 --name clone2 --file /var/lib/libvirt/images/prueba6.qcow2 --preserve-data
 ```
 
 Indicamos como fichero el volumen que hemos creado, pero con la opción `--preserve-data` no se copia el volumen original al nuevo, simplemente se usa. Se puede comprobar que la clonación no tarda nada de tiempo, no se está copiando un volumen en otro.
