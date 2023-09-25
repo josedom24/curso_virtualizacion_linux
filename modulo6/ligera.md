@@ -70,10 +70,11 @@ backing file format: qcow2
 ...
 ```
 
-
 ### Creación de la nueva máquina a partir de la imagen con backing store
 
-En este caso podemos usar la herramienta `virt-install`como vimos en capítulos anteriores:
+#### Con `virt-install`
+
+En este caso podemos usar la herramienta `virt-install` pero sin indicar el medio de instalación.
 
 ```
 virt-install --connect qemu:///system \
@@ -82,12 +83,22 @@ virt-install --connect qemu:///system \
 			 --os-variant debian10 \
 			 --disk path=/var/lib/libvirt/images/prueba6.qcow2` \
 			 --memory 1024 \
-			 --vcpus 1
-```			
+			 --vcpus 1 \
+			 --import
+```		
 
-Usando `virt-manager` podemos crear una nueva máquina virtual con el volumen que hemos creado.
+Usamos la opción `--import` para que no te pida que indique el medio de instalación, simplemente va a usar el volumen indicado como disco de la máquina virtual.
 
-Podemos hacerlo como estudiamos en el apartado *Trabajar con volúmenes en las máquinas virtuales*, eligiendo la opción **Manual install** al crear la máquina y posteriormente seleccionando el volumen de la nueva máquina.
+
+#### Con `virt-manager`
+
+Si utilizamos `virt-manager`, para crear la nueva máquina, durante el asistente de creación de la máquina, elegimos la opción **Manual install**, ya que no vamos a usar una imagen ISO:
+
+![volumen](img/volumen9.png)
+
+Y posteriormente, escogemos el volumen que tenemos creado:
+
+![volumen](img/volumen4.png)
 
 Otra forma, sería escogiendo la opción **Importar imagen de disco existente** en la creación de la máquina:
 

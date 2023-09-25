@@ -20,7 +20,7 @@ virt-install --connect qemu:///system \
 			 --os-variant debian10 \
 			 --disk vol=default/vol1.qcow2 \
 			 --memory 1024 \
-			 --vcpus 1 \
+			 --vcpus 1
 			 
 ```			 
 
