@@ -17,8 +17,11 @@ virt-install --connect qemu:///system \
 			 --os-variant debian10 \
 			 --disk vol=default/vol1.qcow2 \
 			 --memory 1024 \
-			 --vcpus 1
+			 --vcpus 1 \
+			 --import
 ```			 
+
+Usamos la opción `--import` para que no te pida que indique el medio de instalación, simplemente va a usar el volumen indicado como disco de la máquina virtual.
 
 Hemos utilizado la opción `--disk vol=default/vol1.qcow2`, indicando el volumen usando el formato `pool/volumen`. Otras opciones que podríamos poner serían:
 
