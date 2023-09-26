@@ -38,4 +38,6 @@ La máquina clon que hemos creado es igual a la original. La nueva máquina cont
 
 ![clonación](img/clonacion2.png)
 
-Podemos acceder a la máquina y cambiar el fichero `/etc/hostname` para cambiar el nombre de la máquina, pero todavía tendríamos mucha información repetida entre las dos máquinas. En el siguiente apartado vamos a usar la aplicación `virt-sysprep` para eliminar todos estos identificadores únicos.
+Podemos acceder a la máquina y cambiar el fichero `/etc/hostname` para cambiar el nombre de la máquina, pero todavía tendríamos mucha información repetida entre las dos máquinas. 
+
+Por lo tanto no vamos a realizar la clonación de esta manera. En el siguiente apartado vamos a aprender a crear **plantillas de máquinas virtuales** que nos permiten realziar la clonación de forma adecuada.
