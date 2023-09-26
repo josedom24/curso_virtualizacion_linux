@@ -11,7 +11,7 @@ Un bridge externo es un bridge virtual que estarán conectada al router de la re
 
 **Nota: Si conectamos al bridge una interfaz de tipo wifi podemos tener problemas de conectividad. No todas las tarjetas inalámbricas permiten la conexión a puentes virtuales.**
 
-No aseguremos que tenemos instalado el siguiente paquete que nos permite trabajar con Linux Bridge:
+Nos aseguremos que tenemos instalado el siguiente paquete que nos permite trabajar con Linux Bridge:
 
 ```
 apt install bridge-utils
