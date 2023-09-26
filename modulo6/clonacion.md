@@ -22,7 +22,7 @@ Es la forma más sencilla, se crea una nueva máquina que se llama como la origi
 Si queremos indicar el nombre de la nueva máquina: usamos el parámetro `--name` y si queremos indicar el nombre del nuevo volumen usamos `--file`:
 
 ```
-virt-clone --connect=qemu:///system --original prueba4 --name prueba5 --file /var/lib/libvirt/images/vol_prueba5.qcow2
+virt-clone --connect=qemu:///system --original prueba4 --name prueba5 --file /var/lib/libvirt/images/vol_prueba5.qcow2 --auto-clone
 ```
 ## Uso de virt-manager para realizar la clonación
 
