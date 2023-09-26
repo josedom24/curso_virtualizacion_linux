@@ -63,7 +63,7 @@ $ ip a
 ...
 ```
 
-Comprobamos que la interfaz física `enp1s0` no tiene dirección IPP, ya que está conectada al bridge. La interfaz de red `br0` representa la conexión del bridge que ha tomado una ip del servidor DHCP de la red local (esta dirección IP será diferente a la que tenía anteriormente la interfaz física).
+Comprobamos que la interfaz física `enp1s0` no tiene dirección IP, ya que está conectada al bridge. La interfaz de red `br0` representa la conexión del bridge que ha tomado una ip del servidor DHCP de la red local (esta dirección IP será diferente a la que tenía anteriormente la interfaz física).
 
 Si tenemos instalado el paquete `bridge-utils` podremos ver los puentes virtuales y las interfaces que tienen conectadas, ejecutando como superusuario:
 
