@@ -40,4 +40,4 @@ La máquina clon que hemos creado es igual a la original. La nueva máquina cont
 
 Podemos acceder a la máquina y cambiar el fichero `/etc/hostname` para cambiar el nombre de la máquina, pero todavía tendríamos mucha información repetida entre las dos máquinas. 
 
-Por lo tanto no vamos a realizar la clonación de esta manera. En el siguiente apartado vamos a aprender a crear **plantillas de máquinas virtuales** que nos permiten realziar la clonación de forma adecuada.
+Por lo tanto no vamos a realizar la clonación de esta manera. En el siguiente apartado vamos a aprender a crear **plantillas de máquinas virtuales** que nos permiten realizar la clonación de forma adecuada.
