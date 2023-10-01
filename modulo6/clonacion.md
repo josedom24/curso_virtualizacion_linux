@@ -22,7 +22,7 @@ Es la forma más sencilla, se crea una nueva máquina que se llama como la origi
 Si queremos indicar el nombre de la nueva máquina: usamos el parámetro `--name` y si queremos indicar el nombre del nuevo volumen usamos `--file`:
 
 ```
-virt-clone --connect=qemu:///system --original prueba4 --name prueba5 --file /var/lib/libvirt/images/vol_prueba5.qcow2
+virt-clone --connect=qemu:///system --original prueba4 --name prueba5 --file /var/lib/libvirt/images/vol_prueba5.qcow2 --auto-clone
 ```
 ## Uso de virt-manager para realizar la clonación
 
@@ -38,4 +38,6 @@ La máquina clon que hemos creado es igual a la original. La nueva máquina cont
 
 ![clonación](img/clonacion2.png)
 
-Podemos acceder a la máquina y cambiar el fichero `/etc/hostname` para cambiar el nombre de la máquina, pero todavía tendríamos mucha información repetida entre las dos máquinas. En el siguiente apartado vamos a usar la aplicación `virt-sysprep` para eliminar todos estos identificadores únicos.
+Podemos acceder a la máquina y cambiar el fichero `/etc/hostname` para cambiar el nombre de la máquina, pero todavía tendríamos mucha información repetida entre las dos máquinas. 
+
+Por lo tanto no vamos a realizar la clonación de esta manera. En el siguiente apartado vamos a aprender a crear **plantillas de máquinas virtuales** que nos permiten realizar la clonación de forma adecuada.
