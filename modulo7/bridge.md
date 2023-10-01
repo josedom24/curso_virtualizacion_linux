@@ -114,6 +114,14 @@ ip a
        valid_lft 3595sec preferred_lft 3595sec
 ```
 
+Podemos comprobar los puentes que tenemos creados y las interfaces que están conectados a él, ejecutando la siguiente instrucción:
+
+```
+brctl show
+bridge name	bridge id		STP enabled	interfaces
+br0		8000.7eb448933f70	no		enp1s0
+```
+
 ## Creación de un bridge externo en Ubuntu
 
 En Ubuntu vamos a configurar el fichero `/etc/netplan/01-network-manager-all.yaml` de la siguiente forma:
