@@ -1,8 +1,8 @@
-# Definición de redes en libvirt
+# Definición de Redes Virtuales (Privadas) en libvirt
 
 Las redes que gestiona libvirt se definen con el formato XML. Puedes profundizar en el formato XML con los que se definen las redes consultando el documento [Network XML format](https://libvirt.org/formatnetwork.html). 
 
-## Definición de Redes Virtuales de tipo NAT
+## Definición de Redes Virtuales (Privadas) de tipo NAT
 
 La red `default` con la que hemos trabajado es de este tipo. La configuración de la red `default` la podemos encontrar en el fichero `/usr/share/libvirt/networks/default.xml`:
 
@@ -56,32 +56,3 @@ Son similares a la anterior, pero el host no se conecta a la red. Por lo tanto n
 </network>
 ```
 
-## Definición de Redes Puentes conectadas a un bridge externo
-
-Partimos de que en el host tenemos creado un bridge virtual (que se suele llamar `br0`) al que estña conectado el host. Las máquinas virtuales se conectarán en ese bridge y tomarán configuración de red de la misma red a la que está conectada el host. La definición quedaría:
-
-```xml
-<network>
-  <name>red-bridge</name>
-  <forward mode="bridge"/>
-  <bridge name="br0"/>
-</network>
-```
-
-* El modo de forward se indica como `bridge`.
-* Y en la etiqueta `bridge` se pone el nombre del bridge virtual que estamos usando.
-
-## Definición de Redes Puentes compartiendo la interfaz física del host
-
-En este caso se comparte una interfaz física del host para conectar la máquina virtual a la red física. La definición sería:
-
-```xml
-<network>
-  <name>red-bridge-eth0</name>
-  <forward mode="bridge">
-    <interface dev="eth0"/>
-  </forward>
-</network>
-``` 
-
-Es similar a la anterior, pero se utiliza la etiqueta `<interface>` para indicar el nombre de la interfaz de red física que vamos a utilizar.
