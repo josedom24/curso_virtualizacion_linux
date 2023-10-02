@@ -4,12 +4,12 @@ libvirt nos proporciona las herramientas necesarias para gestionar las redes vir
 
 Tenemos dos grandes grupos de redes que podemos configurar:
 
-* **Redes Virtuales**: Son **redes privadas** que podemos configurar para que tengan distintas características.
-* **Redes Puente**: Las podemos considerar como **redes públicas**, desde el punto de vista que las máquinas virtuales estarán conectadas a la misma red a la que está conectada el host.
+* **Redes Virtuales (Privadas)**: Son **redes privadas** que podemos configurar para que tengan distintas características.
+* **Redes Puente (Públicas)**: Las podemos considerar como **redes públicas**, desde el punto de vista que las máquinas virtuales estarán conectadas a la misma red a la que está conectada el host.
 
 Recordemos un **puente o bridge/switch** es un dispositivo de interconexión de redes. La gestión de redes de libvirt se basa en el concepto de **switch virtual**, para ello utiliza **Linux Bridge**, que es un software que nos permite crear bridge virtuales con la misma funcionalidad que un bridge físico.
 
-## Tipos de Redes Virtuales
+## Tipos de Redes Virtuales (Privadas)
 
 La clasificación dependerá de la configuración que hagamos a la **Red Virtual**:
 
@@ -49,7 +49,7 @@ Es un Red Virtual Aislada, en la que el host no está conectado a las máquians 
 
 En este tipo de red se suele configurar la red de las máquinas virtuales de forma estática.
 
-## Tipos de Redes Puente
+## Tipos de Redes Puente (Públicas)
 
 La clasificación depende de la forma utilizada para conectar las máquinas virtuales al exterior.
 
