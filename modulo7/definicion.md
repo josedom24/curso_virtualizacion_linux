@@ -2,7 +2,7 @@
 
 Las redes que gestiona libvirt se definen con el formato XML. Puedes profundizar en el formato XML con los que se definen las redes consultando el documento [Network XML format](https://libvirt.org/formatnetwork.html). 
 
-## Definición de Redes Virtuales (Privadas) de tipo NAT
+## Definición de Redes Virtuales de tipo NAT
 
 La red `default` con la que hemos trabajado es de este tipo. La configuración de la red `default` la podemos encontrar en el fichero `/usr/share/libvirt/networks/default.xml`:
 
