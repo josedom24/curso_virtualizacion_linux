@@ -32,7 +32,7 @@ O podemos usar la aplicación `qemu-img` y posterior refrescamos el pool `defaul
 
 ```
 cd /var/lib/libvirt/images
-sudo qemu-img create -f qcow2 -b template-debian.qcow2 -F qcow2 prueba6.qcow2 10G
+sudo qemu-img create -f qcow2 -b prueba1.qcow2 -F qcow2 clone2.qcow2 10G
 virsh -c qemu:///system pool-refresh default
 ```
 
