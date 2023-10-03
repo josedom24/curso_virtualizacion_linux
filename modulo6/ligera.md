@@ -73,7 +73,7 @@ virt-install --connect qemu:///system \
 			 --virt-type kvm \
 			 --name nueva_prueba \
 			 --os-variant debian10 \
-			 --disk path=/var/lib/libvirt/images/clone2.qcow2` \
+			 --disk path=/var/lib/libvirt/images/prueba6.qcow2 \
 			 --memory 1024 \
 			 --vcpus 1 \
 			 --import
