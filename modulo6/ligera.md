@@ -45,10 +45,10 @@ Otra opción es usando `virt-manager`, creando un nuevo volumen e indicando dura
 Para comprobar que un volumen está creado con una imagen base podemos usar `virsh`:
 
 ```
-virsh -c qemu:///system vol-dumpxml prueba6.qcow2 default
+virsh -c qemu:///system vol-dumpxml clone2.qcow2 default
 ...
 <backingStore>
-    <path>/var/lib/libvirt/images/template-debian.qcow2</path>
+    <path>/var/lib/libvirt/images/prueba1.qcow2</path>
     <format type='qcow2'/>
     <permissions>
     ...
@@ -57,9 +57,9 @@ virsh -c qemu:///system vol-dumpxml prueba6.qcow2 default
 O usando el comando `qemu-img`:
 
 ```
-sudo qemu-img info /var/lib/libvirt/images/prueba6.qcow2
+sudo qemu-img info /var/lib/libvirt/images/clone2.qcow2
 ...
-backing file: template-debian.qcow2
+backing file: prueba1.qcow2
 backing file format: qcow2
 ...
 ```
@@ -73,7 +73,7 @@ virt-install --connect qemu:///system \
 			 --virt-type kvm \
 			 --name nueva_prueba \
 			 --os-variant debian10 \
-			 --disk path=/var/lib/libvirt/images/prueba6.qcow2` \
+			 --disk path=/var/lib/libvirt/images/clone2.qcow2` \
 			 --memory 1024 \
 			 --vcpus 1 \
 			 --import
@@ -106,7 +106,7 @@ Y eligiendo el volumen en siguiente paso:
 Una vez que tenemos creado el volumen basada en el imagen base de la plantilla, podemos crear un nuevo clon con `virt-clone`, para ello ejecutamos:
 
 ```
-virt-clone --connect=qemu:///system --original plantilla-prueba1 --name clone2 --file /var/lib/libvirt/images/prueba6.qcow2 --preserve-data
+virt-clone --connect=qemu:///system --original plantilla-prueba1 --name clone2 --file /var/lib/libvirt/images/clone2.qcow2 --preserve-data
 ```
 
 Indicamos como fichero el volumen que hemos creado, pero con la opción `--preserve-data` no se copia el volumen original al nuevo, simplemente se usa. Se puede comprobar que la clonación no tarda nada de tiempo, no se está copiando un volumen en otro.
