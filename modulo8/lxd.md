@@ -11,10 +11,16 @@ Internamente usa LXC para la gestión de contenedores, pero facilita el uso de l
 
 ## Instalación de LXD
 
-Vamos a usar el gestor de paquetes snap (si estás trabajando con la distribución Debian debes instalar el paquete `sanpd`).
+Vamos a usar el gestor de paquetes snap (si estás trabajando con la distribución Debian 11 debes instalar el paquete `sanpd`).
 
 ```
 sudo snap install lxd
+```
+
+En la versión Debian 12 lo podemos instalar con `apt`:
+
+```
+apt install lxd
 ```
 
 Antes de ejecutar una instancia (contenedor o máquina virtual) tenemos que hacer una configuración inicial de LXD, para ello ejecutamos como root:
