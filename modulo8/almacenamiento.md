@@ -13,7 +13,7 @@ root@contenedor1:/srv# mkdir www
 En el fichero de configuración del contenedor (`/var/lib/lxc/contenedor1/config`) añadimos la siguiente línea:
 
 ```
-lxc.mount.entry=/opt/contenedor1 srv/www none bind 0 0
+lxc.mount.entry=/opt/contenedor1 /srv/www none bind 0 0
 ```
 
 Hay que tener en cuenta que al indicar el directorio de montaje hay que usar una ruta relativa (es relativa al directorio donde se encuentra el sistema de fichero del contenedor, en este caso `/var/lib/lxc/contenedor1/rootfs/`).
