@@ -5,7 +5,7 @@ En este tipo de clonación la imagen de la máquina clonada utiliza la imagen de
 El mecanismo es un poco más complejo, tenemos que realziar dos pasos:
 
 1. Creación del nuevo volumen a a partir de la imagen base de la plantilla (**backing store**).
-2. Creación de la nueva máquina usando `virt-install`, `virt-manager` o `viirt-clone`.
+2. Creación de la nueva máquina usando `virt-install`, `virt-manager` o `virt-clone`.
 
 ## Creación de imágenes de disco con backing store
 
