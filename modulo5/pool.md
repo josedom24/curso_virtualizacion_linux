@@ -99,7 +99,7 @@ Y por último lo eliminamos:
 virsh -c qemu:///system pool-undefine vm-images 
 Se ha quitado la definición del grupo vm-images
 ```
-## Gestión de Pools de Almacenamiento con virt-amanger
+## Gestión de Pools de Almacenamiento con virt-manager
 
 Desde la pestaña **Almacenamiento** de los **Detalles de la conexión** podemos ver los pools que tenemos creados y podemos gestionarlos:
 
