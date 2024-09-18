@@ -32,7 +32,7 @@ La red default se ha iniciado
 Además es recomendable activar la propiedad de **Incio autómatico**, para que se inicie de forma automática después de reiniciar el host, para ello:
 
 ```
-virsh -c qemu:///system net-autostart default
+usuario@kvm:~$ virsh -c qemu:///system net-autostart default
 La red default ha sido marcada para iniciarse automáticamente
 ```
 
