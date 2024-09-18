@@ -1,6 +1,6 @@
 # Gestión de máquinas virtuales con virsh
 
-[virsh]() es el cliente por línea de comandos "oficial" de libvirt. Ofrece una shell completa para el manejo de la API.
+[virsh](https://libvirt.org/manpages/virsh.html) es el cliente por línea de comandos "oficial" de libvirt. Ofrece una shell completa para el manejo de la API.
 
 Cuando obtenga la ayuda de esta herramienta verás que en mucha ocasiones habla de dominio. Un **dominio** en QEMU/KVM es una máquina virtual.
 
