@@ -4,7 +4,7 @@ En este apartado vamos a gestionar los volúmenes con herramienta especificas. E
 
 ## Gestión de imágenes de disco con qemu-img
 
-La herramienta `qemu-img` es una utilidad para gestionar ficheros de imagen de disco. Puedes profundizar en el uso de esta herramienta consultando la documentación oficial: [QEMU disk image utility](https://qemu.readthedocs.io/en/latest/tools/qemu-img.html).
+La herramienta `qemu-img` es una utilidad para gestionar ficheros de imagen de disco. Puedes profundizar en el uso de esta herramienta consultando la documentación oficial: [QEMU disk image utility](https://qemu-project.gitlab.io/qemu/tools/qemu-img.html).
 
 Vamos a crear un nuevo fichero de imagen llamado `vol2.qcow2`, con el formato `qcow2`, con un tamaño de 2GB, en el directorio `/srv/images`, correspondiente al pool `vm-images`, que creamos en un apartado anterior (si quisiéramos trabajar con el pool `default` trabajaríamos en el directorio `/var/lib/libvirt/images`).
 
