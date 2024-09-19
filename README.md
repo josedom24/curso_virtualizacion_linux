@@ -34,6 +34,7 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 	* Acceso a las máquinas virtuales desde el exterior
 
 5. Gestión del  almacenamiento en QEMU/KVM + libvirt
+	* [Introducción al almacenamiento](modulo5/almacenamiento.md)
 	* [Introducción al almacenamiento en QEMU/KVM + libvirt](modulo5/introduccion.md)
 	* [Gestión de Pools de Almacenamiento](modulo5/pool.md)
 	* [Gestión de volúmenes de almacenamiento con libvirt](modulo5/volumen1.md)
