@@ -1,6 +1,6 @@
 # Creación de un Puente Externo con Linux Bridge
 
-Un bridge externo es un bridge virtual que estarán conectada al router de la red local. El bridge se creará en el servidor donde estamos virtualizando (host). El host estará conectado a este bridge para tener conectividad al exterior. Veamos un esquema:
+Un bridge externo es un bridge virtual que estará conectado al router de la red local. El bridge se creará en el servidor donde estamos virtualizando (host). El host estará conectado a este bridge para tener conectividad al exterior. Veamos un esquema:
 
 ![bridge externo](img/red_bridge_externo.drawio.png)
 
