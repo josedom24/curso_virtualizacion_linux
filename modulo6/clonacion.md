@@ -17,7 +17,11 @@ Asignando 'vol1-clone.qcow2'                               |  10 GB  00:15
 El clon 'prueba4-clone' ha sido creado exitosamente.
 ```
 
-Es la forma más sencilla, se crea una nueva máquina que se llama como la original y se le añade la palabra `--auto-clone`, todos los discos de la máquina original se clonan, y se llaman igual a los originales con la coletilla `--auto-clone`.
+Es la forma más sencilla, se crea una nueva máquina. El parámetro `--auto-clone` asigna automáticamente:
+
+* Un nuevo **nombre** para la máquina virtual clonada si no se especifica uno.
+* Nuevas **direcciones MAC** para las interfaces de red para evitar conflictos en la red.
+* Una nueva **ruta del disco para el almacenamiento** del clon, evitando sobrescribir el disco existente.
 
 Si queremos indicar el nombre de la nueva máquina: usamos el parámetro `--name` y si queremos indicar el nombre del nuevo volumen usamos `--file`:
 
