@@ -44,7 +44,7 @@ lxc-alpine    lxc-archlinux  lxc-centos  lxc-debian    lxc-fedora	  lxc-gentoo  
 lxc-altlinux  lxc-busybox    lxc-cirros  lxc-download  lxc-fedora-legacy  lxc-local   lxc-openmandriva	lxc-oracle    lxc-pld	 lxc-slackware	lxc-sshd	lxc-ubuntu-cloud
 ```
 
-También puedes obtener la lista de plantillas en la página [Image server for LXC and LXD](https://uk.lxd.images.canonical.com/).
+También puedes obtener la lista de plantillas en la página [Image server for LXC and LXD](https://images.linuxcontainers.org/).
 
 ## Ejecución de comandos en un contenedor
 
