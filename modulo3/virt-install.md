@@ -13,7 +13,7 @@ La información que tenemos que proporcionar a `virt-install` para la creación 
 * El nombre de la máquina virtual (parámetro `--name`).
 * El tipo de virtualización (parámetro `--virt-type`). en nuestro caso será `kvm`.
 * En nuestro caso vamos a realizar una instalación desde un fichero ISO, por lo que tendremos que indicar que la nueva máquina tendrá un CDROM con la ISO que indiquemos (parámetro `--cdrom`).
-* La variante del sistema operativo que vamos a utilizar (parámetro `--os-variant`). Para obtener la lista de variantes de sistemas operativos, podemos ejecutar `osinfo-query os`. 
+* La variante del sistema operativo que vamos a utilizar (parámetro `--os-variant`). Para obtener la lista de variantes de sistemas operativos, podemos ejecutar `osinfo-query os` (Instalar el paquete `libosinfo-bin` si no reconoce el comando). 
 * El tamaño del disco (parámetro `--disk size`). Se creará un fichero con la imagen del disco que se guardará en `/var/lib/libvirt/images`.
 * La cantidad de memoria RAM (parámetro `--memory`).
 * La cantidad de vCPU asignadas a la máquina (parámetro `--vcpus`).
