@@ -62,4 +62,4 @@ Curso sobre virtualización en sistemas operativos Linux con QEMU/KVM, libvirt, 
 	* [Configuración de contenedores LXC](modulo8/configuracion.md)
 	* [Redes en LXC](modulo8/redes.md)
 	* [Almacenamiento en LXC](modulo8/almacenamiento.md)
-	* [Introducción a LXD](modulo8/lxd.md)
+	
