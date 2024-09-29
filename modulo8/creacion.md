@@ -60,3 +60,13 @@ si el contenedor está apagado, lo haríamos de la siguiente forma:
 $ lxc-stop contenedor1
 $ lxc-execute contenedor1 -- ls -al
 ```
+
+## Eliminar un contenedor
+
+Para eliminar un contenedor podemos ejecutar la siguiente instrucción con el contenedor parado:
+
+```bash
+$ lxc-destroy contendor1
+```
+
+Si el contenedor está inicado podemos usar el parámetro `-f` de la instracción `lxc-destroy` para eliminarlo.
