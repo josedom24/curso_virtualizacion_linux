@@ -2,7 +2,7 @@
 
 En este tipo de clonación la imagen de la máquina clonada utiliza la imagen de la plantilla como imagen base (**backing store**) en modo de sólo lectura, en la imagen de la nueva máquina sólo se guardan los cambios del sistema de archivo. Requiere menos espacio en disco, pero no puede ejecutarse sin acceso a la imagen de plantilla base. 
 
-El mecanismo es un poco más complejo, tenemos que realziar dos pasos:
+El mecanismo es un poco más complejo, tenemos que realizar dos pasos:
 
 1. Creación del nuevo volumen a a partir de la imagen base de la plantilla (**backing store**).
 2. Creación de la nueva máquina usando `virt-install`, `virt-manager` o `virt-clone`.
